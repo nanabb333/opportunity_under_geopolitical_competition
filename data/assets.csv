@@ -1,0 +1,20 @@
+asset_id,ticker,asset_name,asset_type,country,listing_region,sector,subsector,benchmark_role,strategic_asset,public_market_available,data_feasibility,notes
+A001,SPY,SPDR S&P 500 ETF Trust,ETF,US,US,broad_market,broad_market,broad_market,0,1,available,Broad market benchmark.
+A002,QQQ,Invesco QQQ Trust,ETF,US,US,technology,technology,tech_benchmark,0,1,available,Technology-heavy benchmark.
+A003,SMH,VanEck Semiconductor ETF,ETF,US,US,semiconductors,broad_semiconductor,sector_benchmark,1,1,available,Preferred semiconductor-sector benchmark if SOX index data unavailable.
+A004,SOX,PHLX Semiconductor Index,index,US,US,semiconductors,broad_semiconductor,sector_benchmark,1,1,conditional,Use if index return data are available.
+A005,INTC,Intel Corporation,firm,US,US,semiconductors,integrated_device_manufacturer,none,1,1,available,Named beneficiary for E009; eligible beneficiary for E001.
+A006,TSM,Taiwan Semiconductor Manufacturing Company ADR,firm,Taiwan,US_ADR,semiconductors,foundry,none,1,1,available,Named beneficiary proxy for TSMC in E010 and E008.
+A007,MU,Micron Technology,firm,US,US,semiconductors,memory,none,1,1,available,Named beneficiary for E012; threat-exposed for E006.
+A008,SMSN,Samsung Electronics,firm,South Korea,foreign,semiconductors,memory_foundry,none,1,1,conditional,Conditional asset; exact tradable instrument and calendar rule must be frozen before returns.
+A009,NVDA,Nvidia Corporation,firm,US,US,semiconductors,AI_chips,none,1,1,available,Threat-exposed in E002 and E003; not main beneficiary.
+A010,AMD,Advanced Micro Devices,firm,US,US,semiconductors,AI_chips,none,1,1,available,Threat-exposed or peer in export-control events.
+A011,ASML,ASML Holding ADR,firm,Netherlands,US_ADR,semiconductors,equipment,none,1,1,available,Equipment firm for contrast and peer comparisons.
+A012,AMAT,Applied Materials,firm,US,US,semiconductors,equipment,none,1,1,available,Equipment peer/contrast asset.
+A013,LRCX,Lam Research,firm,US,US,semiconductors,equipment,none,1,1,available,Equipment peer/contrast asset.
+A014,KLAC,KLA Corporation,firm,US,US,semiconductors,equipment,none,1,1,available,Equipment peer.
+A015,BAESY,BAE Systems ADR,firm,United Kingdom,US_ADR,defense_semiconductors,defense_electronics,none,1,1,conditional,Secondary caution case for E007; market relevance may be low.
+A016,SONY,Sony Group ADR,firm,Japan,US_ADR,electronics,image_sensors,none,1,1,conditional,Use only if direct Kumamoto link is documented; otherwise exclude from links.
+A017,TM,Toyota Motor ADR,firm,Japan,US_ADR,automotive,industrial_partner,none,0,1,conditional,Use only if direct Kumamoto link is documented; likely secondary only.
+A018,KWEB,KraneShares CSI China Internet ETF,ETF,China,US,China_technology,broad_china_tech,contrast_benchmark,0,1,optional,Optional China-tech contrast benchmark.
+A019,CQQQ,Invesco China Technology ETF,ETF,China,US,China_technology,broad_china_tech,contrast_benchmark,0,1,optional,Optional China-tech contrast benchmark.

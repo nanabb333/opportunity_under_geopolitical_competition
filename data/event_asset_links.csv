@@ -1,0 +1,61 @@
+event_id,asset_id,exposure_role,primary_beneficiary,expected_direction,link_strength,link_basis,analysis_role,data_feasibility,pre_outcome_link_notes
+E001,A005,eligible_beneficiary,0,positive,2,sector_eligibility,secondary,available,Intel is likely eligible under CHIPS support but not named by signing event.
+E001,A006,eligible_beneficiary,0,positive,2,sector_eligibility,secondary,available,TSMC is likely eligible through US fab capacity but not named by signing event.
+E001,A007,eligible_beneficiary,0,positive,2,sector_eligibility,secondary,available,Micron is likely eligible through US memory capacity but not named by signing event.
+E001,A008,eligible_beneficiary,0,positive,2,sector_eligibility,secondary,conditional,Samsung likely eligible through US fab investment; conditional on market data.
+E001,A003,benchmark,0,neutral,3,benchmark,secondary,available,Semiconductor-sector ETF benchmark.
+E001,A001,benchmark,0,neutral,3,benchmark,secondary,available,Broad market benchmark.
+E001,A002,benchmark,0,neutral,3,benchmark,secondary,available,Technology benchmark.
+E002,A009,threat_exposed,0,negative,3,direct_restriction,contrast,available,Nvidia disclosed new US license requirement affecting AI chip exports.
+E002,A010,threat_exposed,0,negative,2,direct_restriction,contrast,available,AMD may face similar AI chip export restrictions; link less direct than Nvidia.
+E002,A003,benchmark,0,neutral,3,benchmark,contrast,available,Semiconductor-sector ETF benchmark.
+E002,A002,benchmark,0,neutral,3,benchmark,contrast,available,Technology benchmark.
+E003,A009,threat_exposed,0,negative,3,direct_restriction,contrast,available,Nvidia advanced computing chips are directly implicated by BIS controls.
+E003,A010,threat_exposed,0,negative,3,direct_restriction,contrast,available,AMD advanced computing chips are plausibly implicated by BIS controls.
+E003,A011,threat_exposed,0,negative,2,direct_restriction,contrast,available,ASML may be affected through semiconductor equipment restrictions and China exposure.
+E003,A012,threat_exposed,0,negative,2,direct_restriction,contrast,available,Applied Materials may be affected through equipment restrictions and China exposure.
+E003,A013,threat_exposed,0,negative,2,direct_restriction,contrast,available,Lam Research may be affected through equipment restrictions and China exposure.
+E003,A006,threat_exposed,0,mixed,2,supply_chain_role,contrast,available,TSMC faces China ecosystem risk but may also gain strategic value; expected direction mixed.
+E003,A003,benchmark,0,neutral,3,benchmark,contrast,available,Semiconductor-sector ETF benchmark.
+E003,A001,benchmark,0,neutral,3,benchmark,contrast,available,Broad market benchmark.
+E004,A007,substitute,0,positive,2,substitute_logic,contrast,available,Micron may be a memory substitute if YMTC is restricted; substitution is plausible but not direct support.
+E004,A008,substitute,0,positive,2,substitute_logic,contrast,conditional,Samsung may be a memory substitute; conditional on market-data feasibility.
+E004,A003,benchmark,0,neutral,3,benchmark,contrast,available,Semiconductor-sector ETF benchmark.
+E005,A011,threat_exposed,0,negative,2,direct_restriction,contrast,available,ASML is an allied equipment firm with China exposure; event is Japan-led but related to equipment controls.
+E005,A012,threat_exposed,0,negative,2,direct_restriction,contrast,available,Applied Materials used as allied equipment peer/contrast asset.
+E005,A013,threat_exposed,0,negative,2,direct_restriction,contrast,available,Lam Research used as allied equipment peer/contrast asset.
+E005,A014,threat_exposed,0,negative,2,direct_restriction,contrast,available,KLA used as allied equipment peer/contrast asset.
+E005,A003,benchmark,0,neutral,3,benchmark,contrast,available,Semiconductor-sector ETF benchmark.
+E006,A007,threat_exposed,0,negative,3,direct_restriction,contrast,available,Micron is directly affected by China critical infrastructure procurement restriction.
+E006,A008,substitute,0,positive,2,substitute_logic,contrast,conditional,Samsung may substitute for Micron in memory procurement; conditional and secondary.
+E006,A003,benchmark,0,neutral,3,benchmark,contrast,available,Semiconductor-sector ETF benchmark.
+E007,A015,named_beneficiary,0,positive,3,named_in_policy,secondary,conditional,BAE is named recipient; included as small-award caution case if ADR data are usable.
+E007,A003,benchmark,0,neutral,3,benchmark,secondary,available,Semiconductor-sector ETF benchmark.
+E007,A001,benchmark,0,neutral,3,benchmark,secondary,available,Broad market benchmark.
+E008,A006,named_beneficiary,0,positive,2,named_in_policy,secondary,available,TSMC is linked to Kumamoto fab opening and Japanese state support; implementation event not clean shock.
+E008,A016,eligible_beneficiary,0,positive,1,supply_chain_role,secondary,conditional,Sony only included if direct Kumamoto economic link is documented.
+E008,A017,eligible_beneficiary,0,positive,1,supply_chain_role,secondary,conditional,Toyota only included if direct Kumamoto economic link is documented.
+E008,A003,benchmark,0,neutral,3,benchmark,secondary,available,Semiconductor-sector ETF benchmark.
+E009,A005,named_beneficiary,1,positive,3,named_in_policy,main,available,Intel is named beneficiary of CHIPS preliminary terms.
+E009,A012,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,Applied Materials is semiconductor equipment peer; not named beneficiary.
+E009,A013,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,Lam Research is equipment peer; not named beneficiary.
+E009,A014,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,KLA is equipment peer; not named beneficiary.
+E009,A003,benchmark,0,neutral,3,benchmark,main,available,Primary semiconductor-sector benchmark.
+E009,A001,benchmark,0,neutral,3,benchmark,main,available,Broad market benchmark.
+E009,A002,benchmark,0,neutral,3,benchmark,main,available,Technology benchmark.
+E010,A006,named_beneficiary,1,positive,3,named_in_policy,main,available,TSMC/TSM is named beneficiary of Arizona CHIPS preliminary terms.
+E010,A005,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,Intel is a sector peer/competitor; not beneficiary of this event.
+E010,A003,benchmark,0,neutral,3,benchmark,main,available,Primary semiconductor-sector benchmark.
+E010,A001,benchmark,0,neutral,3,benchmark,main,available,Broad market benchmark.
+E010,A002,benchmark,0,neutral,3,benchmark,main,available,Technology benchmark.
+E011,A008,named_beneficiary,0,positive,3,named_in_policy,main_conditional,conditional,Samsung is named beneficiary; main inclusion conditional on replicable trading-calendar and price data.
+E011,A006,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,TSM is sector peer/competitor for Samsung event.
+E011,A005,sector_peer,0,neutral,1,sector_eligibility,main_peer,available,Intel is sector peer/competitor for Samsung event.
+E011,A003,benchmark,0,neutral,3,benchmark,main_conditional,available,Primary semiconductor-sector benchmark.
+E011,A001,benchmark,0,neutral,3,benchmark,main_conditional,available,Broad market benchmark.
+E011,A002,benchmark,0,neutral,3,benchmark,main_conditional,available,Technology benchmark.
+E012,A007,named_beneficiary,1,positive,3,named_in_policy,main,available,Micron is named beneficiary of CHIPS preliminary agreement.
+E012,A008,sector_peer,0,neutral,1,sector_eligibility,main_peer,conditional,Samsung is memory peer if market data are feasible.
+E012,A003,benchmark,0,neutral,3,benchmark,main,available,Primary semiconductor-sector benchmark.
+E012,A001,benchmark,0,neutral,3,benchmark,main,available,Broad market benchmark.
+E012,A002,benchmark,0,neutral,3,benchmark,main,available,Technology benchmark.
