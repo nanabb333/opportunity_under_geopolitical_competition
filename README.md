@@ -27,4 +27,3 @@ The repository contains a frozen pilot sample, event and asset coding files, and
 - `docs/`: frozen research design, protocol, theory, sample, and pilot documents.
 - `data/`: event, asset, and event-asset link tables, plus local raw price inputs when available.
 - `scripts/`: reproducible scripts for building market return and event-study files.
-# opportunity_under_geopolitical_competition
