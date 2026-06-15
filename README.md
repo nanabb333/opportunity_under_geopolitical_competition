@@ -2,6 +2,14 @@
 
 This repository contains a research portfolio on how geopolitical competition can create market opportunity for selected firms and sectors. The project focuses on cases where strategic importance and credible state support may lead investors to price geopolitical pressure as more than downside risk.
 
+## At a Glance
+
+- **Field:** Political economy, geopolitical risk, financial markets
+- **Method:** Event-study analysis using semiconductor policy events
+- **Primary outcome:** `car_sector_m1_p1`, sector-adjusted CAR[-1,+1]
+- **Main finding:** Mixed evidence: one supportive case and two theory-weakening cases
+- **Outputs:** Validated dataset, reproducible pipeline, dissertation-ready figures and tables
+
 ## Research Question
 
 When do financial markets interpret geopolitical competition as a source of opportunity for strategically important firms or sectors?
@@ -53,7 +61,7 @@ The primary outcome is `car_sector_m1_p1`: the sector-adjusted cumulative abnorm
 The validated primary sample contains three named-beneficiary semiconductor support events. Results are classified using the pre-committed primary outcome, `car_sector_m1_p1`.
 
 | Event | Firm | Primary outcome: `car_sector_m1_p1` | Classification |
-|---|---:|---:|---|
+|---|---|---:|---|
 | E009 | INTC | -4.3183% | Theory-weakening |
 | E010 | TSM | 2.1512% | Supportive |
 | E012 | MU | -2.5406% | Theory-weakening |
@@ -63,6 +71,8 @@ The validated evidence is mixed: one primary case is supportive, and two primary
 ## Result Exhibits
 
 ![Primary Outcome Results](dissertation_results/figures/figure1_primary_outcome_car_sector_m1_p1.png)
+
+Figure 1 summarizes the pre-committed primary outcome across the three validated primary cases. Figures 2 and 3 provide descriptive context but do not replace the primary classification rule.
 
 Additional figures:
 
