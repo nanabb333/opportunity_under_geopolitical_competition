@@ -14,6 +14,12 @@ This repository contains a research portfolio on how geopolitical competition ca
 | Main finding | Mixed evidence: one supportive primary case and two theory-weakening primary cases |
 | Portfolio value | Demonstrates theory-driven research design, financial event-study workflow, data validation, and reproducible analysis |
 
+## What This Project Demonstrates
+
+This project demonstrates how a political economy research question can be converted into a transparent empirical workflow. Rather than treating geopolitical competition only as a narrative risk factor, the project defines a testable mechanism, freezes coding decisions before return interpretation, links events to firms through documented event-asset relationships, and evaluates market reactions using sector-adjusted abnormal returns.
+
+The main empirical finding is intentionally mixed: one primary case supports the proposed State Support mechanism, while two primary cases weaken it under the pre-committed classification rule. This makes the project stronger as a research portfolio artifact because it shows disciplined interpretation rather than result-chasing. The contribution is not a claim that state support always creates market opportunity, but a reproducible framework for evaluating when geopolitical state support is, or is not, reflected in market pricing.
+
 ## Research Question
 
 When do financial markets interpret geopolitical competition as a source of opportunity for strategically important firms or sectors?
