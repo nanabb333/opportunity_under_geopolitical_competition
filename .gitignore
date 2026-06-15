@@ -1,5 +1,7 @@
 research_agenda/
+.DS_Store
 __pycache__/
+*.pyc
 *.py[cod]
 data/market_returns.csv
 data/raw_prices/

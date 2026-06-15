@@ -1,0 +1,6 @@
+# Table 3. Recipient vs Non-Recipient Comparison
+
+| Group | N | Mean CAR | Median CAR | Positive Share |
+|---|---:|---:|---:|---:|
+| Recipient | 5 | -0.3186% | -0.0288% | 40.0000% |
+| Non-recipient | 7 | -2.1506% | 0.1983% | 57.1429% |
