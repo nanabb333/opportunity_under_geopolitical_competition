@@ -4,11 +4,15 @@ This repository contains a research portfolio on how geopolitical competition ca
 
 ## At a Glance
 
-- **Field:** Political economy, geopolitical risk, financial markets
-- **Method:** Event-study analysis using semiconductor policy events
-- **Primary outcome:** `car_sector_m1_p1`, sector-adjusted CAR[-1,+1]
-- **Main finding:** Mixed evidence: one supportive case and two theory-weakening cases
-- **Outputs:** Validated dataset, reproducible pipeline, dissertation-ready figures and tables
+| Component | Summary |
+|---|---|
+| Field | Political economy / geopolitical risk / financial markets |
+| Method | Event-study analysis |
+| Sector focus | Semiconductors and strategic industrial policy |
+| Unit of analysis | Event-firm observation |
+| Primary outcome | `car_sector_m1_p1` |
+| Main finding | Mixed evidence: one supportive primary case and two theory-weakening primary cases |
+| Portfolio value | Demonstrates theory-driven research design, financial event-study workflow, data validation, and reproducible analysis |
 
 ## Research Question
 
