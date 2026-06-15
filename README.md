@@ -68,15 +68,22 @@ The validated primary sample contains three named-beneficiary semiconductor supp
 
 The validated evidence is mixed: one primary case is supportive, and two primary cases are theory-weakening under the pre-committed classification rule.
 
+## Results Snapshot
+
+- The primary evidence is mixed: E010 / TSM is supportive, while E009 / INTC and E012 / MU are theory-weakening under the pre-committed `car_sector_m1_p1` rule.
+- Descriptive CAR[-7,+7] values show the same heterogeneity: TSM has the strongest positive wider-window movement, while MU remains negative and INTC is near zero.
+- The recipient vs non-recipient comparison does not show systematic recipient outperformance, reinforcing the dissertation's cautious interpretation.
+
 ## Result Exhibits
 
 ![Primary Outcome Results](dissertation_results/figures/figure1_primary_outcome_car_sector_m1_p1.png)
 
-Figure 1 summarizes the pre-committed primary outcome across the three validated primary cases. Figures 2 and 3 provide descriptive context but do not replace the primary classification rule.
+![Descriptive CAR[-7,+7] Across Primary Cases](dissertation_results/figures/figure2_primary_case_descriptive_car_m7_p7.png)
 
-Additional figures:
+Figure 1 summarizes the pre-committed primary outcome across the three validated primary cases. Figure 2 provides descriptive wider-window context. Figure 3 reports the recipient versus non-recipient comparison and is linked below.
 
-- [Figure 2: Descriptive CAR[-7,+7] Across Primary Cases](dissertation_results/figures/figure2_primary_case_descriptive_car_m7_p7.png)
+Additional figure:
+
 - [Figure 3: Recipient vs Non-Recipient Mean CAR Comparison](dissertation_results/figures/figure3_recipient_vs_nonrecipient_mean_car.png)
 
 Tables:
