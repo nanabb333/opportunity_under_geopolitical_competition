@@ -96,6 +96,12 @@ For detailed instructions, see [Reproducibility Guide](docs/reproducibility_guid
 
 This project is descriptive historical analysis only. It does not claim forecast accuracy, provide investment advice, or estimate expected returns. The sample is intentionally limited and semiconductors-focused, and several fields rely on qualitative coding. For the full limitations statement, see [Project limitations](docs/project_limitations.md).
 
+## Future Dataset Expansion
+
+The current historical analog dataset is intentionally limited and mirrors the dissertation event base. Future versions should expand event coverage across military exercises, diplomatic shocks, sanctions, leadership meetings, supply-chain relocation, technology restrictions, strategic investment, and semiconductor expansion cases.
+
+A larger, better-balanced evidence base will improve historical comparison and scenario retrieval, but only if new events are sourced and coded conservatively. See [Event expansion plan](docs/event_expansion_plan.md), [Event family taxonomy V2](docs/event_family_taxonomy_v2.md), and [Event collection protocol](docs/event_collection_protocol.md).
+
 ## Repository Map
 
 - `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analog dataset.
