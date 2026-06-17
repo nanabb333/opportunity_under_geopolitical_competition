@@ -1,6 +1,6 @@
 # Opportunity Under Geopolitical Competition
 
-This repository contains a research portfolio on how geopolitical competition can create market opportunity for selected firms and sectors. The project focuses on cases where strategic importance and credible state support may lead investors to price geopolitical pressure as more than downside risk.
+A dissertation-based geopolitical risk analytics project that transforms event-study research into historical analog scenario analysis.
 
 ## Project Value Chain
 
@@ -18,12 +18,86 @@ Observed Pathway Engine
 Dashboard Evidence View
 ```
 
-Portfolio packaging:
+## Live / Local Dashboard Preview
 
+Run the static dashboard locally from the repository root:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/dashboard/
+```
+
+The dashboard displays scenario questions, top historical analogs, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
+
+## Key Outputs
+
+- [Historical analog dataset](data/historical_analog_events.csv)
+- [Historical similarity matrix](results/historical_similarity_matrix.csv)
+- [Scenario query demo results](results/scenario_query_demo_results.json)
+- [Observed pathway summaries](results/observed_pathways.json)
+- [Dashboard evidence view](dashboard/index.html)
 - [Portfolio case study](docs/portfolio_case_study.md)
 - [Recruiter summary](docs/recruiter_summary.md)
 - [Technical architecture](docs/technical_architecture.md)
 - [Project limitations](docs/project_limitations.md)
+
+## How It Works
+
+1. Events are coded from the dissertation research base into a structured historical analog dataset.
+2. Similarity is calculated deterministically across qualitative event features.
+3. Scenario questions are mapped to coded profiles and retrieve the closest historical analogs.
+4. Retrieved analogs are grouped into observed pathways with representative events and evidence notes.
+5. The dashboard displays the scenario evidence in a readable static interface.
+
+## Reproducibility
+
+Run the deterministic historical analog release checks with:
+
+```bash
+python3 scripts/run_all_checks.py
+```
+
+Launch the dashboard with:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/dashboard/
+```
+
+For detailed instructions, see [Reproducibility Guide](docs/reproducibility_guide.md).
+
+## What This Demonstrates
+
+- Geopolitical risk research
+- Event-study thinking
+- Structured dataset design
+- Deterministic analytics pipeline
+- Scenario analysis
+- Dashboard communication
+- Reproducible project packaging
+
+## Limitations
+
+This project is descriptive historical analysis only. It does not claim forecast accuracy, provide investment advice, or estimate expected returns. The sample is intentionally limited and semiconductors-focused, and several fields rely on qualitative coding. For the full limitations statement, see [Project limitations](docs/project_limitations.md).
+
+## Repository Map
+
+- `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analog dataset.
+- `scripts/`: validation, event-study, similarity, scenario query, observed pathway, figure, and release-check scripts.
+- `results/`: generated similarity, scenario query, and observed pathway outputs.
+- `dashboard/`: static evidence view.
+- `docs/`: methodology, architecture, portfolio, reproducibility, audit, and limitation documents.
+- `dissertation_results/`: dissertation figures, tables, captions, and source notes.
 
 ## At a Glance
 
@@ -37,7 +111,7 @@ Portfolio packaging:
 | Main finding | Mixed evidence: one supportive primary case and two theory-weakening primary cases |
 | Portfolio value | Demonstrates theory-driven research design, financial event-study workflow, data validation, and reproducible analysis |
 
-## What This Project Demonstrates
+## Detailed Dissertation Framing
 
 This project demonstrates how a political economy research question can be converted into a transparent empirical workflow. Rather than treating geopolitical competition only as a narrative risk factor, the project defines a testable mechanism, freezes coding decisions before return interpretation, links events to firms through documented event-asset relationships, and evaluates market reactions using sector-adjusted abnormal returns.
 
@@ -134,27 +208,7 @@ Tables:
 - Reproducible Analytics
 - Academic Research Communication
 
-## Reproducibility
-
-Run the deterministic historical analog release checks with:
-
-```bash
-python3 scripts/run_all_checks.py
-```
-
-Launch the static dashboard from the repository root with:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
-
-```text
-http://127.0.0.1:8000/dashboard/
-```
-
-For detailed instructions, see [Reproducibility Guide](docs/reproducibility_guide.md).
+## Dissertation Event-Study Reproducibility
 
 Run the dissertation event-study pipeline with:
 
