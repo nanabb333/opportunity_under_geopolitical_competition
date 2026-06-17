@@ -1,0 +1,234 @@
+{
+  "method": "Deterministic qualitative feature matching; exact match = 1, partial textual overlap = 0.5, no match or unavailable coding = 0.",
+  "source_dataset": "data/historical_analog_events.csv",
+  "events_loaded": 12,
+  "scenarios_evaluated": 3,
+  "top_n": 3,
+  "disclaimer": "Scenario analogs are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
+  "results": [
+    {
+      "scenario_id": "SQ001",
+      "question": "What if China announces another large-scale military exercise near Taiwan?",
+      "scenario_profile": {
+        "event_family": "geopolitical_pressure",
+        "affected_sector": "semiconductors",
+        "strategic_importance_level": "High",
+        "state_support_signal": "No direct support",
+        "restriction_or_pressure_signal": "Strong geopolitical-pressure context",
+        "surprise_level": "Moderate",
+        "market_interpretation": "Threat-dominant contrast event for Taiwan concentration and semiconductor supply-chain exposure",
+        "observed_market_pathway": "Restriction pressure pathway"
+      },
+      "top_analogs": [
+        {
+          "event_id": "E003",
+          "event_date": "2022-10-07",
+          "event_title": "BIS advanced computing and semiconductor controls",
+          "similarity_score": 0.8125,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+        },
+        {
+          "event_id": "E002",
+          "event_date": "2022-08-31",
+          "event_title": "Nvidia discloses AI chip export-license requirement",
+          "similarity_score": 0.6875,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+        },
+        {
+          "event_id": "E005",
+          "event_date": "2023-03-31",
+          "event_title": "Japan announces semiconductor-equipment export controls",
+          "similarity_score": 0.6875,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SQ002",
+      "question": "What if the U.S. expands semiconductor export restrictions?",
+      "scenario_profile": {
+        "event_family": "export_control_pressure",
+        "affected_sector": "semiconductors",
+        "strategic_importance_level": "High",
+        "state_support_signal": "No direct support",
+        "restriction_or_pressure_signal": "Strong export-control pressure",
+        "surprise_level": "Moderate",
+        "market_interpretation": "Threat-dominant contrast event for restricted advanced-computing and semiconductor exposure",
+        "observed_market_pathway": "Restriction pressure pathway"
+      },
+      "top_analogs": [
+        {
+          "event_id": "E003",
+          "event_date": "2022-10-07",
+          "event_title": "BIS advanced computing and semiconductor controls",
+          "similarity_score": 0.9375,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+        },
+        {
+          "event_id": "E002",
+          "event_date": "2022-08-31",
+          "event_title": "Nvidia discloses AI chip export-license requirement",
+          "similarity_score": 0.8125,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+        },
+        {
+          "event_id": "E005",
+          "event_date": "2023-03-31",
+          "event_title": "Japan announces semiconductor-equipment export controls",
+          "similarity_score": 0.6875,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SQ003",
+      "question": "What if Taiwan announces new state support for strategic semiconductor firms?",
+      "scenario_profile": {
+        "event_family": "direct_state_support",
+        "affected_sector": "semiconductors",
+        "strategic_importance_level": "High",
+        "state_support_signal": "Strong named subsidy and capacity-support signal",
+        "restriction_or_pressure_signal": "Low",
+        "surprise_level": "Moderate",
+        "market_interpretation": "Primary named-beneficiary support case for strategic semiconductor capacity",
+        "observed_market_pathway": "Named support/downside-offset pathway"
+      },
+      "top_analogs": [
+        {
+          "event_id": "E009",
+          "event_date": "2024-03-20",
+          "event_title": "Intel CHIPS Act preliminary terms announced",
+          "similarity_score": 0.875,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Named support/downside-offset pathway",
+          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
+        },
+        {
+          "event_id": "E007",
+          "event_date": "2023-12-11",
+          "event_title": "BAE receives first CHIPS Act manufacturing award",
+          "similarity_score": 0.75,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Named support pathway",
+          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
+        },
+        {
+          "event_id": "E011",
+          "event_date": "2024-04-15",
+          "event_title": "Samsung CHIPS Act preliminary terms announced",
+          "similarity_score": 0.75,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "surprise_level"
+          ],
+          "observed_market_pathway": "Named support pathway",
+          "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+        }
+      ]
+    }
+  ]
+}

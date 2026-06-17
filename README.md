@@ -153,6 +153,17 @@ The similarity output is not a forecast, trading signal, or investment recommend
 - [Similarity engine methodology](docs/historical_similarity_engine_methodology.md)
 - [Similarity engine summary](docs/historical_similarity_engine_summary.md)
 
+## Scenario Query Demo Layer
+
+The repo can now answer example scenario questions using deterministic historical analog retrieval. The demo maps hard-coded scenario questions to coded profiles, compares them against the historical analog dataset, and returns the closest documented events.
+
+The demo uses no LLM API calls and is a portfolio demonstration, not a forecasting model. It does not provide trading or investment advice.
+
+- [Scenario query demo script](scripts/run_scenario_query_demo.py)
+- [Scenario query demo results](results/scenario_query_demo_results.json)
+- [Scenario query demo methodology](docs/scenario_query_demo_methodology.md)
+- [Scenario query demo summary](docs/scenario_query_demo_summary.md)
+
 ## Repository Structure
 
 - `docs/`: frozen research design, protocol, theory, sample, and dataset documentation.
