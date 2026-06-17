@@ -164,6 +164,17 @@ The demo uses no LLM API calls and is a portfolio demonstration, not a forecasti
 - [Scenario query demo methodology](docs/scenario_query_demo_methodology.md)
 - [Scenario query demo summary](docs/scenario_query_demo_summary.md)
 
+## Observed Pathway Engine
+
+The repo now summarizes observed post-event pathways from similar historical analogs. This supports structured scenario analysis by grouping retrieved analogs into pathway counts, representative events, and evidence notes.
+
+The pathway output does not assign probabilities and does not provide investment advice.
+
+- [Observed pathway engine script](scripts/generate_observed_pathways.py)
+- [Observed pathway output](results/observed_pathways.json)
+- [Observed pathway engine methodology](docs/observed_pathway_engine_methodology.md)
+- [Observed pathway engine summary](docs/observed_pathway_engine_summary.md)
+
 ## Repository Structure
 
 - `docs/`: frozen research design, protocol, theory, sample, and dataset documentation.
