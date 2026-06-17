@@ -34,6 +34,12 @@ http://127.0.0.1:8000/dashboard/
 
 The dashboard displays scenario questions, top historical analogs, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
 
+## Dashboard Preview
+
+![Dashboard Overview](figures/dashboard_overview.png)
+
+![Observed Pathways](figures/dashboard_pathways.png)
+
 ## Key Outputs
 
 - [Historical analog dataset](data/historical_analog_events.csv)
