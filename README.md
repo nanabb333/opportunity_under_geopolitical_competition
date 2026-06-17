@@ -132,6 +132,16 @@ Expected outputs:
 - `data/event_firm_returns.csv`
 - `data/local_price_validation_report.md`
 
+## Historical Analog Dataset Layer
+
+This repo now includes a structured historical-analog event layer that extends the dissertation event-study base into a broader qualitative comparison dataset. It supports comparison across event families, state-support signals, restriction or pressure signals, surprise levels, and observed market pathways.
+
+The historical analog layer is for research comparison and decision-support framing only. It does not make forecasts or investment recommendations.
+
+- [Historical analog events](data/historical_analog_events.csv)
+- [Historical analog dataset methodology](docs/historical_analog_dataset_methodology.md)
+- [Historical analog dataset summary](docs/historical_analog_dataset_summary.md)
+
 ## Repository Structure
 
 - `docs/`: frozen research design, protocol, theory, sample, and dataset documentation.
