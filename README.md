@@ -142,6 +142,17 @@ The historical analog layer is for research comparison and decision-support fram
 - [Historical analog dataset methodology](docs/historical_analog_dataset_methodology.md)
 - [Historical analog dataset summary](docs/historical_analog_dataset_summary.md)
 
+## Historical Similarity Engine
+
+The repo also includes a deterministic pairwise event-comparison script for the historical analog layer. The engine compares coded qualitative features across events and writes a transparent similarity matrix for historical research use.
+
+The similarity output is not a forecast, trading signal, or investment recommendation.
+
+- [Similarity engine script](scripts/calculate_historical_similarity.py)
+- [Similarity matrix output](results/historical_similarity_matrix.csv)
+- [Similarity engine methodology](docs/historical_similarity_engine_methodology.md)
+- [Similarity engine summary](docs/historical_similarity_engine_summary.md)
+
 ## Repository Structure
 
 - `docs/`: frozen research design, protocol, theory, sample, and dataset documentation.
