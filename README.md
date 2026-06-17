@@ -2,6 +2,29 @@
 
 This repository contains a research portfolio on how geopolitical competition can create market opportunity for selected firms and sectors. The project focuses on cases where strategic importance and credible state support may lead investors to price geopolitical pressure as more than downside risk.
 
+## Project Value Chain
+
+```text
+Dissertation Research
+        ↓
+Structured Event Dataset
+        ↓
+Historical Similarity Engine
+        ↓
+Scenario Query Demo
+        ↓
+Observed Pathway Engine
+        ↓
+Dashboard Evidence View
+```
+
+Portfolio packaging:
+
+- [Portfolio case study](docs/portfolio_case_study.md)
+- [Recruiter summary](docs/recruiter_summary.md)
+- [Technical architecture](docs/technical_architecture.md)
+- [Project limitations](docs/project_limitations.md)
+
 ## At a Glance
 
 | Component | Summary |
