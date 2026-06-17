@@ -136,7 +136,27 @@ Tables:
 
 ## Reproducibility
 
-Run the event-study pipeline with:
+Run the deterministic historical analog release checks with:
+
+```bash
+python3 scripts/run_all_checks.py
+```
+
+Launch the static dashboard from the repository root with:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/dashboard/
+```
+
+For detailed instructions, see [Reproducibility Guide](docs/reproducibility_guide.md).
+
+Run the dissertation event-study pipeline with:
 
 ```bash
 python3 scripts/build_event_returns.py
