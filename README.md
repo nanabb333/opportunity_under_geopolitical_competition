@@ -102,6 +102,22 @@ The current historical analog dataset is intentionally limited and mirrors the d
 
 A larger, better-balanced evidence base will improve historical comparison and scenario retrieval, but only if new events are sourced and coded conservatively. See [Event expansion plan](docs/event_expansion_plan.md), [Event family taxonomy V2](docs/event_family_taxonomy_v2.md), and [Event collection protocol](docs/event_collection_protocol.md).
 
+## Dataset Production Pipeline
+
+New events should move through a standardized production workflow: identification, eligibility screening, event-family assignment, coding, quality review, dataset integration, and validation. The workflow keeps source requirements, coding rules, and review steps explicit before an event enters the analytical system.
+
+Use [Event coding workflow](docs/event_coding_workflow.md), [Event coding template](docs/event_coding_template.md), and [Dataset growth dashboard](docs/dataset_growth_dashboard.md) when preparing new rows. Validate a single candidate event with:
+
+```bash
+python3 scripts/validate_event_entry.py path/to/event_record.json
+```
+
+After approved events are integrated into `data/historical_analog_events.csv`, run:
+
+```bash
+python3 scripts/run_all_checks.py
+```
+
 ## Repository Map
 
 - `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analog dataset.
