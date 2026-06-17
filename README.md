@@ -175,6 +175,29 @@ The pathway output does not assign probabilities and does not provide investment
 - [Observed pathway engine methodology](docs/observed_pathway_engine_methodology.md)
 - [Observed pathway engine summary](docs/observed_pathway_engine_summary.md)
 
+## Dashboard Evidence View
+
+The repo includes a static dashboard evidence view for scenario questions, top historical analogs, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
+
+Run it locally from the repository root:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/dashboard/
+```
+
+The dashboard is an evidence view, not a forecasting model or investment-advice tool.
+
+- [Dashboard page](dashboard/index.html)
+- [Dashboard script](dashboard/app.js)
+- [Dashboard styles](dashboard/styles.css)
+- [Dashboard evidence view summary](docs/dashboard_evidence_view_summary.md)
+
 ## Repository Structure
 
 - `docs/`: frozen research design, protocol, theory, sample, and dataset documentation.

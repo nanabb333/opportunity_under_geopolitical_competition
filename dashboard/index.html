@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Evidence View</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Opportunity Under Geopolitical Competition</p>
+        <h1>Dashboard Evidence View</h1>
+        <p class="lede">
+          A static evidence view for scenario questions, historical analogs,
+          observed pathways, and limitations.
+        </p>
+      </div>
+      <div class="status-panel" aria-live="polite">
+        <span class="status-label">Data status</span>
+        <strong id="data-status">Loading evidence files...</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Dissertation theory chain</p>
+          <h2>From geopolitical competition to market interpretation</h2>
+        </div>
+        <ol class="theory-chain" aria-label="Dissertation theory chain">
+          <li>Geopolitical competition</li>
+          <li>Strategic importance</li>
+          <li>Expected state support</li>
+          <li>Investor interpretation</li>
+          <li>Market reaction</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Scenario Query Demo</p>
+          <h2>Scenario questions and retrieved evidence</h2>
+          <p>
+            Each scenario is mapped to a coded profile and compared with the
+            historical analog dataset using deterministic qualitative matching.
+          </p>
+        </div>
+        <div id="scenario-container" class="scenario-grid"></div>
+      </section>
+
+      <section class="section split-section">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Observed Pathways</p>
+            <h2>Grouped historical patterns</h2>
+            <p>
+              Retrieved analogs are grouped by observed pathway to show whether
+              scenario evidence points toward pressure, support, or
+              support/downside-offset logic.
+            </p>
+          </div>
+          <div id="pathway-container" class="pathway-stack"></div>
+        </div>
+
+        <aside class="limitations-card">
+          <p class="eyebrow">Limitations / Not Investment Advice</p>
+          <h2>Research boundaries</h2>
+          <p>
+            This dashboard is a portfolio evidence view. It does not assign
+            probabilities, forecast market reactions, estimate expected returns,
+            or provide trading or investment recommendations.
+          </p>
+          <p>
+            Similarity scores and pathway counts are descriptive summaries of
+            coded historical analogs. Evidence notes should be read as
+            qualitative context, not as causal proof.
+          </p>
+        </aside>
+      </section>
+
+      <section id="error-panel" class="error-panel" hidden></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
