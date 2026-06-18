@@ -2,6 +2,109 @@
 
 A dissertation-based geopolitical risk analytics project that transforms event-study research into historical analogue scenario analysis.
 
+## At a Glance
+
+This repository is a Geopolitical Intelligence Automation System. It retrieves historical analogues, identifies observed pathways, and generates structured evidence summaries for analyst review.
+
+It is not a forecasting system, trading system, or investment recommendation engine.
+
+Core portfolio artefacts:
+
+- [Repository case study](docs/repo_case_study.md)
+- [Product architecture](docs/product_architecture.md)
+- [Recruiter summary](docs/recruiter_summary.md)
+- [Dashboard evidence view](dashboard/index.html)
+
+## Business Problem
+
+Geopolitical risk is often communicated through narrative judgement. That makes it difficult for analysts to compare new scenarios against historical evidence, inspect why a case was selected, and separate evidence from speculation.
+
+This project addresses that problem by turning a dissertation research base into a structured, reproducible analytics workflow for historical comparison.
+
+## Product Overview
+
+The product converts coded geopolitical events into scenario evidence:
+
+```mermaid
+flowchart LR
+    A["Historical Event Dataset"] --> B["Similarity Engine"]
+    B --> C["Scenario Query Engine"]
+    C --> D["Evidence Transparency Layer"]
+    D --> E["Analyst Brief Generator"]
+    E --> F["Static Dashboard"]
+```
+
+The system is deterministic and auditable. It uses coded event features, transparent similarity logic, evidence notes, and analyst caveats.
+
+## Intelligence Workflow
+
+```mermaid
+flowchart TD
+    A["User Scenario Question"] --> B["Coded Scenario Profile"]
+    B --> C["Historical Analogue Retrieval"]
+    C --> D["Observed Pathway Grouping"]
+    D --> E["Evidence Synthesis"]
+    E --> F["Analyst Brief"]
+    F --> G["Dashboard Presentation"]
+```
+
+Each layer preserves traceability back to the historical analogue dataset. The workflow supports scenario assessment, not prediction.
+
+## Evidence Transparency
+
+The Evidence Transparency Layer explains why each analogue was retrieved. It shows:
+
+- match dimensions;
+- partial matches;
+- differences;
+- deterministic similarity explanation;
+- divergence explanation;
+- evidence metadata;
+- analyst caveats.
+
+This improves analytical credibility by making the retrieval logic visible to analysts, recruiters, and academic reviewers.
+
+## Dashboard Views
+
+The static dashboard includes:
+
+- Product Hero with evidence-base KPIs;
+- Evidence Transparency;
+- Scenario Query View;
+- Analyst Briefs;
+- Observed Pathways;
+- Dataset Coverage Dashboard;
+- research limitations and not-investment-advice boundaries.
+
+Run locally:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/dashboard/
+```
+
+## What This Demonstrates
+
+- Research-to-product translation
+- Geopolitical risk analytics
+- Historical analogue retrieval
+- Deterministic scenario analysis
+- Evidence transparency and explainability
+- Analyst brief generation
+- Dashboard communication
+- Reproducible analytics packaging
+
+## Recruiter Takeaways
+
+This project demonstrates the ability to move from an ambiguous strategic-risk problem to a working analytics product. It combines research judgement, data structuring, Python automation, deterministic retrieval, dashboard design, and portfolio storytelling.
+
+The strongest fit is for roles in business analytics, risk analytics, strategy analytics, geopolitical intelligence, market intelligence, and decision-support product analytics.
+
 ## Project Value Chain
 
 ```text
