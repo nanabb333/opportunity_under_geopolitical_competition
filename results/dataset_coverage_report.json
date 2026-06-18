@@ -1,0 +1,161 @@
+{
+  "source_dataset": "data/historical_analog_events.csv",
+  "dataset_size": 12,
+  "coverage": {
+    "event_family": {
+      "label": "Event Family Coverage",
+      "counts": [
+        {
+          "value": "direct_state_support",
+          "count": 5
+        },
+        {
+          "value": "export_control_pressure",
+          "count": 2
+        },
+        {
+          "value": "allied_export_control_pressure",
+          "count": 1
+        },
+        {
+          "value": "broad_policy_support",
+          "count": 1
+        },
+        {
+          "value": "entity_list_pressure",
+          "count": 1
+        },
+        {
+          "value": "implementation_reallocation",
+          "count": 1
+        },
+        {
+          "value": "retaliation_pressure",
+          "count": 1
+        }
+      ]
+    },
+    "affected_sector": {
+      "label": "Sector Coverage",
+      "counts": [
+        {
+          "value": "semiconductors",
+          "count": 4
+        },
+        {
+          "value": "memory chips",
+          "count": 3
+        },
+        {
+          "value": "foundry",
+          "count": 2
+        },
+        {
+          "value": "AI chips",
+          "count": 1
+        },
+        {
+          "value": "defense semiconductors",
+          "count": 1
+        },
+        {
+          "value": "semiconductor equipment",
+          "count": 1
+        }
+      ]
+    },
+    "country_or_region": {
+      "label": "Geography Coverage",
+      "counts": [
+        {
+          "value": "US",
+          "count": 7
+        },
+        {
+          "value": "China",
+          "count": 1
+        },
+        {
+          "value": "Japan",
+          "count": 1
+        },
+        {
+          "value": "Japan/Taiwan",
+          "count": 1
+        },
+        {
+          "value": "US/South Korea",
+          "count": 1
+        },
+        {
+          "value": "US/Taiwan",
+          "count": 1
+        }
+      ]
+    },
+    "strategic_importance_level": {
+      "label": "Strategic Importance Coverage",
+      "counts": [
+        {
+          "value": "High",
+          "count": 12
+        }
+      ]
+    },
+    "surprise_level": {
+      "label": "Surprise Level Coverage",
+      "counts": [
+        {
+          "value": "Moderate",
+          "count": 9
+        },
+        {
+          "value": "Low",
+          "count": 2
+        },
+        {
+          "value": "TBD",
+          "count": 1
+        }
+      ]
+    },
+    "state_support_signal": {
+      "label": "State Support Coverage",
+      "counts": [
+        {
+          "value": "No direct support",
+          "count": 5
+        },
+        {
+          "value": "Strong named subsidy and capacity-support signal",
+          "count": 2
+        },
+        {
+          "value": "Strong broad statutory support",
+          "count": 1
+        },
+        {
+          "value": "Strong implementation/capacity-support signal",
+          "count": 1
+        },
+        {
+          "value": "Strong named subsidy and industrial-policy support",
+          "count": 1
+        },
+        {
+          "value": "Strong named subsidy and loan support",
+          "count": 1
+        },
+        {
+          "value": "Strong named subsidy support",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Coverage counts are descriptive only.",
+    "Counts do not imply forecast accuracy, causal strength, or investment relevance.",
+    "Low-count categories should be prioritized for future sourced event collection."
+  ]
+}
