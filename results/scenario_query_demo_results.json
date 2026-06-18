@@ -1,7 +1,7 @@
 {
   "method": "Deterministic qualitative feature matching; exact match = 1, partial textual overlap = 0.5, no match or unavailable coding = 0.",
   "source_dataset": "data/historical_analogue_events.csv",
-  "events_loaded": 12,
+  "events_loaded": 17,
   "scenarios_evaluated": 3,
   "top_n": 3,
   "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",

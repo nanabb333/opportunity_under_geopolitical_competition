@@ -11,3 +11,8 @@ E009,2024-03-20,Intel CHIPS Act preliminary terms announced,direct_state_support
 E010,2024-04-08,TSMC Arizona CHIPS Act preliminary terms announced,direct_state_support,US/Taiwan,foundry,High,Strong named subsidy and capacity-support signal,Moderate guardrail or cost-offset context,Moderate,Primary allied foundry support case; support may offset high US fab costs,Named support/downside-offset pathway,E010,"Base event from data/events.csv; primary case for TSM; no additional financial result invented."
 E011,2024-04-15,Samsung CHIPS Act preliminary terms announced,direct_state_support,US/South Korea,semiconductors,High,Strong named subsidy and capacity-support signal,Low,TBD,Conditional primary-style case because market-data timing is less straightforward,Named support pathway,Not primary,"Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
 E012,2024-04-25,Micron CHIPS Act preliminary agreement announced,direct_state_support,US,memory chips,High,Strong named subsidy and industrial-policy support,Low,Moderate,Primary named-beneficiary memory-chip support case with memory-cycle confounding risk,Named support/downside-offset pathway,E012,"Base event from data/events.csv; primary case for MU; memory-cycle confounding remains a limitation."
+E013,2022-08-04,Pelosi Visit Military Exercises,military_exercise,China/Taiwan,semiconductors,High,No direct support,Strong military pressure,High,Military escalation and geopolitical uncertainty,Military escalation pathway,Not primary,"PLA exercises following Pelosi visit; military signalling event."
+E014,2023 Joint Sword Exercise
+E015,2024 Joint Sword-A
+E016,2024 Joint Sword-B
+E017,Large-scale PLA Encirclement Exercise
