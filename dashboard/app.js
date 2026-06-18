@@ -1,11 +1,14 @@
 const DATA_FILES = {
   scenario: "../results/scenario_query_demo_results.json",
   pathways: "../results/observed_pathways.json",
+  coverage: "../results/dataset_coverage_report.json",
 };
 
 const state = {
   scenarioData: null,
   pathwayData: null,
+  coverageData: null,
+  coverageError: null,
   errors: [],
 };
 
@@ -44,7 +47,8 @@ function renderDataStatus() {
   }
   const scenarioCount = state.scenarioData?.results?.length ?? 0;
   const pathwayCount = state.pathwayData?.results?.length ?? 0;
-  status.textContent = `${scenarioCount} scenarios and ${pathwayCount} pathway summaries loaded`;
+  const coverageStatus = state.coverageData ? "coverage loaded" : "coverage unavailable";
+  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}`;
 }
 
 function renderErrors() {
@@ -121,6 +125,51 @@ function renderScenarioCards() {
   });
 }
 
+function renderCoverage() {
+  const container = document.getElementById("coverage-container");
+  container.innerHTML = "";
+
+  if (!state.coverageData) {
+    container.appendChild(
+      el(
+        "p",
+        "fallback-note",
+        `Coverage report unavailable. Run python3 scripts/dataset_coverage_analysis.py to generate ${DATA_FILES.coverage}.`
+      )
+    );
+    if (state.coverageError) {
+      container.appendChild(el("p", "fallback-detail", state.coverageError));
+    }
+    return;
+  }
+
+  const coverage = state.coverageData.coverage ?? {};
+  const cards = [
+    ["event_family", "Event family coverage"],
+    ["affected_sector", "Sector coverage"],
+    ["country_or_region", "Geography coverage"],
+  ];
+
+  cards.forEach(([field, title]) => {
+    const card = el("article", "coverage-card");
+    card.appendChild(el("h3", null, title));
+    const counts = coverage[field]?.counts ?? [];
+    if (counts.length === 0) {
+      card.appendChild(el("p", "evidence-note", "No coverage values available."));
+    } else {
+      const list = el("ul", "coverage-list");
+      counts.forEach((item) => {
+        const row = el("li");
+        row.appendChild(el("span", null, item.value));
+        row.appendChild(el("strong", null, String(item.count)));
+        list.appendChild(row);
+      });
+      card.appendChild(list);
+    }
+    container.appendChild(card);
+  });
+}
+
 function renderPathways() {
   const container = document.getElementById("pathway-container");
   container.innerHTML = "";
@@ -164,9 +213,10 @@ function renderPathways() {
 }
 
 async function init() {
-  const [scenarioResult, pathwayResult] = await Promise.allSettled([
+  const [scenarioResult, pathwayResult, coverageResult] = await Promise.allSettled([
     loadJson("scenario", DATA_FILES.scenario),
     loadJson("pathways", DATA_FILES.pathways),
+    loadJson("coverage", DATA_FILES.coverage),
   ]);
 
   if (scenarioResult.status === "fulfilled") {
@@ -181,8 +231,15 @@ async function init() {
     state.errors.push(`Missing or unreadable file: ${DATA_FILES.pathways}. ${pathwayResult.reason.message}`);
   }
 
+  if (coverageResult.status === "fulfilled") {
+    state.coverageData = coverageResult.value;
+  } else {
+    state.coverageError = `Missing or unreadable file: ${DATA_FILES.coverage}. ${coverageResult.reason.message}`;
+  }
+
   renderDataStatus();
   renderErrors();
+  renderCoverage();
   renderScenarioCards();
   renderPathways();
 }

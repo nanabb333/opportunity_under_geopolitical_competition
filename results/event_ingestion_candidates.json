@@ -1,0 +1,43 @@
+{
+  "prototype_status": "manual_simulation_only",
+  "disclaimer": "These are synthetic workflow examples. They are not verified historical events, not scraped records, and not approved rows for data/historical_analog_events.csv.",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "candidate_id": "CAND001",
+      "event_title": "Prototype candidate: military exercise affecting a strategic technology supply route",
+      "event_date": "TBD",
+      "source_name": "Manual prototype placeholder",
+      "source_url": "not_applicable_prototype",
+      "raw_summary": "Synthetic example used to demonstrate how a future collection process could capture a military-exercise candidate before human source review.",
+      "eligibility_status": "needs_human_review",
+      "assigned_event_family": "Military Exercise",
+      "reviewer_note": "Prototype candidate only; not verified and not approved for dataset integration.",
+      "integration_status": "not_integrated"
+    },
+    {
+      "candidate_id": "CAND002",
+      "event_title": "Prototype candidate: export restriction on advanced technology equipment",
+      "event_date": "TBD",
+      "source_name": "Manual prototype placeholder",
+      "source_url": "not_applicable_prototype",
+      "raw_summary": "Synthetic example used to demonstrate how a future workflow could route an export restriction candidate into review without treating it as verified data.",
+      "eligibility_status": "needs_human_review",
+      "assigned_event_family": "Export Restriction",
+      "reviewer_note": "Prototype candidate only; not verified and not approved for dataset integration.",
+      "integration_status": "not_integrated"
+    },
+    {
+      "candidate_id": "CAND003",
+      "event_title": "Prototype candidate: public investment in strategic semiconductor capacity",
+      "event_date": "TBD",
+      "source_name": "Manual prototype placeholder",
+      "source_url": "not_applicable_prototype",
+      "raw_summary": "Synthetic example used to demonstrate how a future workflow could identify a strategic investment candidate for human coding.",
+      "eligibility_status": "needs_human_review",
+      "assigned_event_family": "Strategic Investment",
+      "reviewer_note": "Prototype candidate only; not verified and not approved for dataset integration.",
+      "integration_status": "not_integrated"
+    }
+  ]
+}

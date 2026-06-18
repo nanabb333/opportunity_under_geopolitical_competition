@@ -1,0 +1,2 @@
+candidate_id,event_title,event_date,source_name,source_url,raw_summary,eligibility_status,assigned_event_family,reviewer_note,integration_status
+CAND_TEMPLATE,TBD,YYYY-MM-DD,TBD,TBD,TBD,needs_human_review,TBD,TBD,not_integrated

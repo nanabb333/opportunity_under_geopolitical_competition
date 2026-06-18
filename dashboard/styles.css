@@ -85,6 +85,7 @@ h3 {
 .limitations-card,
 .scenario-card,
 .pathway-card,
+.coverage-card,
 .error-panel {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -152,6 +153,86 @@ main {
 
 .theory-chain li:last-child::after {
   content: "";
+}
+
+.workflow-chain {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(110px, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.workflow-chain li {
+  position: relative;
+  min-height: 76px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+.workflow-chain li::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.workflow-chain li:last-child::after {
+  content: "";
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.coverage-card {
+  padding: 18px;
+}
+
+.coverage-list {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+}
+
+.coverage-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.coverage-list strong {
+  color: var(--ink);
+}
+
+.fallback-note,
+.fallback-detail {
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.fallback-detail {
+  margin-top: 10px;
+  color: #7a2b21;
 }
 
 .scenario-grid {
@@ -327,11 +408,14 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .theory-chain {
+  .theory-chain,
+  .workflow-chain,
+  .coverage-grid {
     grid-template-columns: 1fr;
   }
 
-  .theory-chain li::after {
+  .theory-chain li::after,
+  .workflow-chain li::after {
     content: "v";
     top: auto;
     right: 50%;
