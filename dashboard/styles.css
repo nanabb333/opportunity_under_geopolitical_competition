@@ -206,6 +206,14 @@ main {
   padding: 18px;
 }
 
+.coverage-summary-card {
+  border-left: 4px solid var(--accent);
+}
+
+.evidence-gap-card {
+  grid-column: span 2;
+}
+
 .operations-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -248,6 +256,10 @@ main {
   border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.evidence-gap-card .coverage-list li {
+  display: block;
 }
 
 .coverage-list strong {
@@ -311,7 +323,7 @@ main {
   min-width: 0;
 }
 
-.analog-stack {
+.analogue-stack {
   display: grid;
   gap: 12px;
 }
@@ -398,7 +410,7 @@ main {
 }
 
 .profile-list,
-.analog-list,
+.analogue-list,
 .evidence-list,
 .pathway-list {
   padding: 0;
@@ -428,19 +440,19 @@ main {
   text-align: right;
 }
 
-.analog-list {
+.analogue-list {
   display: grid;
   gap: 12px;
   margin-top: 10px;
 }
 
-.analog-item {
+.analogue-item {
   padding: 12px;
   border: 1px solid var(--line);
   background: var(--surface-muted);
 }
 
-.analog-meta {
+.analogue-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;

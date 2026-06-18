@@ -6,26 +6,25 @@ Event Family Coverage,event_family,broad_policy_support,1
 Event Family Coverage,event_family,entity_list_pressure,1
 Event Family Coverage,event_family,implementation_reallocation,1
 Event Family Coverage,event_family,retaliation_pressure,1
-Sector Coverage,affected_sector,semiconductors,4
-Sector Coverage,affected_sector,memory chips,3
-Sector Coverage,affected_sector,foundry,2
-Sector Coverage,affected_sector,AI chips,1
-Sector Coverage,affected_sector,defense semiconductors,1
-Sector Coverage,affected_sector,semiconductor equipment,1
 Geography Coverage,country_or_region,US,7
 Geography Coverage,country_or_region,China,1
 Geography Coverage,country_or_region,Japan,1
 Geography Coverage,country_or_region,Japan/Taiwan,1
 Geography Coverage,country_or_region,US/South Korea,1
 Geography Coverage,country_or_region,US/Taiwan,1
+Sector Coverage,affected_sector,semiconductors,4
+Sector Coverage,affected_sector,memory chips,3
+Sector Coverage,affected_sector,foundry,2
+Sector Coverage,affected_sector,AI chips,1
+Sector Coverage,affected_sector,defence semiconductors,1
+Sector Coverage,affected_sector,semiconductor equipment,1
 Strategic Importance Coverage,strategic_importance_level,High,12
 Surprise Level Coverage,surprise_level,Moderate,9
 Surprise Level Coverage,surprise_level,Low,2
 Surprise Level Coverage,surprise_level,TBD,1
-State Support Coverage,state_support_signal,No direct support,5
-State Support Coverage,state_support_signal,Strong named subsidy and capacity-support signal,2
-State Support Coverage,state_support_signal,Strong broad statutory support,1
-State Support Coverage,state_support_signal,Strong implementation/capacity-support signal,1
-State Support Coverage,state_support_signal,Strong named subsidy and industrial-policy support,1
-State Support Coverage,state_support_signal,Strong named subsidy and loan support,1
-State Support Coverage,state_support_signal,Strong named subsidy support,1
+Pathway Coverage,observed_market_pathway,Restriction pressure pathway,4
+Pathway Coverage,observed_market_pathway,Named support/downside-offset pathway,3
+Pathway Coverage,observed_market_pathway,Named support pathway,2
+Pathway Coverage,observed_market_pathway,Broad policy support context,1
+Pathway Coverage,observed_market_pathway,Capacity reallocation pathway,1
+Pathway Coverage,observed_market_pathway,Restriction/substitution pathway,1

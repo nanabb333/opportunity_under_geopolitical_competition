@@ -114,6 +114,34 @@ Generate briefs with:
 python3 scripts/generate_analyst_briefs.py
 ```
 
+## Research Quality and Coverage Layer
+
+```text
+Event Collection
+        ↓
+Dataset Expansion
+        ↓
+Coverage Analytics
+        ↓
+Evidence Gap Assessment
+        ↓
+Analyst Brief System
+```
+
+This layer strengthens the evidence base that supports historical analogue retrieval and analyst briefs. It defines event-family coding rules, staged dataset expansion milestones, event collection standards, coverage analytics, evidence-gap assessment, and research quality controls.
+
+- [Event family taxonomy V2](docs/event_family_taxonomy_v2.md)
+- [Event expansion framework](docs/event_expansion_framework.md)
+- [Event collection protocol V2](docs/event_collection_protocol_v2.md)
+- [Dataset coverage analysis script](scripts/dataset_coverage_analysis.py)
+- [Dataset coverage report](results/dataset_coverage_report.json)
+- [Dataset coverage summary](results/dataset_coverage_summary.csv)
+- [Evidence gap assessment](docs/evidence_gap_assessment.md)
+- [Research quality framework](docs/research_quality_framework.md)
+- [Dataset validation framework](docs/dataset_validation_framework.md)
+
+The coverage layer is descriptive. It helps identify where future sourced collection should improve the dataset; it does not provide forecasts, probabilities, or investment advice.
+
 ## Live / Local Dashboard Preview
 
 Run the static dashboard locally from the repository root:

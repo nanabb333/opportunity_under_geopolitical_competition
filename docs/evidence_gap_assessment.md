@@ -2,18 +2,15 @@
 
 ## Purpose
 
-This assessment identifies where the historical analog dataset is currently thin. It supports future event collection by showing which event families, sectors, regions, and pathway types need additional sourced evidence.
+This assessment identifies where `data/historical_analogue_events.csv` remains thin. It supports future collection by showing which event families, sectors, regions, and observed pathway categories should be expanded before the historical analogue and analyst brief systems are treated as broadly representative.
 
-## Underrepresented Event Families
+Current dataset size: 12 events.
 
-Current event-family coverage is concentrated in:
+## High Priority Gaps
 
-- `direct_state_support`: 5 events
-- `export_control_pressure`: 2 events
+### Underrepresented Event Families
 
-All other represented families have only one event each. Several planned taxonomy families have zero current coverage.
-
-Highest-priority gaps:
+The dataset is concentrated in direct state support and export-control pressure. The following taxonomy families currently have no or minimal coverage:
 
 - Military Exercise
 - Diplomatic Shock
@@ -21,87 +18,83 @@ Highest-priority gaps:
 - Election Event
 - Leadership Meeting
 - Supply Chain Relocation
+- Technology Restriction
 
-These categories should be prioritized because they would broaden scenario retrieval beyond subsidy and export-control analogs.
+These gaps matter because current scenario retrieval relies heavily on semiconductor subsidy and restriction analogues. New sourced events in these families would make scenario comparison less dependent on one policy domain.
 
-## Underrepresented Sectors
+### Underrepresented Regions
 
-Current sector coverage is concentrated in semiconductor-linked categories:
+Current geography is U.S.-heavy, with limited coverage for China, Japan, Taiwan-linked cases, South Korea-linked cases, and no dedicated European Union, Netherlands, India, Southeast Asia, or Middle East strategic-supply-chain cases.
 
-- semiconductors
-- memory chips
-- foundry
-- AI chips
-- semiconductor equipment
-- defense semiconductors
+Priority regions:
 
-Underrepresented sectors for future collection:
+- Taiwan
+- China
+- European Union
+- Netherlands
+- South Korea
+- Japan
+- India
+- Southeast Asia
 
-- critical minerals;
-- defense systems;
-- energy security;
-- telecommunications infrastructure;
-- shipping and logistics;
-- battery and clean-energy supply chains;
-- cloud, AI infrastructure, and data-center capacity.
+### Underrepresented Pathway Categories
 
-These sectors should be added only when events meet the source and coding standards in `docs/event_collection_protocol.md`.
+Current observed pathways are strongest for restriction pressure and named state support. Priority pathway gaps include:
 
-## Underrepresented Regions
+- military-pressure pathway
+- diplomatic-shock pathway
+- sanctions-pressure pathway
+- election-policy uncertainty pathway
+- leadership-meeting escalation or de-escalation pathway
+- supply-chain relocation pathway
 
-Current geography is U.S.-heavy:
+## Medium Priority Gaps
 
-- US: 7 events
-- all other country or region labels: 1 event each
+### Underrepresented Sectors
 
-Future collection should improve coverage of:
+The current evidence base is semiconductor-focused. Medium-priority sector expansion should add strategically relevant cases without losing connection to the dissertation theory.
 
-- Taiwan;
-- China;
-- Japan;
-- South Korea;
-- European Union;
-- Netherlands;
-- India;
-- Southeast Asia;
-- Middle East energy-security cases, where relevant to strategic supply chains.
+Candidate sectors:
 
-The goal is not geographic breadth for its own sake. New regions should be added when they improve historical comparison for strategic-sector or geopolitical-pressure mechanisms.
+- critical minerals
+- defence systems
+- telecommunications infrastructure
+- energy security
+- battery and clean-energy supply chains
+- cloud and AI infrastructure
+- shipping and logistics
 
-## Underrepresented Pathway Types
+### Strategic Importance Variation
 
-Current pathway coverage is strongest for:
+All current events are coded as high strategic importance. Future data should include carefully sourced medium-importance cases where the event still has geopolitical relevance. This would improve comparison quality by avoiding a dataset where every event is coded at the highest level.
 
-- restriction pressure;
-- named support;
-- named support/downside-offset.
+## Low Priority Gaps
 
-Underrepresented pathway types:
+Low-priority expansion should wait until the core event-family gaps are addressed:
 
-- capacity relocation;
-- diplomatic shock pathway;
-- sanctions pressure pathway;
-- election-policy uncertainty pathway;
-- leadership-meeting de-escalation or escalation pathway;
-- supply-chain rerouting pathway.
+- additional U.S. semiconductor subsidy cases;
+- additional broad policy-support events;
+- additional facility-opening implementation events;
+- duplicative export-control cases with the same mechanism and region.
 
-## Prioritized Collection Plan
+These events may be useful later, but they add less marginal value than new event families and regions.
 
-Near-term collection should focus on categories that improve diversity of mechanisms:
+## Collection Priorities
 
 1. Add military exercise events connected to Taiwan or strategic supply-chain risk.
 2. Add sanctions events with clear sector or firm exposure.
 3. Add diplomatic shock events with identifiable dates and policy relevance.
-4. Add leadership meeting events only when the meeting produced a clear policy signal.
-5. Add supply-chain relocation events with documented facility, sourcing, or capacity implications.
-6. Add election events only where the policy implication is clear enough to code conservatively.
+4. Add technology-restriction events that are not simply export controls.
+5. Add leadership meeting events only when they produce a clear policy signal.
+6. Add supply-chain relocation events with documented capacity or sourcing implications.
+7. Add election events only where policy implications can be coded conservatively.
 
 ## Quality Guardrails
 
 - Do not add events only because they are famous.
-- Do not add events because the market reaction is already known.
+- Do not add events because a market reaction is already known.
 - Do not expand into weakly sourced geopolitical narratives.
 - Do not treat pathway counts as probabilities.
 - Preserve `TBD` and `Not coded` where evidence is insufficient.
 
-The highest-value next dataset is not the largest one. It is the one with enough family, sector, and geography diversity to support meaningful historical comparison while remaining transparent and source-based.
+The highest-value next dataset is not the largest one. It is the one with enough family, sector, geography, and pathway diversity to support meaningful historical comparison while remaining transparent and source-based.

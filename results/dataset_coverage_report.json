@@ -1,5 +1,5 @@
 {
-  "source_dataset": "data/historical_analog_events.csv",
+  "source_dataset": "data/historical_analogue_events.csv",
   "dataset_size": 12,
   "coverage": {
     "event_family": {
@@ -35,35 +35,6 @@
         }
       ]
     },
-    "affected_sector": {
-      "label": "Sector Coverage",
-      "counts": [
-        {
-          "value": "semiconductors",
-          "count": 4
-        },
-        {
-          "value": "memory chips",
-          "count": 3
-        },
-        {
-          "value": "foundry",
-          "count": 2
-        },
-        {
-          "value": "AI chips",
-          "count": 1
-        },
-        {
-          "value": "defense semiconductors",
-          "count": 1
-        },
-        {
-          "value": "semiconductor equipment",
-          "count": 1
-        }
-      ]
-    },
     "country_or_region": {
       "label": "Geography Coverage",
       "counts": [
@@ -89,6 +60,35 @@
         },
         {
           "value": "US/Taiwan",
+          "count": 1
+        }
+      ]
+    },
+    "affected_sector": {
+      "label": "Sector Coverage",
+      "counts": [
+        {
+          "value": "semiconductors",
+          "count": 4
+        },
+        {
+          "value": "memory chips",
+          "count": 3
+        },
+        {
+          "value": "foundry",
+          "count": 2
+        },
+        {
+          "value": "AI chips",
+          "count": 1
+        },
+        {
+          "value": "defence semiconductors",
+          "count": 1
+        },
+        {
+          "value": "semiconductor equipment",
           "count": 1
         }
       ]
@@ -119,43 +119,103 @@
         }
       ]
     },
-    "state_support_signal": {
-      "label": "State Support Coverage",
+    "observed_market_pathway": {
+      "label": "Pathway Coverage",
       "counts": [
         {
-          "value": "No direct support",
-          "count": 5
+          "value": "Restriction pressure pathway",
+          "count": 4
         },
         {
-          "value": "Strong named subsidy and capacity-support signal",
+          "value": "Named support/downside-offset pathway",
+          "count": 3
+        },
+        {
+          "value": "Named support pathway",
           "count": 2
         },
         {
-          "value": "Strong broad statutory support",
+          "value": "Broad policy support context",
           "count": 1
         },
         {
-          "value": "Strong implementation/capacity-support signal",
+          "value": "Capacity reallocation pathway",
           "count": 1
         },
         {
-          "value": "Strong named subsidy and industrial-policy support",
-          "count": 1
-        },
-        {
-          "value": "Strong named subsidy and loan support",
-          "count": 1
-        },
-        {
-          "value": "Strong named subsidy support",
+          "value": "Restriction/substitution pathway",
           "count": 1
         }
       ]
     }
   },
+  "evidence_gaps": {
+    "high_priority": [
+      "Event family gap: Military Exercise",
+      "Event family gap: Diplomatic Shock",
+      "Event family gap: Technology Restriction",
+      "Event family gap: Strategic Investment",
+      "Event family gap: Sanction",
+      "Event family gap: Supply Chain Relocation",
+      "Pathway gap: military-pressure pathway",
+      "Pathway gap: diplomatic-shock pathway",
+      "Pathway gap: sanctions-pressure pathway",
+      "Pathway gap: election-policy uncertainty pathway"
+    ],
+    "medium_priority": [
+      "Sector gap: critical minerals",
+      "Sector gap: defence systems",
+      "Sector gap: telecommunications infrastructure",
+      "Sector gap: energy security",
+      "Sector gap: battery and clean-energy supply chains",
+      "Region gap: European Union",
+      "Region gap: Netherlands",
+      "Region gap: India",
+      "Region gap: Southeast Asia"
+    ],
+    "low_priority": [
+      "Additional U.S. semiconductor subsidy cases",
+      "Additional broad policy-support cases",
+      "Additional implementation-only facility-opening cases"
+    ],
+    "missing_event_families": [
+      "Military Exercise",
+      "Diplomatic Shock",
+      "Technology Restriction",
+      "Strategic Investment",
+      "Sanction",
+      "Supply Chain Relocation",
+      "Election Event",
+      "Leadership Meeting"
+    ],
+    "missing_sectors": [
+      "critical minerals",
+      "defence systems",
+      "telecommunications infrastructure",
+      "energy security",
+      "battery and clean-energy supply chains",
+      "cloud and AI infrastructure",
+      "shipping and logistics"
+    ],
+    "missing_regions": [
+      "European Union",
+      "Netherlands",
+      "India",
+      "Southeast Asia"
+    ],
+    "missing_pathways": [
+      "military-pressure pathway",
+      "diplomatic-shock pathway",
+      "sanctions-pressure pathway",
+      "election-policy uncertainty pathway",
+      "leadership-meeting escalation pathway",
+      "supply-chain relocation pathway"
+    ],
+    "note": "Evidence gaps are generated from target coverage categories and current dataset labels. They are collection priorities, not analytical findings."
+  },
   "notes": [
     "Coverage counts are descriptive only.",
     "Counts do not imply forecast accuracy, causal strength, or investment relevance.",
-    "Low-count categories should be prioritized for future sourced event collection."
+    "Low-count categories should be prioritised for future sourced event collection."
   ]
 }

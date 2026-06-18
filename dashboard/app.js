@@ -158,10 +158,26 @@ function renderCoverage() {
   }
 
   const coverage = state.coverageData.coverage ?? {};
+  const datasetSize = state.coverageData.dataset_size ?? "Not coded";
+  const gaps = state.coverageData.evidence_gaps ?? {};
+
+  const summaryCard = el("article", "coverage-card coverage-summary-card");
+  summaryCard.appendChild(el("h3", null, "Total Events"));
+  summaryCard.appendChild(el("strong", "operations-value", String(datasetSize)));
+  summaryCard.appendChild(
+    el(
+      "p",
+      "evidence-note",
+      "Approved historical analogue events currently available for scenario retrieval and analyst briefs."
+    )
+  );
+  container.appendChild(summaryCard);
+
   const cards = [
     ["event_family", "Event family coverage"],
     ["affected_sector", "Sector coverage"],
     ["country_or_region", "Geography coverage"],
+    ["observed_market_pathway", "Pathway coverage"],
   ];
 
   cards.forEach(([field, title]) => {
@@ -182,6 +198,29 @@ function renderCoverage() {
     }
     container.appendChild(card);
   });
+
+  const gapCard = el("article", "coverage-card evidence-gap-card");
+  gapCard.appendChild(el("h3", null, "Evidence gaps"));
+  const highPriority = gaps.high_priority ?? [];
+  const mediumPriority = gaps.medium_priority ?? [];
+  const gapList = el("ul", "coverage-list");
+  [...highPriority.slice(0, 6), ...mediumPriority.slice(0, 4)].forEach((gap) => {
+    const row = el("li");
+    row.appendChild(el("span", null, gap));
+    gapList.appendChild(row);
+  });
+  if (gapList.children.length === 0) {
+    gapList.appendChild(el("li", null, "No generated evidence gaps available."));
+  }
+  gapCard.appendChild(gapList);
+  gapCard.appendChild(
+    el(
+      "p",
+      "evidence-note",
+      gaps.note ?? "Evidence gaps are collection priorities, not analytical findings."
+    )
+  );
+  container.appendChild(gapCard);
 }
 
 function renderOperationsOverview() {
