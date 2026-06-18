@@ -26,6 +26,17 @@ FEATURE_FIELDS = [
     "observed_market_pathway",
 ]
 
+FEATURE_WEIGHTS = {
+    "event_family": 3,
+    "affected_sector": 2,
+    "observed_market_pathway": 2,
+    "restriction_or_pressure_signal": 2,
+    "strategic_importance_level": 1,
+    "state_support_signal": 1,
+    "surprise_level": 1,
+    "market_interpretation": 1,
+}
+
 NOT_CODED_VALUES = {"", "tbd", "not coded", "none", "na", "n/a"}
 TOKEN_PATTERN = re.compile(r"[a-z0-9]+")
 
@@ -34,21 +45,21 @@ SCENARIOS = [
         "scenario_id": "SQ001",
         "question": "What if China announces another large-scale military exercise near Taiwan?",
         "scenario_profile": {
-            "event_family": "geopolitical_pressure",
+            "event_family": "Military Exercise",
             "affected_sector": "semiconductors",
             "strategic_importance_level": "High",
             "state_support_signal": "No direct support",
-            "restriction_or_pressure_signal": "Strong geopolitical-pressure context",
+            "restriction_or_pressure_signal": "Strong military pressure",
             "surprise_level": "Moderate",
-            "market_interpretation": "Threat-dominant contrast event for Taiwan concentration and semiconductor supply-chain exposure",
-            "observed_market_pathway": "Restriction pressure pathway",
+            "market_interpretation": "Military pressure and Taiwan concentration supply-chain exposure",
+            "observed_market_pathway": "Military escalation pathway",
         },
     },
     {
         "scenario_id": "SQ002",
         "question": "What if the U.S. expands semiconductor export restrictions?",
         "scenario_profile": {
-            "event_family": "export_control_pressure",
+            "event_family": "Export Restriction",
             "affected_sector": "semiconductors",
             "strategic_importance_level": "High",
             "state_support_signal": "No direct support",
@@ -62,7 +73,7 @@ SCENARIOS = [
         "scenario_id": "SQ003",
         "question": "What if Taiwan announces new state support for strategic semiconductor firms?",
         "scenario_profile": {
-            "event_family": "direct_state_support",
+            "event_family": "Industrial Policy",
             "affected_sector": "semiconductors",
             "strategic_importance_level": "High",
             "state_support_signal": "Strong named subsidy and capacity-support signal",
@@ -132,16 +143,17 @@ def compare_scenario_to_event(
     total_score = 0.0
     matched_fields: list[str] = []
     different_fields: list[str] = []
+    denominator = sum(FEATURE_WEIGHTS[field] for field in FEATURE_FIELDS)
 
     for field in FEATURE_FIELDS:
         field_score = score_field(scenario_profile.get(field), event.get(field))
-        total_score += field_score
+        total_score += field_score * FEATURE_WEIGHTS[field]
         if field_score > 0:
             matched_fields.append(field)
         else:
             different_fields.append(field)
 
-    similarity_score = total_score / len(FEATURE_FIELDS)
+    similarity_score = total_score / denominator
     return {
         "event_id": event["event_id"],
         "event_date": event["event_date"],
@@ -181,6 +193,7 @@ def run_demo(events: list[dict[str, str]]) -> dict[str, object]:
         "events_loaded": len(events),
         "scenarios_evaluated": len(SCENARIOS),
         "top_n": 3,
+        "feature_weights": FEATURE_WEIGHTS,
         "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
         "results": scenario_results,
     }

@@ -25,6 +25,17 @@ FEATURE_FIELDS = [
     "observed_market_pathway",
 ]
 
+FEATURE_WEIGHTS = {
+    "event_family": 3,
+    "affected_sector": 2,
+    "observed_market_pathway": 2,
+    "restriction_or_pressure_signal": 2,
+    "strategic_importance_level": 1,
+    "state_support_signal": 1,
+    "surprise_level": 1,
+    "market_interpretation": 1,
+}
+
 OUTPUT_COLUMNS = [
     "source_event_id",
     "comparison_event_id",
@@ -97,7 +108,7 @@ def load_events() -> list[dict[str, str]]:
 
 def calculate_pairs(events: list[dict[str, str]]) -> list[dict[str, str]]:
     pair_rows: list[dict[str, str]] = []
-    denominator = len(FEATURE_FIELDS)
+    denominator = sum(FEATURE_WEIGHTS[field] for field in FEATURE_FIELDS)
 
     for source in events:
         for comparison in events:
@@ -110,7 +121,7 @@ def calculate_pairs(events: list[dict[str, str]]) -> list[dict[str, str]]:
 
             for field in FEATURE_FIELDS:
                 field_score = score_field(source.get(field), comparison.get(field))
-                total_score += field_score
+                total_score += field_score * FEATURE_WEIGHTS[field]
                 if field_score > 0:
                     matched_fields.append(field)
                 else:
@@ -148,6 +159,9 @@ def print_summary(events: list[dict[str, str]], pair_rows: list[dict[str, str]])
     print("Historical similarity engine")
     print(f"Events loaded: {len(events)}")
     print(f"Event pairs generated: {len(pair_rows)}")
+    print("Feature weights:")
+    for field in FEATURE_FIELDS:
+        print(f"- {field}: {FEATURE_WEIGHTS[field]}")
     print("Top 10 most similar event pairs:")
     for row in pair_rows[:10]:
         print(

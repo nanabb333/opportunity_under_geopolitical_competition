@@ -4,48 +4,39 @@
   "events_loaded": 40,
   "scenarios_evaluated": 3,
   "top_n": 3,
+  "feature_weights": {
+    "event_family": 3,
+    "affected_sector": 2,
+    "observed_market_pathway": 2,
+    "restriction_or_pressure_signal": 2,
+    "strategic_importance_level": 1,
+    "state_support_signal": 1,
+    "surprise_level": 1,
+    "market_interpretation": 1
+  },
   "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
   "results": [
     {
       "scenario_id": "SQ001",
       "question": "What if China announces another large-scale military exercise near Taiwan?",
       "scenario_profile": {
-        "event_family": "geopolitical_pressure",
+        "event_family": "Military Exercise",
         "affected_sector": "semiconductors",
         "strategic_importance_level": "High",
         "state_support_signal": "No direct support",
-        "restriction_or_pressure_signal": "Strong geopolitical-pressure context",
+        "restriction_or_pressure_signal": "Strong military pressure",
         "surprise_level": "Moderate",
-        "market_interpretation": "Threat-dominant contrast event for Taiwan concentration and semiconductor supply-chain exposure",
-        "observed_market_pathway": "Restriction pressure pathway"
+        "market_interpretation": "Military pressure and Taiwan concentration supply-chain exposure",
+        "observed_market_pathway": "Military escalation pathway"
       },
       "top_analogues": [
-        {
-          "event_id": "E003",
-          "event_date": "2022-10-07",
-          "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.75,
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level",
-            "market_interpretation",
-            "observed_market_pathway"
-          ],
-          "different_fields": [
-            "event_family"
-          ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
         {
           "event_id": "E014",
           "event_date": "2023-04-08",
           "event_title": "Joint Sword Exercise",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.9615,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -54,9 +45,7 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
           "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
         },
@@ -64,8 +53,9 @@
           "event_id": "E015",
           "event_date": "2024-05-23",
           "event_title": "Joint Sword-A",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.9615,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -74,11 +64,28 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
           "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
+        },
+        {
+          "event_id": "E016",
+          "event_date": "2024-10-14",
+          "event_title": "Joint Sword-B",
+          "similarity_score": 0.9615,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation."
         }
       ]
     },
@@ -86,7 +93,7 @@
       "scenario_id": "SQ002",
       "question": "What if the U.S. expands semiconductor export restrictions?",
       "scenario_profile": {
-        "event_family": "export_control_pressure",
+        "event_family": "Export Restriction",
         "affected_sector": "semiconductors",
         "strategic_importance_level": "High",
         "state_support_signal": "No direct support",
@@ -100,7 +107,7 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.875,
+          "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
             "affected_sector",
@@ -119,7 +126,7 @@
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.75,
+          "similarity_score": 0.8077,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -139,7 +146,7 @@
           "event_id": "E005",
           "event_date": "2023-03-31",
           "event_title": "Japan announces semiconductor-equipment export controls",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.7308,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -161,7 +168,7 @@
       "scenario_id": "SQ003",
       "question": "What if Taiwan announces new state support for strategic semiconductor firms?",
       "scenario_profile": {
-        "event_family": "direct_state_support",
+        "event_family": "Industrial Policy",
         "affected_sector": "semiconductors",
         "strategic_importance_level": "High",
         "state_support_signal": "Strong named subsidy and capacity-support signal",
@@ -175,8 +182,9 @@
           "event_id": "E009",
           "event_date": "2024-03-20",
           "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.75,
+          "similarity_score": 0.9231,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -185,38 +193,17 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Named support/downside-offset pathway",
           "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E007",
-          "event_date": "2023-12-11",
-          "event_title": "BAE receives first CHIPS Act manufacturing award",
-          "similarity_score": 0.625,
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level",
-            "market_interpretation",
-            "observed_market_pathway"
-          ],
-          "different_fields": [
-            "event_family"
-          ],
-          "observed_market_pathway": "Named support pathway",
-          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         },
         {
           "event_id": "E011",
           "event_date": "2024-04-15",
           "event_title": "Samsung CHIPS Act preliminary terms announced",
-          "similarity_score": 0.625,
+          "similarity_score": 0.8077,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -225,11 +212,29 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "event_family",
             "surprise_level"
           ],
           "observed_market_pathway": "Named support pathway",
           "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+        },
+        {
+          "event_id": "E007",
+          "event_date": "2023-12-11",
+          "event_title": "BAE receives first CHIPS Act manufacturing award",
+          "similarity_score": 0.7692,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Named support pathway",
+          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         }
       ]
     }
