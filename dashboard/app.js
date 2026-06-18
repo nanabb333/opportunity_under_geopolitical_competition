@@ -2,6 +2,7 @@ const DATA_FILES = {
   scenario: "../results/scenario_query_demo_results.json",
   pathways: "../results/observed_pathways.json",
   coverage: "../results/dataset_coverage_report.json",
+  interactive: "../results/interactive_scenario_analysis.json",
 };
 
 const state = {
@@ -9,6 +10,9 @@ const state = {
   pathwayData: null,
   coverageData: null,
   coverageError: null,
+  interactiveData: null,
+  interactiveError: null,
+  selectedInteractiveScenarioId: null,
   errors: [],
 };
 
@@ -48,7 +52,8 @@ function renderDataStatus() {
   const scenarioCount = state.scenarioData?.results?.length ?? 0;
   const pathwayCount = state.pathwayData?.results?.length ?? 0;
   const coverageStatus = state.coverageData ? "coverage loaded" : "coverage unavailable";
-  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}`;
+  const interactiveStatus = state.interactiveData ? "interactive assistant loaded" : "interactive assistant unavailable";
+  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}, ${interactiveStatus}`;
 }
 
 function renderErrors() {
@@ -170,6 +175,124 @@ function renderCoverage() {
   });
 }
 
+function renderInteractiveAssistant() {
+  const container = document.getElementById("interactive-container");
+  container.innerHTML = "";
+
+  const scenarios = state.interactiveData?.results ?? [];
+  if (scenarios.length === 0) {
+    container.appendChild(
+      el(
+        "p",
+        "fallback-note",
+        `Interactive scenario analysis unavailable. Run python3 scripts/analyze_scenario_profile.py to generate ${DATA_FILES.interactive}.`
+      )
+    );
+    if (state.interactiveError) {
+      container.appendChild(el("p", "fallback-detail", state.interactiveError));
+    }
+    return;
+  }
+
+  if (!state.selectedInteractiveScenarioId) {
+    state.selectedInteractiveScenarioId = scenarios[0].scenario_id;
+  }
+
+  const selectedScenario = scenarios.find(
+    (scenario) => scenario.scenario_id === state.selectedInteractiveScenarioId
+  ) ?? scenarios[0];
+
+  const controls = el("div", "interactive-controls");
+  const label = el("label", "scenario-select-label", "Scenario");
+  label.setAttribute("for", "interactive-scenario-select");
+
+  const select = el("select", "scenario-select");
+  select.id = "interactive-scenario-select";
+  scenarios.forEach((scenario) => {
+    const option = el("option", null, `${scenario.scenario_id}: ${scenario.scenario_question}`);
+    option.value = scenario.scenario_id;
+    option.selected = scenario.scenario_id === selectedScenario.scenario_id;
+    select.appendChild(option);
+  });
+  select.addEventListener("change", (event) => {
+    state.selectedInteractiveScenarioId = event.target.value;
+    renderInteractiveAssistant();
+  });
+  controls.appendChild(label);
+  controls.appendChild(select);
+  container.appendChild(controls);
+
+  const summary = el("article", "interactive-summary");
+  summary.appendChild(el("span", "scenario-id", selectedScenario.scenario_id));
+  summary.appendChild(el("h3", null, selectedScenario.scenario_question));
+  summary.appendChild(el("p", "evidence-note", selectedScenario.analyst_note));
+
+  const profile = selectedScenario.scenario_profile ?? {};
+  const profileList = el("ul", "profile-list compact-profile-list");
+  [
+    ["Event family", profile.event_family],
+    ["Sector", profile.affected_sector],
+    ["Region", profile.country_or_region],
+    ["Support signal", profile.state_support_signal],
+    ["Pressure signal", profile.restriction_or_pressure_signal],
+    ["Surprise level", profile.surprise_level],
+  ].forEach(([labelText, value]) => {
+    const item = el("li");
+    item.appendChild(el("span", null, labelText));
+    item.appendChild(el("strong", null, value ?? "Not coded"));
+    profileList.appendChild(item);
+  });
+  summary.appendChild(profileList);
+  container.appendChild(summary);
+
+  const layout = el("div", "interactive-layout");
+
+  const analogColumn = el("section", "interactive-column");
+  analogColumn.appendChild(el("h3", null, "Top Historical Analogs"));
+  const analogList = el("div", "analog-stack");
+  (selectedScenario.top_analogs ?? []).forEach((analog) => {
+    const card = el("article", "mini-card");
+    card.appendChild(el("h3", null, `${analog.event_id}: ${analog.event_title}`));
+    const meta = el("div", "analog-meta");
+    meta.appendChild(el("span", "tag score-tag", `Similarity ${formatScore(analog.similarity_score)}`));
+    meta.appendChild(el("span", "tag", analog.observed_market_pathway ?? "Not coded"));
+    card.appendChild(meta);
+    card.appendChild(
+      el(
+        "p",
+        "evidence-note",
+        `Matched fields: ${(analog.matched_fields ?? []).join(", ") || "None"}`
+      )
+    );
+    card.appendChild(el("p", "evidence-note", analog.evidence_note ?? "No evidence note available."));
+    analogList.appendChild(card);
+  });
+  analogColumn.appendChild(analogList);
+
+  const pathwayColumn = el("section", "interactive-column");
+  pathwayColumn.appendChild(el("h3", null, "Observed Pathway Summary"));
+  const pathwayList = el("ul", "pathway-summary-list");
+  (selectedScenario.observed_pathway_summary ?? []).forEach((pathway) => {
+    const item = el("li");
+    item.appendChild(el("strong", null, pathway.pathway_name));
+    item.appendChild(el("span", "tag count-tag", `${pathway.count} analog(s)`));
+    item.appendChild(
+      el("p", "evidence-note", `Representative events: ${(pathway.representative_events ?? []).join(", ")}`)
+    );
+    pathwayList.appendChild(item);
+  });
+  pathwayColumn.appendChild(pathwayList);
+
+  pathwayColumn.appendChild(el("h3", null, "Limitations"));
+  pathwayColumn.appendChild(
+    el("p", "evidence-note", selectedScenario.limitations_note ?? state.interactiveData.limitations_note)
+  );
+
+  layout.appendChild(analogColumn);
+  layout.appendChild(pathwayColumn);
+  container.appendChild(layout);
+}
+
 function renderPathways() {
   const container = document.getElementById("pathway-container");
   container.innerHTML = "";
@@ -213,10 +336,11 @@ function renderPathways() {
 }
 
 async function init() {
-  const [scenarioResult, pathwayResult, coverageResult] = await Promise.allSettled([
+  const [scenarioResult, pathwayResult, coverageResult, interactiveResult] = await Promise.allSettled([
     loadJson("scenario", DATA_FILES.scenario),
     loadJson("pathways", DATA_FILES.pathways),
     loadJson("coverage", DATA_FILES.coverage),
+    loadJson("interactive", DATA_FILES.interactive),
   ]);
 
   if (scenarioResult.status === "fulfilled") {
@@ -237,9 +361,16 @@ async function init() {
     state.coverageError = `Missing or unreadable file: ${DATA_FILES.coverage}. ${coverageResult.reason.message}`;
   }
 
+  if (interactiveResult.status === "fulfilled") {
+    state.interactiveData = interactiveResult.value;
+  } else {
+    state.interactiveError = `Missing or unreadable file: ${DATA_FILES.interactive}. ${interactiveResult.reason.message}`;
+  }
+
   renderDataStatus();
   renderErrors();
   renderCoverage();
+  renderInteractiveAssistant();
   renderScenarioCards();
   renderPathways();
 }

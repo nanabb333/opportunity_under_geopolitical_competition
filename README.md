@@ -145,6 +145,25 @@ python3 scripts/search_historical_analogs.py "military exercise"
 python3 scripts/search_historical_analogs.py "export restriction"
 ```
 
+## Interactive Scenario Assistant v1
+
+The repo now includes a static interactive scenario assistant. Users can select predefined geopolitical or industrial-policy scenarios, retrieve similar historical analogs, and review observed pathway summaries from the current evidence base.
+
+The assistant is deterministic and evidence-based. It uses no LLM API calls, does not scrape websites, does not forecast outcomes, and does not provide investment advice.
+
+- [Scenario profiles template](data/scenario_profiles_template.csv)
+- [Sample scenario profiles](data/sample_scenario_profiles.csv)
+- [Scenario profile analyzer](scripts/analyze_scenario_profile.py)
+- [Interactive scenario analysis output](results/interactive_scenario_analysis.json)
+- [Interactive scenario assistant methodology](docs/interactive_scenario_assistant_methodology.md)
+- [Interactive scenario assistant summary](docs/interactive_scenario_assistant_summary.md)
+
+Run the analyzer with:
+
+```bash
+python3 scripts/analyze_scenario_profile.py
+```
+
 ## Repository Map
 
 - `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analog dataset.
