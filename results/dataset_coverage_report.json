@@ -1,6 +1,6 @@
 {
   "source_dataset": "data/historical_analogue_events.csv",
-  "dataset_size": 23,
+  "dataset_size": 26,
   "coverage": {
     "event_family": {
       "label": "Event Family Coverage",
@@ -19,7 +19,7 @@
         },
         {
           "value": "Technology Restriction",
-          "count": 2
+          "count": 5
         },
         {
           "value": "Diplomatic Shock",
@@ -59,6 +59,10 @@
           "count": 4
         },
         {
+          "value": "US/China",
+          "count": 3
+        },
+        {
           "value": "Japan",
           "count": 1
         },
@@ -71,7 +75,7 @@
           "count": 1
         },
         {
-          "value": "US/China",
+          "value": "UK/China",
           "count": 1
         },
         {
@@ -104,6 +108,10 @@
           "count": 3
         },
         {
+          "value": "telecommunications infrastructure",
+          "count": 3
+        },
+        {
           "value": "foundry",
           "count": 2
         },
@@ -126,7 +134,7 @@
       "counts": [
         {
           "value": "High",
-          "count": 23
+          "count": 26
         }
       ]
     },
@@ -135,11 +143,11 @@
       "counts": [
         {
           "value": "Moderate",
-          "count": 17
+          "count": 18
         },
         {
           "value": "High",
-          "count": 2
+          "count": 4
         },
         {
           "value": "Low",
@@ -164,6 +172,10 @@
         },
         {
           "value": "Named support/downside-offset pathway",
+          "count": 3
+        },
+        {
+          "value": "Telecom restriction pathway",
           "count": 3
         },
         {
@@ -220,10 +232,10 @@
     ],
     "medium_priority": [
       "Sector gap: defence systems",
-      "Sector gap: telecommunications infrastructure",
       "Sector gap: energy security",
       "Sector gap: battery and clean-energy supply chains",
       "Sector gap: cloud and AI infrastructure",
+      "Sector gap: shipping and logistics",
       "Region gap: European Union",
       "Region gap: Netherlands",
       "Region gap: India",
@@ -240,7 +252,6 @@
     ],
     "missing_sectors": [
       "defence systems",
-      "telecommunications infrastructure",
       "energy security",
       "battery and clean-energy supply chains",
       "cloud and AI infrastructure",
