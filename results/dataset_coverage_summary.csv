@@ -1,17 +1,22 @@
 coverage_type,field,value,count
-Event Family Coverage,event_family,Industrial Policy,6
-Event Family Coverage,event_family,Export Restriction,5
+Event Family Coverage,event_family,Industrial Policy,16
+Event Family Coverage,event_family,Export Restriction,6
 Event Family Coverage,event_family,Military Exercise,5
 Event Family Coverage,event_family,Technology Restriction,5
+Event Family Coverage,event_family,Strategic Investment,2
+Event Family Coverage,event_family,Supply Chain Relocation,2
 Event Family Coverage,event_family,Diplomatic Shock,1
 Event Family Coverage,event_family,Election Event,1
 Event Family Coverage,event_family,Leadership Meeting,1
 Event Family Coverage,event_family,Sanction,1
-Event Family Coverage,event_family,Supply Chain Relocation,1
-Geography Coverage,country_or_region,US,7
+Geography Coverage,country_or_region,US,13
 Geography Coverage,country_or_region,China/Taiwan,5
 Geography Coverage,country_or_region,China,4
+Geography Coverage,country_or_region,EU,4
 Geography Coverage,country_or_region,US/China,3
+Geography Coverage,country_or_region,US/global,2
+Geography Coverage,country_or_region,Australia/UK/US,1
+Geography Coverage,country_or_region,Indo-Pacific,1
 Geography Coverage,country_or_region,Japan,1
 Geography Coverage,country_or_region,Japan/Taiwan,1
 Geography Coverage,country_or_region,Taiwan/China/US,1
@@ -20,16 +25,21 @@ Geography Coverage,country_or_region,US/South Korea,1
 Geography Coverage,country_or_region,US/Taiwan,1
 Geography Coverage,country_or_region,US/Taiwan/China,1
 Sector Coverage,affected_sector,semiconductors,12
+Sector Coverage,affected_sector,AI infrastructure,4
+Sector Coverage,affected_sector,defence systems,4
+Sector Coverage,affected_sector,energy security,4
 Sector Coverage,affected_sector,critical minerals,3
 Sector Coverage,affected_sector,memory chips,3
 Sector Coverage,affected_sector,telecommunications infrastructure,3
 Sector Coverage,affected_sector,foundry,2
+Sector Coverage,affected_sector,supply-chain resilience,2
 Sector Coverage,affected_sector,AI chips,1
 Sector Coverage,affected_sector,defence semiconductors,1
 Sector Coverage,affected_sector,semiconductor equipment,1
-Strategic Importance Coverage,strategic_importance_level,High,26
-Surprise Level Coverage,surprise_level,Moderate,18
-Surprise Level Coverage,surprise_level,High,4
+Strategic Importance Coverage,strategic_importance_level,High,39
+Strategic Importance Coverage,strategic_importance_level,Medium,1
+Surprise Level Coverage,surprise_level,Moderate,29
+Surprise Level Coverage,surprise_level,High,7
 Surprise Level Coverage,surprise_level,Low,2
 Surprise Level Coverage,surprise_level,TBD,2
 Pathway Coverage,observed_market_pathway,Military escalation pathway,4
@@ -37,12 +47,24 @@ Pathway Coverage,observed_market_pathway,Restriction pressure pathway,4
 Pathway Coverage,observed_market_pathway,Named support/downside-offset pathway,3
 Pathway Coverage,observed_market_pathway,Telecom restriction pathway,3
 Pathway Coverage,observed_market_pathway,Critical-minerals restriction pathway,2
+Pathway Coverage,observed_market_pathway,Defence industrial-base pathway,2
+Pathway Coverage,observed_market_pathway,Energy manufacturing support pathway,2
 Pathway Coverage,observed_market_pathway,Named support pathway,2
+Pathway Coverage,observed_market_pathway,AI compute restriction pathway,1
+Pathway Coverage,observed_market_pathway,AI governance pathway,1
+Pathway Coverage,observed_market_pathway,AI infrastructure investment pathway,1
+Pathway Coverage,observed_market_pathway,AI national-security pathway,1
+Pathway Coverage,observed_market_pathway,Allied defence industrial pathway,1
 Pathway Coverage,observed_market_pathway,Broad policy support context,1
 Pathway Coverage,observed_market_pathway,Capacity reallocation pathway,1
+Pathway Coverage,observed_market_pathway,Critical-materials resilience pathway,1
 Pathway Coverage,observed_market_pathway,Critical-minerals technology restriction pathway,1
+Pathway Coverage,observed_market_pathway,Defence production pathway,1
 Pathway Coverage,observed_market_pathway,Diplomatic escalation pathway,1
 Pathway Coverage,observed_market_pathway,Diplomatic stabilisation pathway,1
+Pathway Coverage,observed_market_pathway,Energy security diversification pathway,1
+Pathway Coverage,observed_market_pathway,Grid resilience pathway,1
 Pathway Coverage,observed_market_pathway,Political-cycle pathway,1
 Pathway Coverage,observed_market_pathway,Restriction/substitution pathway,1
+Pathway Coverage,observed_market_pathway,Supply-chain resilience pathway,1
 Pathway Coverage,observed_market_pathway,TBD,1

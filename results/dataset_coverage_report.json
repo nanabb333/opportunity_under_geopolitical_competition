@@ -1,17 +1,17 @@
 {
   "source_dataset": "data/historical_analogue_events.csv",
-  "dataset_size": 26,
+  "dataset_size": 40,
   "coverage": {
     "event_family": {
       "label": "Event Family Coverage",
       "counts": [
         {
           "value": "Industrial Policy",
-          "count": 6
+          "count": 16
         },
         {
           "value": "Export Restriction",
-          "count": 5
+          "count": 6
         },
         {
           "value": "Military Exercise",
@@ -20,6 +20,14 @@
         {
           "value": "Technology Restriction",
           "count": 5
+        },
+        {
+          "value": "Strategic Investment",
+          "count": 2
+        },
+        {
+          "value": "Supply Chain Relocation",
+          "count": 2
         },
         {
           "value": "Diplomatic Shock",
@@ -36,10 +44,6 @@
         {
           "value": "Sanction",
           "count": 1
-        },
-        {
-          "value": "Supply Chain Relocation",
-          "count": 1
         }
       ]
     },
@@ -48,7 +52,7 @@
       "counts": [
         {
           "value": "US",
-          "count": 7
+          "count": 13
         },
         {
           "value": "China/Taiwan",
@@ -59,8 +63,24 @@
           "count": 4
         },
         {
+          "value": "EU",
+          "count": 4
+        },
+        {
           "value": "US/China",
           "count": 3
+        },
+        {
+          "value": "US/global",
+          "count": 2
+        },
+        {
+          "value": "Australia/UK/US",
+          "count": 1
+        },
+        {
+          "value": "Indo-Pacific",
+          "count": 1
         },
         {
           "value": "Japan",
@@ -100,6 +120,18 @@
           "count": 12
         },
         {
+          "value": "AI infrastructure",
+          "count": 4
+        },
+        {
+          "value": "defence systems",
+          "count": 4
+        },
+        {
+          "value": "energy security",
+          "count": 4
+        },
+        {
           "value": "critical minerals",
           "count": 3
         },
@@ -113,6 +145,10 @@
         },
         {
           "value": "foundry",
+          "count": 2
+        },
+        {
+          "value": "supply-chain resilience",
           "count": 2
         },
         {
@@ -134,7 +170,11 @@
       "counts": [
         {
           "value": "High",
-          "count": 26
+          "count": 39
+        },
+        {
+          "value": "Medium",
+          "count": 1
         }
       ]
     },
@@ -143,11 +183,11 @@
       "counts": [
         {
           "value": "Moderate",
-          "count": 18
+          "count": 29
         },
         {
           "value": "High",
-          "count": 4
+          "count": 7
         },
         {
           "value": "Low",
@@ -183,8 +223,36 @@
           "count": 2
         },
         {
+          "value": "Defence industrial-base pathway",
+          "count": 2
+        },
+        {
+          "value": "Energy manufacturing support pathway",
+          "count": 2
+        },
+        {
           "value": "Named support pathway",
           "count": 2
+        },
+        {
+          "value": "AI compute restriction pathway",
+          "count": 1
+        },
+        {
+          "value": "AI governance pathway",
+          "count": 1
+        },
+        {
+          "value": "AI infrastructure investment pathway",
+          "count": 1
+        },
+        {
+          "value": "AI national-security pathway",
+          "count": 1
+        },
+        {
+          "value": "Allied defence industrial pathway",
+          "count": 1
         },
         {
           "value": "Broad policy support context",
@@ -195,7 +263,15 @@
           "count": 1
         },
         {
+          "value": "Critical-materials resilience pathway",
+          "count": 1
+        },
+        {
           "value": "Critical-minerals technology restriction pathway",
+          "count": 1
+        },
+        {
+          "value": "Defence production pathway",
           "count": 1
         },
         {
@@ -207,11 +283,23 @@
           "count": 1
         },
         {
+          "value": "Energy security diversification pathway",
+          "count": 1
+        },
+        {
+          "value": "Grid resilience pathway",
+          "count": 1
+        },
+        {
           "value": "Political-cycle pathway",
           "count": 1
         },
         {
           "value": "Restriction/substitution pathway",
+          "count": 1
+        },
+        {
+          "value": "Supply-chain resilience pathway",
           "count": 1
         },
         {
@@ -223,7 +311,6 @@
   },
   "evidence_gaps": {
     "high_priority": [
-      "Event family gap: Strategic Investment",
       "Event family gap: Semiconductor Expansion",
       "Pathway gap: military-pressure pathway",
       "Pathway gap: diplomatic-shock pathway",
@@ -231,12 +318,8 @@
       "Pathway gap: election-policy uncertainty pathway"
     ],
     "medium_priority": [
-      "Sector gap: defence systems",
-      "Sector gap: energy security",
       "Sector gap: battery and clean-energy supply chains",
-      "Sector gap: cloud and AI infrastructure",
       "Sector gap: shipping and logistics",
-      "Region gap: European Union",
       "Region gap: Netherlands",
       "Region gap: India",
       "Region gap: Southeast Asia"
@@ -247,18 +330,13 @@
       "Additional implementation-only facility-opening cases"
     ],
     "missing_event_families": [
-      "Strategic Investment",
       "Semiconductor Expansion"
     ],
     "missing_sectors": [
-      "defence systems",
-      "energy security",
       "battery and clean-energy supply chains",
-      "cloud and AI infrastructure",
       "shipping and logistics"
     ],
     "missing_regions": [
-      "European Union",
       "Netherlands",
       "India",
       "Southeast Asia"
