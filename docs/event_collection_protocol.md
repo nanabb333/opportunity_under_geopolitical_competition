@@ -4,6 +4,25 @@
 
 This protocol defines how future events should be collected for the historical analogue dataset. The goal is to expand the evidence base without weakening transparency, source quality, or academic honesty.
 
+## Dataset Scope
+
+The historical analogue dataset is designed to capture events associated with geopolitical competition in strategically important sectors.
+
+Coverage includes:
+
+* military signalling;
+* diplomatic shocks;
+* industrial policy;
+* export restrictions;
+* technology restrictions;
+* sanctions;
+* strategic investment;
+* supply-chain relocation;
+* leadership meetings;
+* election events.
+
+The dataset is not intended to cover general macroeconomic events, broad financial crises, or non-strategic political developments unless they directly affect strategic sectors or geopolitical competition.
+
 ## Inclusion Criteria
 
 An event may be included if all conditions are met:
