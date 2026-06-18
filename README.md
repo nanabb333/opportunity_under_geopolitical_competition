@@ -46,6 +46,43 @@ Phase 3 adds the operating foundation for a continuously updated geopolitical in
 
 This roadmap is an architecture and workflow foundation. It does not add scraping, LLM APIs, forecasting, or investment advice.
 
+## Intelligence Operations Layer
+
+```text
+Source Registry
+        ↓
+Review Queue
+        ↓
+Approved Dataset
+        ↓
+Similarity Engine
+        ↓
+Scenario Assistant
+        ↓
+Observed Pathways
+        ↓
+Operations Dashboard
+```
+
+Phase 4 adds a semi-automated intelligence workflow around the existing research and analytics system. Candidate events move through a review queue before any approved dataset update, dataset changes are logged, and the pipeline orchestrator regenerates validation, coverage, similarity, scenario, pathway, and dashboard health outputs.
+
+- [Event review queue](data/event_review_queue.csv)
+- [Event review queue methodology](docs/event_review_queue_methodology.md)
+- [Dataset change log](data/dataset_change_log.csv)
+- [Dataset governance](docs/dataset_governance.md)
+- [Pipeline orchestrator](scripts/pipeline_orchestrator.py)
+- [System health report script](scripts/system_health_report.py)
+- [System health methodology](docs/system_health_methodology.md)
+- [Portfolio case study V2](docs/portfolio_case_study_v2.md)
+
+Run the operations pipeline with:
+
+```bash
+python3 scripts/pipeline_orchestrator.py
+```
+
+The operations layer supports reproducibility and operational scalability. It does not scrape websites, call LLM APIs, forecast outcomes, or provide investment advice.
+
 ## Live / Local Dashboard Preview
 
 Run the static dashboard locally from the repository root:

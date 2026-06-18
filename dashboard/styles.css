@@ -86,6 +86,7 @@ h3 {
 .scenario-card,
 .pathway-card,
 .coverage-card,
+.operations-card,
 .interactive-panel,
 .interactive-summary,
 .mini-card,
@@ -201,6 +202,32 @@ main {
 
 .coverage-card {
   padding: 18px;
+}
+
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.operations-card {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+}
+
+.operations-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.operations-value {
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .coverage-list {
@@ -486,6 +513,7 @@ main {
 
   .theory-chain,
   .workflow-chain,
+  .operations-grid,
   .coverage-grid {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-06-18T10:13:54",
+  "overall_status": "PASS",
+  "dataset_status": {
+    "path": "data/historical_analog_events.csv",
+    "status": "PASS",
+    "dataset_size": 12,
+    "latest_update_date": "2026-06-18"
+  },
+  "queue_status": {
+    "path": "data/event_review_queue.csv",
+    "status": "PASS",
+    "queue_size": 0,
+    "reviewed_events": 0,
+    "pending_events": 0
+  },
+  "coverage_status": {
+    "path": "results/dataset_coverage_report.json",
+    "status": "PASS",
+    "message": "Coverage report loaded.",
+    "dataset_size": 12,
+    "matches_dataset": true
+  },
+  "validation_status": {
+    "status": "PASS",
+    "returncode": 0,
+    "message": "Validation result: PASSED"
+  },
+  "dashboard_status": {
+    "status": "PASS",
+    "missing_files": [],
+    "checked_files": [
+      "dashboard/index.html",
+      "dashboard/app.js",
+      "dashboard/styles.css",
+      "results/scenario_query_demo_results.json",
+      "results/observed_pathways.json",
+      "results/interactive_scenario_analysis.json",
+      "results/dataset_coverage_report.json"
+    ]
+  },
+  "limitations_note": "System health is an operational readiness summary. It does not forecast geopolitical outcomes, estimate returns, or provide investment advice."
+}

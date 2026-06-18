@@ -3,6 +3,7 @@ const DATA_FILES = {
   pathways: "../results/observed_pathways.json",
   coverage: "../results/dataset_coverage_report.json",
   interactive: "../results/interactive_scenario_analysis.json",
+  health: "../results/system_health_report.json",
 };
 
 const state = {
@@ -13,6 +14,8 @@ const state = {
   interactiveData: null,
   interactiveError: null,
   selectedInteractiveScenarioId: null,
+  healthData: null,
+  healthError: null,
   errors: [],
 };
 
@@ -53,7 +56,8 @@ function renderDataStatus() {
   const pathwayCount = state.pathwayData?.results?.length ?? 0;
   const coverageStatus = state.coverageData ? "coverage loaded" : "coverage unavailable";
   const interactiveStatus = state.interactiveData ? "interactive assistant loaded" : "interactive assistant unavailable";
-  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}, ${interactiveStatus}`;
+  const healthStatus = state.healthData ? `operations ${state.healthData.overall_status}` : "operations unavailable";
+  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}, ${interactiveStatus}, ${healthStatus}`;
 }
 
 function renderErrors() {
@@ -171,6 +175,50 @@ function renderCoverage() {
       });
       card.appendChild(list);
     }
+    container.appendChild(card);
+  });
+}
+
+function renderOperationsOverview() {
+  const container = document.getElementById("operations-container");
+  container.innerHTML = "";
+
+  if (!state.healthData) {
+    container.appendChild(
+      el(
+        "p",
+        "fallback-note",
+        `Operations health report unavailable. Run python3 scripts/system_health_report.py to generate ${DATA_FILES.health}.`
+      )
+    );
+    if (state.healthError) {
+      container.appendChild(el("p", "fallback-detail", state.healthError));
+    }
+    return;
+  }
+
+  const dataset = state.healthData.dataset_status ?? {};
+  const queue = state.healthData.queue_status ?? {};
+  const coverage = state.healthData.coverage_status ?? {};
+  const validation = state.healthData.validation_status ?? {};
+  const dashboard = state.healthData.dashboard_status ?? {};
+
+  const cards = [
+    ["Dataset size", dataset.dataset_size ?? "Not coded", dataset.status ?? "Not coded"],
+    ["Queue size", queue.queue_size ?? "Not coded", queue.status ?? "Not coded"],
+    ["Reviewed events", queue.reviewed_events ?? "Not coded", "Queue"],
+    ["Pending events", queue.pending_events ?? "Not coded", "Queue"],
+    ["Latest update date", dataset.latest_update_date ?? "Not recorded", "Change log"],
+    ["Coverage status", coverage.status ?? "Not coded", coverage.matches_dataset ? "Current" : "Check coverage"],
+    ["Validation status", validation.status ?? "Not coded", validation.message ?? "No validation message"],
+    ["Dashboard status", dashboard.status ?? "Not coded", "Static files"],
+  ];
+
+  cards.forEach(([label, value, note]) => {
+    const card = el("article", "operations-card");
+    card.appendChild(el("span", "operations-label", label));
+    card.appendChild(el("strong", "operations-value", String(value)));
+    card.appendChild(el("p", "evidence-note", String(note)));
     container.appendChild(card);
   });
 }
@@ -336,11 +384,12 @@ function renderPathways() {
 }
 
 async function init() {
-  const [scenarioResult, pathwayResult, coverageResult, interactiveResult] = await Promise.allSettled([
+  const [scenarioResult, pathwayResult, coverageResult, interactiveResult, healthResult] = await Promise.allSettled([
     loadJson("scenario", DATA_FILES.scenario),
     loadJson("pathways", DATA_FILES.pathways),
     loadJson("coverage", DATA_FILES.coverage),
     loadJson("interactive", DATA_FILES.interactive),
+    loadJson("health", DATA_FILES.health),
   ]);
 
   if (scenarioResult.status === "fulfilled") {
@@ -367,8 +416,15 @@ async function init() {
     state.interactiveError = `Missing or unreadable file: ${DATA_FILES.interactive}. ${interactiveResult.reason.message}`;
   }
 
+  if (healthResult.status === "fulfilled") {
+    state.healthData = healthResult.value;
+  } else {
+    state.healthError = `Missing or unreadable file: ${DATA_FILES.health}. ${healthResult.reason.message}`;
+  }
+
   renderDataStatus();
   renderErrors();
+  renderOperationsOverview();
   renderCoverage();
   renderInteractiveAssistant();
   renderScenarioCards();
