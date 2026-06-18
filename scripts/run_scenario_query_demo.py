@@ -7,6 +7,7 @@ import csv
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 
@@ -36,6 +37,21 @@ FEATURE_WEIGHTS = {
     "surprise_level": 1,
     "market_interpretation": 1,
 }
+
+TRANSPARENCY_DIMENSIONS = [
+    ("event_family", "Event Family"),
+    ("affected_sector", "Strategic Sector"),
+    ("strategic_importance_level", "Strategic Importance"),
+    ("state_support_signal", "State Support Signal"),
+    ("restriction_or_pressure_signal", "Geopolitical Context"),
+]
+
+CAVEATS = [
+    "Historical analogue does not imply future repetition.",
+    "Dataset coverage limitations may apply.",
+    "Observed pathways are descriptive rather than predictive.",
+    "Similarity scores summarise coded feature overlap and are not probability estimates.",
+]
 
 NOT_CODED_VALUES = {"", "tbd", "not coded", "none", "na", "n/a"}
 TOKEN_PATTERN = re.compile(r"[a-z0-9]+")
@@ -113,6 +129,68 @@ def score_field(scenario_value: str | None, event_value: str | None) -> float:
     return 0.0
 
 
+def status_from_score(field_score: float) -> str:
+    if field_score == 1.0:
+        return "Match"
+    if field_score == 0.5:
+        return "Partial Match"
+    return "Different"
+
+
+def coverage_classification(event_family: str, family_counts: Counter[str]) -> str:
+    family_count = family_counts[event_family]
+    if family_count >= 5:
+        return "Well represented family"
+    if family_count >= 3:
+        return "Moderate family coverage"
+    return "Limited family coverage"
+
+
+def build_match_dimensions(
+    scenario_profile: dict[str, str],
+    event: dict[str, str],
+) -> list[dict[str, str]]:
+    dimensions: list[dict[str, str]] = []
+    for field, label in TRANSPARENCY_DIMENSIONS:
+        field_score = score_field(scenario_profile.get(field), event.get(field))
+        dimensions.append({
+            "field": field,
+            "label": label,
+            "scenario_value": scenario_profile.get(field, "Not coded"),
+            "event_value": event.get(field, "Not coded"),
+            "status": status_from_score(field_score),
+        })
+    return dimensions
+
+
+def plain_list(values: list[str]) -> str:
+    if not values:
+        return "no primary dimensions"
+    if len(values) == 1:
+        return values[0]
+    return f"{', '.join(values[:-1])}, and {values[-1]}"
+
+
+def build_similarity_explanation(match_dimensions: list[dict[str, str]]) -> str:
+    matches = [
+        dimension["label"].lower()
+        for dimension in match_dimensions
+        if dimension["status"] in {"Match", "Partial Match"}
+    ]
+    return f"Retrieved because the scenario and historical event overlap on {plain_list(matches)}."
+
+
+def build_divergence_explanation(match_dimensions: list[dict[str, str]]) -> str:
+    differences = [
+        f"{dimension['label'].lower()} ({dimension['scenario_value']} versus {dimension['event_value']})"
+        for dimension in match_dimensions
+        if dimension["status"] == "Different"
+    ]
+    if not differences:
+        return "No major coded differences appear across the transparency dimensions."
+    return f"Important differences remain in {plain_list(differences)}."
+
+
 def load_events() -> list[dict[str, str]]:
     if not INPUT_PATH.exists():
         raise FileNotFoundError(f"Input dataset not found: {INPUT_PATH}")
@@ -139,6 +217,7 @@ def load_events() -> list[dict[str, str]]:
 def compare_scenario_to_event(
     scenario_profile: dict[str, str],
     event: dict[str, str],
+    family_counts: Counter[str],
 ) -> dict[str, str | float | list[str]]:
     total_score = 0.0
     matched_fields: list[str] = []
@@ -154,24 +233,41 @@ def compare_scenario_to_event(
             different_fields.append(field)
 
     similarity_score = total_score / denominator
+    match_dimensions = build_match_dimensions(scenario_profile, event)
     return {
         "event_id": event["event_id"],
         "event_date": event["event_date"],
         "event_title": event["event_title"],
+        "event_family": event["event_family"],
+        "affected_sector": event["affected_sector"],
+        "strategic_importance_level": event["strategic_importance_level"],
+        "state_support_signal": event["state_support_signal"],
+        "restriction_or_pressure_signal": event["restriction_or_pressure_signal"],
         "similarity_score": round(similarity_score, 4),
         "matched_fields": matched_fields,
         "different_fields": different_fields,
         "observed_market_pathway": event["observed_market_pathway"],
         "evidence_note": event["evidence_note"],
+        "match_dimensions": match_dimensions,
+        "similarity_explanation": build_similarity_explanation(match_dimensions),
+        "divergence_explanation": build_divergence_explanation(match_dimensions),
+        "evidence_metadata": {
+            "event_id": event["event_id"],
+            "event_family": event["event_family"],
+            "strategic_sector": event["affected_sector"],
+            "coverage_classification": coverage_classification(event["event_family"], family_counts),
+        },
+        "analyst_caveats": CAVEATS,
     }
 
 
 def run_demo(events: list[dict[str, str]]) -> dict[str, object]:
     scenario_results: list[dict[str, object]] = []
+    family_counts = Counter(event["event_family"] for event in events)
 
     for scenario in SCENARIOS:
         comparisons = [
-            compare_scenario_to_event(scenario["scenario_profile"], event)
+            compare_scenario_to_event(scenario["scenario_profile"], event, family_counts)
             for event in events
         ]
         comparisons.sort(

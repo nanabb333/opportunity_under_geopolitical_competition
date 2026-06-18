@@ -114,6 +114,20 @@ Generate briefs with:
 python3 scripts/generate_analyst_briefs.py
 ```
 
+## Evidence Transparency Layer
+
+The dashboard now includes an evidence transparency layer that explains why each historical analogue was retrieved. For every top analogue, it shows matched dimensions, differences, deterministic similarity rationale, evidence metadata, and analyst caveats.
+
+This improves analytical credibility by making retrieval logic visible:
+
+- why the analogue was selected;
+- which fields matched or partially matched;
+- which fields differed;
+- what evidence note supports the pathway;
+- what limitations analysts should keep in view.
+
+For intelligence workflows, this matters because analyst users need traceability before relying on a scenario comparison. For portfolio review, it demonstrates explainable analytics engineering rather than a black-box dashboard. The layer remains descriptive: it does not forecast, assign probabilities, or provide investment advice.
+
 ## Research Quality and Coverage Layer
 
 ```text

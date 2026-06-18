@@ -12,31 +12,8 @@
       "brief_id": "BRIEF-SQ001",
       "scenario_id": "SQ001",
       "scenario_title": "What if China announces another large-scale military exercise near Taiwan?",
-      "scenario_description": "The scenario is coded as geopolitical_pressure in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong geopolitical-pressure context, and surprise level coded as Moderate.",
+      "scenario_description": "The scenario is coded as Military Exercise in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong military pressure, and surprise level coded as Moderate.",
       "most_relevant_historical_analogues": [
-        {
-          "event_id": "E003",
-          "event_date": "2022-10-07",
-          "event_title": "BIS advanced computing and semiconductor controls",
-          "event_family": "Export Restriction",
-          "country_or_region": "US",
-          "affected_sector": "semiconductors",
-          "similarity_score": 0.75,
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level",
-            "market_interpretation",
-            "observed_market_pathway"
-          ],
-          "different_fields": [
-            "event_family"
-          ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
         {
           "event_id": "E014",
           "event_date": "2023-04-08",
@@ -44,8 +21,9 @@
           "event_family": "Military Exercise",
           "country_or_region": "China/Taiwan",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.9615,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -54,9 +32,7 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
           "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
         },
@@ -67,8 +43,9 @@
           "event_family": "Military Exercise",
           "country_or_region": "China/Taiwan",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.9615,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -77,20 +54,41 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
           "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
+        },
+        {
+          "event_id": "E016",
+          "event_date": "2024-10-14",
+          "event_title": "Joint Sword-B",
+          "event_family": "Military Exercise",
+          "country_or_region": "China/Taiwan",
+          "affected_sector": "semiconductors",
+          "similarity_score": 0.9615,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation."
         }
       ],
       "observed_historical_pathways": [
         {
           "pathway_name": "Military escalation pathway",
-          "count": 2,
+          "count": 3,
           "representative_events": [
             "E014",
-            "E015"
+            "E015",
+            "E016"
           ],
           "evidence_notes": [
             {
@@ -100,37 +98,25 @@
             {
               "event_id": "E015",
               "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
-            }
-          ],
-          "analyst_note": "2 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
-          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
-        },
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 1,
-          "representative_events": [
-            "E003"
-          ],
-          "evidence_notes": [
+            },
             {
-              "event_id": "E003",
-              "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+              "event_id": "E016",
+              "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation."
             }
           ],
-          "analyst_note": "1 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "analyst_note": "3 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
           "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ],
       "key_evidence": [
-        "E003: Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously.",
         "E014: PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference.",
         "E015: PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented.",
-        "Military escalation pathway: 2 retrieved analogue(s), represented by E014, E015.",
-        "Restriction pressure pathway: 1 retrieved analogue(s), represented by E003."
+        "E016: PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation.",
+        "Military escalation pathway: 3 retrieved analogue(s), represented by E014, E015, E016."
       ],
       "analytical_caveats": [
         "The brief uses 3 retrieved historical analogue(s) from the current scenario demo.",
-        "The observed pathway section contains 2 pathway grouping(s).",
+        "The observed pathway section contains 1 pathway grouping(s).",
         "The scenario profile is a coded comparison input, not an approved historical event.",
         "Evidence notes are qualitative research context, not causal proof."
       ],
@@ -141,13 +127,13 @@
         "Observed pathways summarise retrieved historical patterns and do not estimate expected returns.",
         "This output is not investment advice, a trading recommendation, or a market-timing tool."
       ],
-      "analyst_note": "The retrieved evidence is organised around Military escalation pathway, Restriction pressure pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
+      "analyst_note": "The retrieved evidence is organised around Military escalation pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
     },
     {
       "brief_id": "BRIEF-SQ002",
       "scenario_id": "SQ002",
       "scenario_title": "What if the U.S. expands semiconductor export restrictions?",
-      "scenario_description": "The scenario is coded as export_control_pressure in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong export-control pressure, and surprise level coded as Moderate.",
+      "scenario_description": "The scenario is coded as Export Restriction in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong export-control pressure, and surprise level coded as Moderate.",
       "most_relevant_historical_analogues": [
         {
           "event_id": "E003",
@@ -156,7 +142,7 @@
           "event_family": "Export Restriction",
           "country_or_region": "US",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.875,
+          "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
             "affected_sector",
@@ -178,7 +164,7 @@
           "event_family": "Export Restriction",
           "country_or_region": "US",
           "affected_sector": "AI chips",
-          "similarity_score": 0.75,
+          "similarity_score": 0.8077,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -201,7 +187,7 @@
           "event_family": "Export Restriction",
           "country_or_region": "Japan",
           "affected_sector": "semiconductor equipment",
-          "similarity_score": 0.6875,
+          "similarity_score": 0.7308,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -270,7 +256,7 @@
       "brief_id": "BRIEF-SQ003",
       "scenario_id": "SQ003",
       "scenario_title": "What if Taiwan announces new state support for strategic semiconductor firms?",
-      "scenario_description": "The scenario is coded as direct_state_support in semiconductors, with strategic importance coded as High, support signal coded as Strong named subsidy and capacity-support signal, pressure signal coded as Low, and surprise level coded as Moderate.",
+      "scenario_description": "The scenario is coded as Industrial Policy in semiconductors, with strategic importance coded as High, support signal coded as Strong named subsidy and capacity-support signal, pressure signal coded as Low, and surprise level coded as Moderate.",
       "most_relevant_historical_analogues": [
         {
           "event_id": "E009",
@@ -279,8 +265,9 @@
           "event_family": "Industrial Policy",
           "country_or_region": "US",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.75,
+          "similarity_score": 0.9231,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -289,34 +276,9 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [
-            "event_family"
-          ],
+          "different_fields": [],
           "observed_market_pathway": "Named support/downside-offset pathway",
           "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E007",
-          "event_date": "2023-12-11",
-          "event_title": "BAE receives first CHIPS Act manufacturing award",
-          "event_family": "Industrial Policy",
-          "country_or_region": "US",
-          "affected_sector": "defence semiconductors",
-          "similarity_score": 0.625,
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level",
-            "market_interpretation",
-            "observed_market_pathway"
-          ],
-          "different_fields": [
-            "event_family"
-          ],
-          "observed_market_pathway": "Named support pathway",
-          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         },
         {
           "event_id": "E011",
@@ -325,8 +287,9 @@
           "event_family": "Industrial Policy",
           "country_or_region": "US/South Korea",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.625,
+          "similarity_score": 0.8077,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -335,11 +298,32 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "event_family",
             "surprise_level"
           ],
           "observed_market_pathway": "Named support pathway",
           "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+        },
+        {
+          "event_id": "E007",
+          "event_date": "2023-12-11",
+          "event_title": "BAE receives first CHIPS Act manufacturing award",
+          "event_family": "Industrial Policy",
+          "country_or_region": "US",
+          "affected_sector": "defence semiconductors",
+          "similarity_score": 0.7692,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [],
+          "observed_market_pathway": "Named support pathway",
+          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         }
       ],
       "observed_historical_pathways": [
@@ -347,17 +331,17 @@
           "pathway_name": "Named support pathway",
           "count": 2,
           "representative_events": [
-            "E007",
-            "E011"
+            "E011",
+            "E007"
           ],
           "evidence_notes": [
             {
-              "event_id": "E007",
-              "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
-            },
-            {
               "event_id": "E011",
               "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+            },
+            {
+              "event_id": "E007",
+              "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
             }
           ],
           "analyst_note": "2 of 3 retrieved analogues fall into a named-support historical pattern. This points to state-support logic, but the retrieved analogues may differ in market relevance, timing quality, or beneficiary visibility.",
@@ -381,9 +365,9 @@
       ],
       "key_evidence": [
         "E009: Base event from data/events.csv; primary case for INTC; no additional financial result invented.",
-        "E007: Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case.",
         "E011: Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding.",
-        "Named support pathway: 2 retrieved analogue(s), represented by E007, E011.",
+        "E007: Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case.",
+        "Named support pathway: 2 retrieved analogue(s), represented by E011, E007.",
         "Named support/downside-offset pathway: 1 retrieved analogue(s), represented by E009."
       ],
       "analytical_caveats": [

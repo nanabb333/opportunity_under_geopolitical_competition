@@ -316,6 +316,84 @@ main {
   color: var(--ink);
 }
 
+.transparency-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.transparency-scenario {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.transparency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.transparency-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+}
+
+.metadata-list,
+.dimension-list {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.metadata-list li,
+.dimension-row {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.metadata-list span,
+.dimension-label,
+.dimension-values {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.metadata-list strong,
+.dimension-status {
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.dimension-row {
+  border-left: 4px solid var(--line);
+}
+
+.dimension-row.match {
+  border-left-color: var(--accent);
+}
+
+.dimension-row.partial-match {
+  border-left-color: var(--amber);
+}
+
+.dimension-row.different {
+  border-left-color: var(--danger-line);
+}
+
+.caveat-list {
+  gap: 8px;
+}
+
 .fallback-note,
 .fallback-detail {
   padding: 14px;
@@ -612,6 +690,10 @@ main {
   }
 
   .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transparency-grid {
     grid-template-columns: 1fr;
   }
 

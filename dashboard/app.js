@@ -114,6 +114,94 @@ function renderHeroKpis() {
   }
 }
 
+function statusClass(status) {
+  return String(status || "Different").toLowerCase().replace(/\s+/g, "-");
+}
+
+function renderEvidenceTransparency() {
+  const container = document.getElementById("transparency-container");
+  container.innerHTML = "";
+
+  const scenarios = state.scenarioData?.results ?? [];
+  if (scenarios.length === 0) {
+    container.appendChild(el("p", "fallback-note", "No scenario evidence is available for transparency review."));
+    return;
+  }
+
+  scenarios.forEach((scenario) => {
+    const scenarioBlock = el("article", "transparency-scenario");
+    scenarioBlock.appendChild(el("span", "scenario-id", scenario.scenario_id));
+    scenarioBlock.appendChild(el("h3", null, scenario.question));
+
+    const analogueGrid = el("div", "transparency-grid");
+    (scenario.top_analogues ?? []).forEach((analogue) => {
+      const card = el("article", "transparency-card");
+      card.appendChild(el("h3", null, `${analogue.event_id}: ${analogue.event_title}`));
+
+      const metadata = analogue.evidence_metadata ?? {};
+      const metadataList = el("ul", "metadata-list");
+      [
+        ["Event ID", metadata.event_id ?? analogue.event_id],
+        ["Event Family", metadata.event_family ?? analogue.event_family ?? "Not coded"],
+        ["Strategic Sector", metadata.strategic_sector ?? analogue.affected_sector ?? "Not coded"],
+        ["Coverage Classification", metadata.coverage_classification ?? "Not coded"],
+      ].forEach(([label, value]) => {
+        const item = el("li");
+        item.appendChild(el("span", null, label));
+        item.appendChild(el("strong", null, value));
+        metadataList.appendChild(item);
+      });
+      card.appendChild(metadataList);
+
+      card.appendChild(el("h3", null, "Match Dimensions"));
+      const dimensionList = el("ul", "dimension-list");
+      (analogue.match_dimensions ?? []).forEach((dimension) => {
+        const item = el("li", `dimension-row ${statusClass(dimension.status)}`);
+        const label = el("span", "dimension-label", dimension.label);
+        const values = el(
+          "span",
+          "dimension-values",
+          `${dimension.scenario_value ?? "Not coded"} / ${dimension.event_value ?? "Not coded"}`
+        );
+        const status = el("strong", "dimension-status", dimension.status ?? "Different");
+        item.appendChild(label);
+        item.appendChild(values);
+        item.appendChild(status);
+        dimensionList.appendChild(item);
+      });
+      if (dimensionList.children.length === 0) {
+        dimensionList.appendChild(el("li", "dimension-row different", "No transparency dimensions available."));
+      }
+      card.appendChild(dimensionList);
+
+      card.appendChild(el("h3", null, "Similarity Explanation"));
+      card.appendChild(el("p", "evidence-note", analogue.similarity_explanation ?? "No deterministic explanation available."));
+
+      card.appendChild(el("h3", null, "Divergence Explanation"));
+      card.appendChild(el("p", "evidence-note", analogue.divergence_explanation ?? "No divergence explanation available."));
+
+      card.appendChild(el("h3", null, "Evidence Support"));
+      card.appendChild(el("p", "evidence-note", analogue.evidence_note ?? "No evidence note available."));
+
+      card.appendChild(el("h3", null, "Analyst Caveats"));
+      const caveatList = el("ul", "brief-list caveat-list");
+      (analogue.analyst_caveats ?? [
+        "Historical analogue does not imply future repetition.",
+        "Dataset coverage limitations may apply.",
+        "Observed pathways are descriptive rather than predictive.",
+      ]).forEach((caveat) => {
+        caveatList.appendChild(el("li", null, caveat));
+      });
+      card.appendChild(caveatList);
+
+      analogueGrid.appendChild(card);
+    });
+
+    scenarioBlock.appendChild(analogueGrid);
+    container.appendChild(scenarioBlock);
+  });
+}
+
 function renderScenarioCards() {
   const container = document.getElementById("scenario-container");
   container.innerHTML = "";
@@ -626,6 +714,7 @@ async function init() {
   renderDataStatus();
   renderErrors();
   renderHeroKpis();
+  renderEvidenceTransparency();
   renderOperationsOverview();
   renderCoverage();
   renderInteractiveAssistant();

@@ -34,6 +34,11 @@
           "event_id": "E014",
           "event_date": "2023-04-08",
           "event_title": "Joint Sword Exercise",
+          "event_family": "Military Exercise",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong military pressure",
           "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
@@ -47,12 +52,68 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
-          "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
+          "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Military Exercise",
+              "event_value": "Military Exercise",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong military pressure",
+              "event_value": "Strong military pressure",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E014",
+            "event_family": "Military Exercise",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E015",
           "event_date": "2024-05-23",
           "event_title": "Joint Sword-A",
+          "event_family": "Military Exercise",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong military pressure",
           "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
@@ -66,12 +127,68 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
-          "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
+          "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Military Exercise",
+              "event_value": "Military Exercise",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong military pressure",
+              "event_value": "Strong military pressure",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E015",
+            "event_family": "Military Exercise",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E016",
           "event_date": "2024-10-14",
           "event_title": "Joint Sword-B",
+          "event_family": "Military Exercise",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong military pressure",
           "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
@@ -85,7 +202,58 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Military escalation pathway",
-          "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation."
+          "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Military Exercise",
+              "event_value": "Military Exercise",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong military pressure",
+              "event_value": "Strong military pressure",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E016",
+            "event_family": "Military Exercise",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         }
       ]
     },
@@ -107,6 +275,11 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
+          "event_family": "Export Restriction",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong export-control pressure",
           "similarity_score": 0.9615,
           "matched_fields": [
             "event_family",
@@ -120,12 +293,68 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Export Restriction",
+              "event_value": "Export Restriction",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong export-control pressure",
+              "event_value": "Strong export-control pressure",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E003",
+            "event_family": "Export Restriction",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
+          "event_family": "Export Restriction",
+          "affected_sector": "AI chips",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong export-control pressure",
           "similarity_score": 0.8077,
           "matched_fields": [
             "event_family",
@@ -140,12 +369,68 @@
             "affected_sector"
           ],
           "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Export Restriction",
+              "event_value": "Export Restriction",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "AI chips",
+              "status": "Different"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong export-control pressure",
+              "event_value": "Strong export-control pressure",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "Important differences remain in strategic sector (semiconductors versus AI chips).",
+          "evidence_metadata": {
+            "event_id": "E002",
+            "event_family": "Export Restriction",
+            "strategic_sector": "AI chips",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E005",
           "event_date": "2023-03-31",
           "event_title": "Japan announces semiconductor-equipment export controls",
+          "event_family": "Export Restriction",
+          "affected_sector": "semiconductor equipment",
+          "strategic_importance_level": "High",
+          "state_support_signal": "No direct support",
+          "restriction_or_pressure_signal": "Strong allied export-control pressure",
           "similarity_score": 0.7308,
           "matched_fields": [
             "event_family",
@@ -160,7 +445,58 @@
             "affected_sector"
           ],
           "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Export Restriction",
+              "event_value": "Export Restriction",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductor equipment",
+              "status": "Different"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "No direct support",
+              "event_value": "No direct support",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Strong export-control pressure",
+              "event_value": "Strong allied export-control pressure",
+              "status": "Partial Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "Important differences remain in strategic sector (semiconductors versus semiconductor equipment).",
+          "evidence_metadata": {
+            "event_id": "E005",
+            "event_family": "Export Restriction",
+            "strategic_sector": "semiconductor equipment",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         }
       ]
     },
@@ -182,6 +518,11 @@
           "event_id": "E009",
           "event_date": "2024-03-20",
           "event_title": "Intel CHIPS Act preliminary terms announced",
+          "event_family": "Industrial Policy",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "Strong named subsidy and loan support",
+          "restriction_or_pressure_signal": "Low",
           "similarity_score": 0.9231,
           "matched_fields": [
             "event_family",
@@ -195,12 +536,68 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Named support/downside-offset pathway",
-          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
+          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Industrial Policy",
+              "event_value": "Industrial Policy",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "Strong named subsidy and capacity-support signal",
+              "event_value": "Strong named subsidy and loan support",
+              "status": "Partial Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Low",
+              "event_value": "Low",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E009",
+            "event_family": "Industrial Policy",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E011",
           "event_date": "2024-04-15",
           "event_title": "Samsung CHIPS Act preliminary terms announced",
+          "event_family": "Industrial Policy",
+          "affected_sector": "semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "Strong named subsidy and capacity-support signal",
+          "restriction_or_pressure_signal": "Low",
           "similarity_score": 0.8077,
           "matched_fields": [
             "event_family",
@@ -215,12 +612,68 @@
             "surprise_level"
           ],
           "observed_market_pathway": "Named support pathway",
-          "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+          "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Industrial Policy",
+              "event_value": "Industrial Policy",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "semiconductors",
+              "status": "Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "Strong named subsidy and capacity-support signal",
+              "event_value": "Strong named subsidy and capacity-support signal",
+              "status": "Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Low",
+              "event_value": "Low",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E011",
+            "event_family": "Industrial Policy",
+            "strategic_sector": "semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         },
         {
           "event_id": "E007",
           "event_date": "2023-12-11",
           "event_title": "BAE receives first CHIPS Act manufacturing award",
+          "event_family": "Industrial Policy",
+          "affected_sector": "defence semiconductors",
+          "strategic_importance_level": "High",
+          "state_support_signal": "Strong named subsidy support",
+          "restriction_or_pressure_signal": "Low",
           "similarity_score": 0.7692,
           "matched_fields": [
             "event_family",
@@ -234,7 +687,58 @@
           ],
           "different_fields": [],
           "observed_market_pathway": "Named support pathway",
-          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
+          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case.",
+          "match_dimensions": [
+            {
+              "field": "event_family",
+              "label": "Event Family",
+              "scenario_value": "Industrial Policy",
+              "event_value": "Industrial Policy",
+              "status": "Match"
+            },
+            {
+              "field": "affected_sector",
+              "label": "Strategic Sector",
+              "scenario_value": "semiconductors",
+              "event_value": "defence semiconductors",
+              "status": "Partial Match"
+            },
+            {
+              "field": "strategic_importance_level",
+              "label": "Strategic Importance",
+              "scenario_value": "High",
+              "event_value": "High",
+              "status": "Match"
+            },
+            {
+              "field": "state_support_signal",
+              "label": "State Support Signal",
+              "scenario_value": "Strong named subsidy and capacity-support signal",
+              "event_value": "Strong named subsidy support",
+              "status": "Partial Match"
+            },
+            {
+              "field": "restriction_or_pressure_signal",
+              "label": "Geopolitical Context",
+              "scenario_value": "Low",
+              "event_value": "Low",
+              "status": "Match"
+            }
+          ],
+          "similarity_explanation": "Retrieved because the scenario and historical event overlap on event family, strategic sector, strategic importance, state support signal, and geopolitical context.",
+          "divergence_explanation": "No major coded differences appear across the transparency dimensions.",
+          "evidence_metadata": {
+            "event_id": "E007",
+            "event_family": "Industrial Policy",
+            "strategic_sector": "defence semiconductors",
+            "coverage_classification": "Well represented family"
+          },
+          "analyst_caveats": [
+            "Historical analogue does not imply future repetition.",
+            "Dataset coverage limitations may apply.",
+            "Observed pathways are descriptive rather than predictive.",
+            "Similarity scores summarise coded feature overlap and are not probability estimates."
+          ]
         }
       ]
     }

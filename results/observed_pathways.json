@@ -9,10 +9,11 @@
       "pathway_summary": [
         {
           "pathway_name": "Military escalation pathway",
-          "count": 2,
+          "count": 3,
           "representative_events": [
             "E014",
-            "E015"
+            "E015",
+            "E016"
           ],
           "evidence_notes": [
             {
@@ -22,24 +23,13 @@
             {
               "event_id": "E015",
               "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
-            }
-          ],
-          "analyst_note": "2 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
-          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
-        },
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 1,
-          "representative_events": [
-            "E003"
-          ],
-          "evidence_notes": [
+            },
             {
-              "event_id": "E003",
-              "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+              "event_id": "E016",
+              "evidence_note": "PLA Joint Sword-B exercise around Taiwan; coded as repeated military-pressure analogue requiring cautious interpretation."
             }
           ],
-          "analyst_note": "1 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "analyst_note": "3 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
           "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ]
@@ -83,17 +73,17 @@
           "pathway_name": "Named support pathway",
           "count": 2,
           "representative_events": [
-            "E007",
-            "E011"
+            "E011",
+            "E007"
           ],
           "evidence_notes": [
             {
-              "event_id": "E007",
-              "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
-            },
-            {
               "event_id": "E011",
               "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+            },
+            {
+              "event_id": "E007",
+              "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
             }
           ],
           "analyst_note": "2 of 3 retrieved analogues fall into a named-support historical pattern. This points to state-support logic, but the retrieved analogues may differ in market relevance, timing quality, or beneficiary visibility.",
