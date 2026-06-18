@@ -1,36 +1,44 @@
 {
   "source_dataset": "data/historical_analogue_events.csv",
-  "dataset_size": 12,
+  "dataset_size": 20,
   "coverage": {
     "event_family": {
       "label": "Event Family Coverage",
       "counts": [
         {
-          "value": "direct_state_support",
+          "value": "Industrial Policy",
+          "count": 6
+        },
+        {
+          "value": "Military Exercise",
           "count": 5
         },
         {
-          "value": "export_control_pressure",
-          "count": 2
+          "value": "Export Restriction",
+          "count": 3
         },
         {
-          "value": "allied_export_control_pressure",
+          "value": "Diplomatic Shock",
           "count": 1
         },
         {
-          "value": "broad_policy_support",
+          "value": "Election Event",
           "count": 1
         },
         {
-          "value": "entity_list_pressure",
+          "value": "Leadership Meeting",
           "count": 1
         },
         {
-          "value": "implementation_reallocation",
+          "value": "Sanction",
           "count": 1
         },
         {
-          "value": "retaliation_pressure",
+          "value": "Supply Chain Relocation",
+          "count": 1
+        },
+        {
+          "value": "Technology Restriction",
           "count": 1
         }
       ]
@@ -41,6 +49,10 @@
         {
           "value": "US",
           "count": 7
+        },
+        {
+          "value": "China/Taiwan",
+          "count": 5
         },
         {
           "value": "China",
@@ -55,11 +67,23 @@
           "count": 1
         },
         {
+          "value": "Taiwan/China/US",
+          "count": 1
+        },
+        {
+          "value": "US/China",
+          "count": 1
+        },
+        {
           "value": "US/South Korea",
           "count": 1
         },
         {
           "value": "US/Taiwan",
+          "count": 1
+        },
+        {
+          "value": "US/Taiwan/China",
           "count": 1
         }
       ]
@@ -69,7 +93,7 @@
       "counts": [
         {
           "value": "semiconductors",
-          "count": 4
+          "count": 12
         },
         {
           "value": "memory chips",
@@ -98,7 +122,7 @@
       "counts": [
         {
           "value": "High",
-          "count": 12
+          "count": 20
         }
       ]
     },
@@ -107,7 +131,11 @@
       "counts": [
         {
           "value": "Moderate",
-          "count": 9
+          "count": 14
+        },
+        {
+          "value": "High",
+          "count": 2
         },
         {
           "value": "Low",
@@ -115,13 +143,17 @@
         },
         {
           "value": "TBD",
-          "count": 1
+          "count": 2
         }
       ]
     },
     "observed_market_pathway": {
       "label": "Pathway Coverage",
       "counts": [
+        {
+          "value": "Military escalation pathway",
+          "count": 4
+        },
         {
           "value": "Restriction pressure pathway",
           "count": 4
@@ -143,7 +175,23 @@
           "count": 1
         },
         {
+          "value": "Diplomatic escalation pathway",
+          "count": 1
+        },
+        {
+          "value": "Diplomatic stabilisation pathway",
+          "count": 1
+        },
+        {
+          "value": "Political-cycle pathway",
+          "count": 1
+        },
+        {
           "value": "Restriction/substitution pathway",
+          "count": 1
+        },
+        {
+          "value": "TBD",
           "count": 1
         }
       ]
@@ -151,12 +199,8 @@
   },
   "evidence_gaps": {
     "high_priority": [
-      "Event family gap: Military Exercise",
-      "Event family gap: Diplomatic Shock",
-      "Event family gap: Technology Restriction",
       "Event family gap: Strategic Investment",
-      "Event family gap: Sanction",
-      "Event family gap: Supply Chain Relocation",
+      "Event family gap: Semiconductor Expansion",
       "Pathway gap: military-pressure pathway",
       "Pathway gap: diplomatic-shock pathway",
       "Pathway gap: sanctions-pressure pathway",
@@ -179,14 +223,8 @@
       "Additional implementation-only facility-opening cases"
     ],
     "missing_event_families": [
-      "Military Exercise",
-      "Diplomatic Shock",
-      "Technology Restriction",
       "Strategic Investment",
-      "Sanction",
-      "Supply Chain Relocation",
-      "Election Event",
-      "Leadership Meeting"
+      "Semiconductor Expansion"
     ],
     "missing_sectors": [
       "critical minerals",

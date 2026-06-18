@@ -1,30 +1,42 @@
 coverage_type,field,value,count
-Event Family Coverage,event_family,direct_state_support,5
-Event Family Coverage,event_family,export_control_pressure,2
-Event Family Coverage,event_family,allied_export_control_pressure,1
-Event Family Coverage,event_family,broad_policy_support,1
-Event Family Coverage,event_family,entity_list_pressure,1
-Event Family Coverage,event_family,implementation_reallocation,1
-Event Family Coverage,event_family,retaliation_pressure,1
+Event Family Coverage,event_family,Industrial Policy,6
+Event Family Coverage,event_family,Military Exercise,5
+Event Family Coverage,event_family,Export Restriction,3
+Event Family Coverage,event_family,Diplomatic Shock,1
+Event Family Coverage,event_family,Election Event,1
+Event Family Coverage,event_family,Leadership Meeting,1
+Event Family Coverage,event_family,Sanction,1
+Event Family Coverage,event_family,Supply Chain Relocation,1
+Event Family Coverage,event_family,Technology Restriction,1
 Geography Coverage,country_or_region,US,7
+Geography Coverage,country_or_region,China/Taiwan,5
 Geography Coverage,country_or_region,China,1
 Geography Coverage,country_or_region,Japan,1
 Geography Coverage,country_or_region,Japan/Taiwan,1
+Geography Coverage,country_or_region,Taiwan/China/US,1
+Geography Coverage,country_or_region,US/China,1
 Geography Coverage,country_or_region,US/South Korea,1
 Geography Coverage,country_or_region,US/Taiwan,1
-Sector Coverage,affected_sector,semiconductors,4
+Geography Coverage,country_or_region,US/Taiwan/China,1
+Sector Coverage,affected_sector,semiconductors,12
 Sector Coverage,affected_sector,memory chips,3
 Sector Coverage,affected_sector,foundry,2
 Sector Coverage,affected_sector,AI chips,1
 Sector Coverage,affected_sector,defence semiconductors,1
 Sector Coverage,affected_sector,semiconductor equipment,1
-Strategic Importance Coverage,strategic_importance_level,High,12
-Surprise Level Coverage,surprise_level,Moderate,9
+Strategic Importance Coverage,strategic_importance_level,High,20
+Surprise Level Coverage,surprise_level,Moderate,14
+Surprise Level Coverage,surprise_level,High,2
 Surprise Level Coverage,surprise_level,Low,2
-Surprise Level Coverage,surprise_level,TBD,1
+Surprise Level Coverage,surprise_level,TBD,2
+Pathway Coverage,observed_market_pathway,Military escalation pathway,4
 Pathway Coverage,observed_market_pathway,Restriction pressure pathway,4
 Pathway Coverage,observed_market_pathway,Named support/downside-offset pathway,3
 Pathway Coverage,observed_market_pathway,Named support pathway,2
 Pathway Coverage,observed_market_pathway,Broad policy support context,1
 Pathway Coverage,observed_market_pathway,Capacity reallocation pathway,1
+Pathway Coverage,observed_market_pathway,Diplomatic escalation pathway,1
+Pathway Coverage,observed_market_pathway,Diplomatic stabilisation pathway,1
+Pathway Coverage,observed_market_pathway,Political-cycle pathway,1
 Pathway Coverage,observed_market_pathway,Restriction/substitution pathway,1
+Pathway Coverage,observed_market_pathway,TBD,1
