@@ -18,12 +18,11 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "event_family": "export_control_pressure",
+          "event_family": "Export Restriction",
           "country_or_region": "US",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.8125,
+          "similarity_score": 0.75,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -32,20 +31,22 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Restriction pressure pathway",
           "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
         },
         {
-          "event_id": "E002",
-          "event_date": "2022-08-31",
-          "event_title": "Nvidia discloses AI chip export-license requirement",
-          "event_family": "export_control_pressure",
-          "country_or_region": "US",
-          "affected_sector": "AI chips",
+          "event_id": "E014",
+          "event_date": "2023-04-08",
+          "event_title": "Joint Sword Exercise",
+          "event_family": "Military Exercise",
+          "country_or_region": "China/Taiwan",
+          "affected_sector": "semiconductors",
           "similarity_score": 0.6875,
           "matched_fields": [
-            "event_family",
+            "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
@@ -54,21 +55,21 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "affected_sector"
+            "event_family"
           ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
         },
         {
-          "event_id": "E005",
-          "event_date": "2023-03-31",
-          "event_title": "Japan announces semiconductor-equipment export controls",
-          "event_family": "allied_export_control_pressure",
-          "country_or_region": "Japan",
-          "affected_sector": "semiconductor equipment",
+          "event_id": "E015",
+          "event_date": "2024-05-23",
+          "event_title": "Joint Sword-A",
+          "event_family": "Military Exercise",
+          "country_or_region": "China/Taiwan",
+          "affected_sector": "semiconductors",
           "similarity_score": 0.6875,
           "matched_fields": [
-            "event_family",
+            "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
@@ -77,48 +78,59 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "affected_sector"
+            "event_family"
           ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
         }
       ],
       "observed_historical_pathways": [
         {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 3,
+          "pathway_name": "Military escalation pathway",
+          "count": 2,
           "representative_events": [
-            "E003",
-            "E002",
-            "E005"
+            "E014",
+            "E015"
+          ],
+          "evidence_notes": [
+            {
+              "event_id": "E014",
+              "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
+            },
+            {
+              "event_id": "E015",
+              "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
+            }
+          ],
+          "analyst_note": "2 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
+        },
+        {
+          "pathway_name": "Restriction pressure pathway",
+          "count": 1,
+          "representative_events": [
+            "E003"
           ],
           "evidence_notes": [
             {
               "event_id": "E003",
               "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-            },
-            {
-              "event_id": "E002",
-              "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
-            },
-            {
-              "event_id": "E005",
-              "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
             }
           ],
-          "analyst_note": "3 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "analyst_note": "1 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
           "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ],
       "key_evidence": [
         "E003: Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously.",
-        "E002: Base event from data/events.csv; firm disclosure of policy restriction; contrast case only.",
-        "E005: Base event from data/events.csv; official allied restriction; no direct state-support signal coded.",
-        "Restriction pressure pathway: 3 retrieved analogue(s), represented by E003, E002, E005."
+        "E014: PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference.",
+        "E015: PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented.",
+        "Military escalation pathway: 2 retrieved analogue(s), represented by E014, E015.",
+        "Restriction pressure pathway: 1 retrieved analogue(s), represented by E003."
       ],
       "analytical_caveats": [
         "The brief uses 3 retrieved historical analogue(s) from the current scenario demo.",
-        "The observed pathway section contains 1 pathway grouping(s).",
+        "The observed pathway section contains 2 pathway grouping(s).",
         "The scenario profile is a coded comparison input, not an approved historical event.",
         "Evidence notes are qualitative research context, not causal proof."
       ],
@@ -129,7 +141,7 @@
         "Observed pathways summarise retrieved historical patterns and do not estimate expected returns.",
         "This output is not investment advice, a trading recommendation, or a market-timing tool."
       ],
-      "analyst_note": "The retrieved evidence is organised around Restriction pressure pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
+      "analyst_note": "The retrieved evidence is organised around Military escalation pathway, Restriction pressure pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
     },
     {
       "brief_id": "BRIEF-SQ002",
@@ -141,10 +153,10 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "event_family": "export_control_pressure",
+          "event_family": "Export Restriction",
           "country_or_region": "US",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.9375,
+          "similarity_score": 0.875,
           "matched_fields": [
             "event_family",
             "affected_sector",
@@ -163,10 +175,10 @@
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
-          "event_family": "export_control_pressure",
+          "event_family": "Export Restriction",
           "country_or_region": "US",
           "affected_sector": "AI chips",
-          "similarity_score": 0.8125,
+          "similarity_score": 0.75,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -186,7 +198,7 @@
           "event_id": "E005",
           "event_date": "2023-03-31",
           "event_title": "Japan announces semiconductor-equipment export controls",
-          "event_family": "allied_export_control_pressure",
+          "event_family": "Export Restriction",
           "country_or_region": "Japan",
           "affected_sector": "semiconductor equipment",
           "similarity_score": 0.6875,
@@ -264,12 +276,11 @@
           "event_id": "E009",
           "event_date": "2024-03-20",
           "event_title": "Intel CHIPS Act preliminary terms announced",
-          "event_family": "direct_state_support",
+          "event_family": "Industrial Policy",
           "country_or_region": "US",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.875,
+          "similarity_score": 0.75,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -278,7 +289,9 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Named support/downside-offset pathway",
           "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
         },
@@ -286,12 +299,11 @@
           "event_id": "E007",
           "event_date": "2023-12-11",
           "event_title": "BAE receives first CHIPS Act manufacturing award",
-          "event_family": "direct_state_support",
+          "event_family": "Industrial Policy",
           "country_or_region": "US",
           "affected_sector": "defence semiconductors",
-          "similarity_score": 0.75,
+          "similarity_score": 0.625,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -300,7 +312,9 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Named support pathway",
           "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         },
@@ -308,12 +322,11 @@
           "event_id": "E011",
           "event_date": "2024-04-15",
           "event_title": "Samsung CHIPS Act preliminary terms announced",
-          "event_family": "direct_state_support",
+          "event_family": "Industrial Policy",
           "country_or_region": "US/South Korea",
           "affected_sector": "semiconductors",
-          "similarity_score": 0.75,
+          "similarity_score": 0.625,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -322,6 +335,7 @@
             "observed_market_pathway"
           ],
           "different_fields": [
+            "event_family",
             "surprise_level"
           ],
           "observed_market_pathway": "Named support pathway",

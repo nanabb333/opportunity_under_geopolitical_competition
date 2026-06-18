@@ -8,28 +8,38 @@
       "scenario_question": "What if China announces another large-scale military exercise near Taiwan?",
       "pathway_summary": [
         {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 3,
+          "pathway_name": "Military escalation pathway",
+          "count": 2,
           "representative_events": [
-            "E003",
-            "E002",
-            "E005"
+            "E014",
+            "E015"
+          ],
+          "evidence_notes": [
+            {
+              "event_id": "E014",
+              "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
+            },
+            {
+              "event_id": "E015",
+              "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
+            }
+          ],
+          "analyst_note": "2 of 3 retrieved analogues fall into this observed pathway. The pathway should be treated as descriptive scenario evidence and checked against the underlying event notes.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
+        },
+        {
+          "pathway_name": "Restriction pressure pathway",
+          "count": 1,
+          "representative_events": [
+            "E003"
           ],
           "evidence_notes": [
             {
               "event_id": "E003",
               "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-            },
-            {
-              "event_id": "E002",
-              "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
-            },
-            {
-              "event_id": "E005",
-              "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
             }
           ],
-          "analyst_note": "3 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "analyst_note": "1 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
           "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ]

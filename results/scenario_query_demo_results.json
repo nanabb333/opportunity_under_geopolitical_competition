@@ -1,7 +1,7 @@
 {
   "method": "Deterministic qualitative feature matching; exact match = 1, partial textual overlap = 0.5, no match or unavailable coding = 0.",
   "source_dataset": "data/historical_analogue_events.csv",
-  "events_loaded": 20,
+  "events_loaded": 23,
   "scenarios_evaluated": 3,
   "top_n": 3,
   "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
@@ -24,9 +24,8 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.8125,
+          "similarity_score": 0.75,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -35,17 +34,19 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Restriction pressure pathway",
           "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
         },
         {
-          "event_id": "E002",
-          "event_date": "2022-08-31",
-          "event_title": "Nvidia discloses AI chip export-license requirement",
+          "event_id": "E014",
+          "event_date": "2023-04-08",
+          "event_title": "Joint Sword Exercise",
           "similarity_score": 0.6875,
           "matched_fields": [
-            "event_family",
+            "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
@@ -54,18 +55,18 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "affected_sector"
+            "event_family"
           ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword exercise following Taiwan president transit and high-level US contact; coded as military-pressure analogue without financial outcome inference."
         },
         {
-          "event_id": "E005",
-          "event_date": "2023-03-31",
-          "event_title": "Japan announces semiconductor-equipment export controls",
+          "event_id": "E015",
+          "event_date": "2024-05-23",
+          "event_title": "Joint Sword-A",
           "similarity_score": 0.6875,
           "matched_fields": [
-            "event_family",
+            "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
@@ -74,10 +75,10 @@
             "observed_market_pathway"
           ],
           "different_fields": [
-            "affected_sector"
+            "event_family"
           ],
-          "observed_market_pathway": "Restriction pressure pathway",
-          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+          "observed_market_pathway": "Military escalation pathway",
+          "evidence_note": "PLA Joint Sword-A exercise around Taiwan after Taiwan leadership transition; coded as military-pressure analogue with no return result invented."
         }
       ]
     },
@@ -99,7 +100,7 @@
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.9375,
+          "similarity_score": 0.875,
           "matched_fields": [
             "event_family",
             "affected_sector",
@@ -118,7 +119,7 @@
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.8125,
+          "similarity_score": 0.75,
           "matched_fields": [
             "event_family",
             "strategic_importance_level",
@@ -174,9 +175,8 @@
           "event_id": "E009",
           "event_date": "2024-03-20",
           "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.875,
+          "similarity_score": 0.75,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -185,7 +185,9 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Named support/downside-offset pathway",
           "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
         },
@@ -193,9 +195,8 @@
           "event_id": "E007",
           "event_date": "2023-12-11",
           "event_title": "BAE receives first CHIPS Act manufacturing award",
-          "similarity_score": 0.75,
+          "similarity_score": 0.625,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -204,7 +205,9 @@
             "market_interpretation",
             "observed_market_pathway"
           ],
-          "different_fields": [],
+          "different_fields": [
+            "event_family"
+          ],
           "observed_market_pathway": "Named support pathway",
           "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         },
@@ -212,9 +215,8 @@
           "event_id": "E011",
           "event_date": "2024-04-15",
           "event_title": "Samsung CHIPS Act preliminary terms announced",
-          "similarity_score": 0.75,
+          "similarity_score": 0.625,
           "matched_fields": [
-            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
@@ -223,6 +225,7 @@
             "observed_market_pathway"
           ],
           "different_fields": [
+            "event_family",
             "surprise_level"
           ],
           "observed_market_pathway": "Named support pathway",

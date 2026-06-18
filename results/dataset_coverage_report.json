@@ -1,6 +1,6 @@
 {
   "source_dataset": "data/historical_analogue_events.csv",
-  "dataset_size": 20,
+  "dataset_size": 23,
   "coverage": {
     "event_family": {
       "label": "Event Family Coverage",
@@ -10,12 +10,16 @@
           "count": 6
         },
         {
+          "value": "Export Restriction",
+          "count": 5
+        },
+        {
           "value": "Military Exercise",
           "count": 5
         },
         {
-          "value": "Export Restriction",
-          "count": 3
+          "value": "Technology Restriction",
+          "count": 2
         },
         {
           "value": "Diplomatic Shock",
@@ -36,10 +40,6 @@
         {
           "value": "Supply Chain Relocation",
           "count": 1
-        },
-        {
-          "value": "Technology Restriction",
-          "count": 1
         }
       ]
     },
@@ -56,7 +56,7 @@
         },
         {
           "value": "China",
-          "count": 1
+          "count": 4
         },
         {
           "value": "Japan",
@@ -96,6 +96,10 @@
           "count": 12
         },
         {
+          "value": "critical minerals",
+          "count": 3
+        },
+        {
           "value": "memory chips",
           "count": 3
         },
@@ -122,7 +126,7 @@
       "counts": [
         {
           "value": "High",
-          "count": 20
+          "count": 23
         }
       ]
     },
@@ -131,7 +135,7 @@
       "counts": [
         {
           "value": "Moderate",
-          "count": 14
+          "count": 17
         },
         {
           "value": "High",
@@ -163,6 +167,10 @@
           "count": 3
         },
         {
+          "value": "Critical-minerals restriction pathway",
+          "count": 2
+        },
+        {
           "value": "Named support pathway",
           "count": 2
         },
@@ -172,6 +180,10 @@
         },
         {
           "value": "Capacity reallocation pathway",
+          "count": 1
+        },
+        {
+          "value": "Critical-minerals technology restriction pathway",
           "count": 1
         },
         {
@@ -207,11 +219,11 @@
       "Pathway gap: election-policy uncertainty pathway"
     ],
     "medium_priority": [
-      "Sector gap: critical minerals",
       "Sector gap: defence systems",
       "Sector gap: telecommunications infrastructure",
       "Sector gap: energy security",
       "Sector gap: battery and clean-energy supply chains",
+      "Sector gap: cloud and AI infrastructure",
       "Region gap: European Union",
       "Region gap: Netherlands",
       "Region gap: India",
@@ -227,7 +239,6 @@
       "Semiconductor Expansion"
     ],
     "missing_sectors": [
-      "critical minerals",
       "defence systems",
       "telecommunications infrastructure",
       "energy security",
