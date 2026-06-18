@@ -24,7 +24,7 @@ I built `Taiwan_Geopolitical_Risk_Project` to move from broad dissertation resea
 
 Taiwan is a natural case because geopolitical risk, semiconductor supply chains, industrial policy, and military pressure intersect there. The project gives the portfolio a sharper regional and analytical focus.
 
-The purpose of Repo 2 is to show that the research framework can be operationalized around a specific risk domain.
+The purpose of Repo 2 is to show that the research framework can be operationalised around a specific risk domain.
 
 ## Why Did You Build Repo 3?
 
@@ -42,7 +42,7 @@ Specific lessons:
 
 - Research framing prevents dashboards from becoming shallow.
 - Dataset governance matters when evidence is qualitative.
-- Historical analogs are useful only when limitations are visible.
+- Historical analogues are useful only when limitations are visible.
 - Automation should support review, not replace it.
 - Decision-support tools need traceability, not just clean UI.
 

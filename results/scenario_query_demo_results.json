@@ -1,10 +1,10 @@
 {
   "method": "Deterministic qualitative feature matching; exact match = 1, partial textual overlap = 0.5, no match or unavailable coding = 0.",
-  "source_dataset": "data/historical_analog_events.csv",
+  "source_dataset": "data/historical_analogue_events.csv",
   "events_loaded": 12,
   "scenarios_evaluated": 3,
   "top_n": 3,
-  "disclaimer": "Scenario analogs are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
+  "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
   "results": [
     {
       "scenario_id": "SQ001",
@@ -19,7 +19,7 @@
         "market_interpretation": "Threat-dominant contrast event for Taiwan concentration and semiconductor supply-chain exposure",
         "observed_market_pathway": "Restriction pressure pathway"
       },
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -94,7 +94,7 @@
         "market_interpretation": "Threat-dominant contrast event for restricted advanced-computing and semiconductor exposure",
         "observed_market_pathway": "Restriction pressure pathway"
       },
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -169,7 +169,7 @@
         "market_interpretation": "Primary named-beneficiary support case for strategic semiconductor capacity",
         "observed_market_pathway": "Named support/downside-offset pathway"
       },
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E009",
           "event_date": "2024-03-20",

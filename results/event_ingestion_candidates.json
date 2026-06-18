@@ -1,6 +1,6 @@
 {
   "prototype_status": "manual_simulation_only",
-  "disclaimer": "These are synthetic workflow examples. They are not verified historical events, not scraped records, and not approved rows for data/historical_analog_events.csv.",
+  "disclaimer": "These are synthetic workflow examples. They are not verified historical events, not scraped records, and not approved rows for data/historical_analogue_events.csv.",
   "candidate_count": 3,
   "candidates": [
     {

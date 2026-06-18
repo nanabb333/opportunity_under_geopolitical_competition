@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This protocol defines how future events should be collected for the historical analog dataset. The goal is to expand the evidence base without weakening transparency, source quality, or academic honesty.
+This protocol defines how future events should be collected for the historical analogue dataset. The goal is to expand the evidence base without weakening transparency, source quality, or academic honesty.
 
 ## Inclusion Criteria
 
@@ -28,7 +28,7 @@ Exclude or defer events when:
 
 ## Coding Standards
 
-Required coding behavior:
+Required coding behaviour:
 
 - Use stable event IDs and do not reuse IDs.
 - Preserve the existing dissertation event IDs.

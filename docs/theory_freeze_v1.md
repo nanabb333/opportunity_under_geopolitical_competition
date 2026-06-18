@@ -50,11 +50,11 @@ The project matters because it identifies a missing step in the geopolitical ris
 
 ## 4. Final Theory
 
-Geopolitical competition changes the political and economic value of certain firms, sectors, technologies, and locations. Firms in semiconductors, defense, energy security, AI infrastructure, critical minerals, telecommunications, or supply-chain chokepoints may become strategically important because states view them as necessary for national security, technological leadership, resilience, or alliance competition.
+Geopolitical competition changes the political and economic value of certain firms, sectors, technologies, and locations. Firms in semiconductors, defence, energy security, AI infrastructure, critical minerals, telecommunications, or supply-chain chokepoints may become strategically important because states view them as necessary for national security, technological leadership, resilience, or alliance competition.
 
 Strategic importance by itself does not guarantee positive market reactions. A strategically important firm may still lose export markets, face restrictions, absorb costly compliance burdens, or be forced into inefficient investment. Strategic importance is therefore a scope condition, not the core causal mechanism. It identifies where states are likely to care, but it does not by itself explain why investors should expect gains.
 
-The core mechanism is state support. When governments recognize strategic importance, they may provide support through subsidies, procurement, tax credits, public loans, guarantees, regulation, protection, local-content rules, industrial policy, or direct capacity investment. This support can convert geopolitical vulnerability into expected revenue, lower capital costs, protected demand, or reduced downside risk.
+The core mechanism is state support. When governments recognise strategic importance, they may provide support through subsidies, procurement, tax credits, public loans, guarantees, regulation, protection, local-content rules, industrial policy, or direct capacity investment. This support can convert geopolitical vulnerability into expected revenue, lower capital costs, protected demand, or reduced downside risk.
 
 Investors then interpret the event. A geopolitical shock may send both a threat signal and an opportunity signal. The threat signal points to uncertainty, restricted markets, retaliation, input disruption, or compliance costs. The opportunity signal points to state-backed support, procurement demand, protected market position, or strategic investment. Positive market reactions should be most likely when the opportunity signal is credible, material, and attached to identifiable firms or sectors.
 
@@ -111,7 +111,7 @@ Geopolitical Competition
 
 ## Geopolitical Competition
 
-Rivalry among states that uses military, economic, technological, regulatory, or industrial-policy tools to pursue security, influence, autonomy, or strategic advantage. In this project, the relevant events are not generic tensions but policy-relevant actions such as export controls, subsidies, procurement, strategic investment, industrial policy, defense spending, and supply-chain restrictions.
+Rivalry among states that uses military, economic, technological, regulatory, or industrial-policy tools to pursue security, influence, autonomy, or strategic advantage. In this project, the relevant events are not generic tensions but policy-relevant actions such as export controls, subsidies, procurement, strategic investment, industrial policy, defence spending, and supply-chain restrictions.
 
 ## Strategic Importance
 
@@ -139,9 +139,9 @@ A positive market valuation effect for firms or sectors perceived as strategical
 
 - Strategic industries where governments have clear security or resilience concerns.
 - Semiconductors and semiconductor manufacturing equipment.
-- Defense firms, ammunition producers, and military technology suppliers.
+- Defence firms, ammunition producers, and military technology suppliers.
 - Energy security assets, especially where state policy supports capacity, storage, or trusted supply.
-- AI infrastructure, including chips, compute, cloud, power, cooling, and data centers, when linked to national-power policy rather than generic AI hype.
+- AI infrastructure, including chips, compute, cloud, power, cooling, and data centres, when linked to national-power policy rather than generic AI hype.
 - Critical minerals and processing capacity where supply dependence is viewed as a security risk.
 - Telecommunications infrastructure and trusted-vendor policy.
 - Supply-chain chokepoints where states seek reshoring, friend-shoring, redundancy, or trusted capacity.
@@ -231,11 +231,11 @@ The first master's-level empirical test should focus on:
 
 > **Semiconductor subsidies and strategic industrial-policy announcements.**
 
-This is the best first path because it matches the frozen theory most directly. The theory now centers on state support, and semiconductor industrial policy provides observable support events: CHIPS Act milestones, preliminary funding terms, state-backed fab announcements, and related strategic-capacity commitments. These events identify beneficiaries more clearly than broad export controls and are less conceptually thin than generic defense-spending reactions.
+This is the best first path because it matches the frozen theory most directly. The theory now centres on state support, and semiconductor industrial policy provides observable support events: CHIPS Act milestones, preliminary funding terms, state-backed fab announcements, and related strategic-capacity commitments. These events identify beneficiaries more clearly than broad export controls and are less conceptually thin than generic defence-spending reactions.
 
 Export controls remain useful as contrast cases, but they should not be the first empirical focus. They are often dominated by threat signals, anticipated policy sequences, and mixed exposure. They are better for testing the threat dominance and substitution hypotheses after the state-support mechanism is established.
 
-Defense spending shocks are feasible but less novel. A finding that defense firms rise after procurement or defense-spending announcements would be empirically straightforward but theoretically weaker.
+Defence spending shocks are feasible but less novel. A finding that defence firms rise after procurement or defence-spending announcements would be empirically straightforward but theoretically weaker.
 
 Cross-sector comparison is attractive for a longer project but too broad for a master's thesis. It risks reintroducing the conceptual sprawl that this freeze is meant to prevent.
 

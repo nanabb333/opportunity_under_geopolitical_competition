@@ -2,7 +2,7 @@
 
 ## What the Script Produces
 
-`scripts/calculate_historical_similarity.py` reads `data/historical_analog_events.csv` and produces `results/historical_similarity_matrix.csv`.
+`scripts/calculate_historical_similarity.py` reads `data/historical_analogue_events.csv` and produces `results/historical_similarity_matrix.csv`.
 
 The output contains one ordered comparison for each source event against every other event. Each row includes:
 
@@ -34,9 +34,9 @@ These examples should be treated as research prompts, not proof that the events 
 
 ## Analytical Contribution
 
-Sprint 1 created a structured historical analog dataset. Sprint 2 turns that dataset into a simple analytical engine by calculating reproducible event-to-event similarity scores.
+Sprint 1 created a structured historical analogue dataset. Sprint 2 turns that dataset into a simple analytical engine by calculating reproducible event-to-event similarity scores.
 
-This advances the repository from a static historical comparison table toward decision-support analytics while preserving academic guardrails. The engine helps identify analog candidates, organize support-versus-pressure comparisons, and document why a pair of events appears similar.
+This advances the repository from a static historical comparison table toward decision-support analytics while preserving academic guardrails. The engine helps identify analogue candidates, organise support-versus-pressure comparisons, and document why a pair of events appears similar.
 
 ## Limitations and Next Step
 

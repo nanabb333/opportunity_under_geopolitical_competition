@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the foundation for a continuously updated geopolitical intelligence system built on the existing dissertation research base. The system is designed to collect candidate information, review and code event records, update the historical analog dataset, and regenerate deterministic analytics.
+This document defines the foundation for a continuously updated geopolitical intelligence system built on the existing dissertation research base. The system is designed to collect candidate information, review and code event records, update the historical analogue dataset, and regenerate deterministic analytics.
 
 It does not automate source collection yet. It does not forecast outcomes, estimate returns, or provide investment advice.
 
@@ -18,7 +18,7 @@ Candidate Events
 Human Review
         |
         v
-Historical Analog Dataset
+Historical Analogue Dataset
         |
         v
 Similarity Engine
@@ -38,7 +38,7 @@ Dashboard
 1. Raw information sources are monitored for geopolitical, industrial-policy, military, and supply-chain developments.
 2. Potentially relevant items are recorded as candidate events, not approved events.
 3. Analysts screen candidates against the event collection protocol and event family taxonomy.
-4. Approved events are coded into `data/historical_analog_events.csv`.
+4. Approved events are coded into `data/historical_analogue_events.csv`.
 5. Validation checks confirm required fields, non-empty event IDs, uniqueness, and missing-value status.
 6. Similarity, scenario, pathway, and coverage scripts regenerate analytical outputs.
 7. The static dashboard reads generated JSON and CSV outputs.
@@ -78,7 +78,7 @@ python3 scripts/validate_event_entry.py path/to/event_record.json
 
 - Review event-family coverage.
 - Update evidence gap assessment.
-- Check whether scenario outputs are overly dependent on a small number of analogs.
+- Check whether scenario outputs are overly dependent on a small number of analogues.
 - Confirm dashboard outputs still reflect the current generated files.
 
 ### Quarterly

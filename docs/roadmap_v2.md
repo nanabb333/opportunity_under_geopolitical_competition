@@ -27,12 +27,12 @@
 ### Goals
 
 - Convert the dissertation evidence base into a deterministic scenario-analysis prototype.
-- Support historical analog comparison and observed pathway summaries.
+- Support historical analogue comparison and observed pathway summaries.
 - Communicate outputs through a static dashboard.
 
 ### Deliverables
 
-- historical analog dataset
+- historical analogue dataset
 - similarity engine
 - scenario query demo
 - observed pathway engine
@@ -98,7 +98,7 @@
 
 ### Goals
 
-- Add language assistance for summarizing reviewed evidence and helping analysts query the evidence base.
+- Add language assistance for summarising reviewed evidence and helping analysts query the evidence base.
 - Use LLMs only after the deterministic data model, validation workflow, and human-review process are stable.
 
 ### Deliverables

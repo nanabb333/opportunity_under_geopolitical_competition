@@ -51,7 +51,7 @@ Some events may be ordinary industrial policy rather than geopolitical competiti
 
 ### Dispute Resolution
 
-Include the event only if official sources or pre-event policy context connect it to national security, supply-chain resilience, technological competition, China-related competition, defense relevance, or strategic industrial capacity. If the link is weak, code `geopolitical_competition_link = 1` and flag for review.
+Include the event only if official sources or pre-event policy context connect it to national security, supply-chain resilience, technological competition, China-related competition, defence relevance, or strategic industrial capacity. If the link is weak, code `geopolitical_competition_link = 1` and flag for review.
 
 ## Step 2. Apply Inclusion Criteria
 
@@ -71,7 +71,7 @@ These conditions keep the project aligned with the frozen theory and avoid retur
 
 ### Potential Ambiguity
 
-Some strategic-policy events involve multiple sectors, such as AI, quantum, defense, and semiconductors.
+Some strategic-policy events involve multiple sectors, such as AI, quantum, defence, and semiconductors.
 
 ### Dispute Resolution
 
@@ -84,7 +84,7 @@ Include only if semiconductors or semiconductor-linked infrastructure are a cent
 Classify each included event as one of:
 
 - `support`: direct or named state support.
-- `broad_policy`: legislation, program authorization, or broad eligibility.
+- `broad_policy`: legislation, programme authorisation, or broad eligibility.
 - `threat_contrast`: export control, Entity List, restriction, or retaliation without direct support.
 - `mixed`: event contains both meaningful support and restriction.
 
@@ -675,7 +675,7 @@ An event is excluded if it lacks a public date, lacks semiconductor relevance, l
 
 ## Frozen Dating Standard
 
-Use the first public authoritative announcement date, with alternative dates documented. For legislation, prioritize the date when support becomes market-credible; for named awards, use the award or preliminary terms announcement date.
+Use the first public authoritative announcement date, with alternative dates documented. For legislation, prioritise the date when support becomes market-credible; for named awards, use the award or preliminary terms announcement date.
 
 ## Frozen Beneficiary Standard
 
@@ -712,4 +712,4 @@ A replicating researcher should be able to reproduce:
 
 ## Final Transparency Position
 
-The central risk in this project is not technical complexity. It is hindsight bias. The protocol therefore prioritizes freezing the event universe, coding, and event-firm links before market returns are observed. If that rule is violated, the project loses much of its credibility as a test of the State Support mechanism.
+The central risk in this project is not technical complexity. It is hindsight bias. The protocol therefore prioritises freezing the event universe, coding, and event-firm links before market returns are observed. If that rule is violated, the project loses much of its credibility as a test of the State Support mechanism.

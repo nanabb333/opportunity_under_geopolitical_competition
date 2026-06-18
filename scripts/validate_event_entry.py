@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a single candidate historical analog event record."""
+"""Validate a single candidate historical analogue event record."""
 
 from __future__ import annotations
 

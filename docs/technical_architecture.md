@@ -21,18 +21,18 @@ Core dissertation inputs:
 - `data/event_asset_links.csv`: pre-outcome event-to-asset relationships.
 - `data/raw_prices/*.csv`: local price inputs for event-study calculations.
 
-Historical analog input:
+Historical analogue input:
 
-- `data/historical_analog_events.csv`: qualitative historical analog event layer.
+- `data/historical_analogue_events.csv`: qualitative historical analogue event layer.
 
 ## Scripts
 
 - `scripts/build_event_returns.py`: builds market-return and event-firm return outputs.
-- `scripts/validate_historical_analog_dataset.py`: checks required columns, unique event IDs, and missing values.
+- `scripts/validate_historical_analogue_dataset.py`: checks required columns, unique event IDs, and missing values.
 - `scripts/calculate_historical_similarity.py`: compares historical events pairwise and writes similarity scores.
-- `scripts/run_scenario_query_demo.py`: evaluates hard-coded scenario questions against the analog dataset.
-- `scripts/generate_observed_pathways.py`: groups retrieved scenario analogs by observed pathway.
-- `scripts/generate_dissertation_figures.py`: generates dissertation figure artifacts.
+- `scripts/run_scenario_query_demo.py`: evaluates hard-coded scenario questions against the analogue dataset.
+- `scripts/generate_observed_pathways.py`: groups retrieved scenario analogues by observed pathway.
+- `scripts/generate_dissertation_figures.py`: generates dissertation figure artefacts.
 
 ## Outputs
 
@@ -43,7 +43,7 @@ Event-study outputs:
 - `data/local_price_validation_report.md`
 - `data/first_results_memo.md`
 
-Historical analog and scenario outputs:
+Historical analogue and scenario outputs:
 
 - `results/historical_similarity_matrix.csv`
 - `results/scenario_query_demo_results.json`
@@ -81,21 +81,21 @@ http://127.0.0.1:8000/dashboard/
 
 ## Validation Flow
 
-Run the current historical analog and scenario checks in order:
+Run the current historical analogue and scenario checks in order:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 python3 scripts/calculate_historical_similarity.py
 python3 scripts/run_scenario_query_demo.py
 python3 scripts/generate_observed_pathways.py
 ```
 
-Expected behavior:
+Expected behaviour:
 
-- the historical analog dataset validates successfully;
+- the historical analogue dataset validates successfully;
 - the similarity engine generates 132 ordered event pairs from 12 events;
 - the scenario query demo evaluates 3 scenarios;
-- the observed pathway engine summarizes 3 scenario outputs.
+- the observed pathway engine summarises 3 scenario outputs.
 
 ## Design Constraints
 

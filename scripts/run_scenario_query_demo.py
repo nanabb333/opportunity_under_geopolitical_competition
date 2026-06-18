@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run deterministic scenario-query demos against historical analog events."""
+"""Run deterministic scenario-query demos against historical analogue events."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-INPUT_PATH = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+INPUT_PATH = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 OUTPUT_DIR = PROJECT_ROOT / "results"
 OUTPUT_PATH = OUTPUT_DIR / "scenario_query_demo_results.json"
 
@@ -172,7 +172,7 @@ def run_demo(events: list[dict[str, str]]) -> dict[str, object]:
             "scenario_id": scenario["scenario_id"],
             "question": scenario["question"],
             "scenario_profile": scenario["scenario_profile"],
-            "top_analogs": comparisons[:3],
+            "top_analogues": comparisons[:3],
         })
 
     return {
@@ -181,7 +181,7 @@ def run_demo(events: list[dict[str, str]]) -> dict[str, object]:
         "events_loaded": len(events),
         "scenarios_evaluated": len(SCENARIOS),
         "top_n": 3,
-        "disclaimer": "Scenario analogs are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
+        "disclaimer": "Scenario analogues are for historical comparison only. They are not forecasts, trading signals, or investment recommendations.",
         "results": scenario_results,
     }
 
@@ -199,10 +199,10 @@ def print_summary(payload: dict[str, object]) -> None:
     print(f"Scenarios evaluated: {payload['scenarios_evaluated']}")
     for scenario in payload["results"]:
         print(f"- {scenario['scenario_id']}: {scenario['question']}")
-        for analog in scenario["top_analogs"]:
+        for analogue in scenario["top_analogues"]:
             print(
-                f"  - {analog['event_id']}: {analog['similarity_score']:.4f} "
-                f"({analog['observed_market_pathway']})"
+                f"  - {analogue['event_id']}: {analogue['similarity_score']:.4f} "
+                f"({analogue['observed_market_pathway']})"
             )
     print(f"Output path: {OUTPUT_PATH}")
 

@@ -1,6 +1,6 @@
 # Event Coding Template
 
-Use this template for one candidate historical analog event before adding it to `data/historical_analog_events.csv`.
+Use this template for one candidate historical analogue event before adding it to `data/historical_analogue_events.csv`.
 
 ## Event Record
 

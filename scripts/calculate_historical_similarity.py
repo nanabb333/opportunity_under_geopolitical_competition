@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Calculate deterministic pairwise similarity for historical analog events."""
+"""Calculate deterministic pairwise similarity for historical analogue events."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-INPUT_PATH = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+INPUT_PATH = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 OUTPUT_DIR = PROJECT_ROOT / "results"
 OUTPUT_PATH = OUTPUT_DIR / "historical_similarity_matrix.csv"
 

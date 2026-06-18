@@ -6,11 +6,11 @@ This sprint added a static interactive scenario assistant layer:
 
 - `data/scenario_profiles_template.csv`
 - `data/sample_scenario_profiles.csv`
-- `scripts/analyze_scenario_profile.py`
+- `scripts/analyse_scenario_profile.py`
 - `results/interactive_scenario_analysis.json`
 - dashboard support for selecting a predefined scenario
 
-The assistant compares coded scenario profiles with the historical analog dataset and returns the top five historical analogs per scenario.
+The assistant compares coded scenario profiles with the historical analogue dataset and returns the top five historical analogues per scenario.
 
 ## Sample Scenarios
 
@@ -24,12 +24,12 @@ The sample scenario file includes five predefined scenario comparison profiles:
 
 These are not approved historical events. They are scenario comparison inputs.
 
-## Dashboard Behavior
+## Dashboard Behaviour
 
 The dashboard now includes an `Interactive Scenario Assistant v1` section. Users can select a sample scenario from a dropdown and view:
 
 - coded scenario profile
-- top historical analogs
+- top historical analogues
 - similarity scores
 - matched fields
 - observed pathway summary
@@ -42,7 +42,7 @@ The dashboard uses static JSON only. There is no backend, no API, and no LLM cal
 
 The assistant is descriptive and evidence-based. It does not forecast market reactions, assign probabilities, estimate returns, or provide investment advice.
 
-The evidence base remains limited. Similarity scores are sensitive to qualitative coding choices, the current sample size, and the available historical analog rows.
+The evidence base remains limited. Similarity scores are sensitive to qualitative coding choices, the current sample size, and the available historical analogue rows.
 
 ## Future Extensions
 

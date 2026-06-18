@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+<title id="title">Figure 4. Event-Level Divergence Across Validated Events</title>
+<desc id="desc">Validated divergence spread, percentage points</desc>
+<rect width="1800" height="1200" fill="#ffffff"/>
+<text x="900.0" y="82.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#1f2933">Event-Level Divergence Across Validated Events</text>
+<text x="900.0" y="135.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#5b6470">Validated divergence spread, percentage points</text>
+<line x1="320.0" y1="220.0" x2="320.0" y2="940.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="320.0" y="988.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">0%</text>
+<line x1="714.1" y1="220.0" x2="714.1" y2="940.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="714.1" y="988.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">5%</text>
+<line x1="1108.2" y1="220.0" x2="1108.2" y2="940.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="1108.2" y="988.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">10%</text>
+<line x1="1502.4" y1="220.0" x2="1502.4" y2="940.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="1502.4" y="988.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">15%</text>
+<line x1="320.0" y1="220.0" x2="320.0" y2="940.0" stroke="#2f3437" stroke-width="3"/>
+<line x1="320.0" y1="940.0" x2="1660.0" y2="940.0" stroke="#2f3437" stroke-width="3"/>
+<rect x="320.0" y="263.2" width="1252.8" height="93.6" fill="#4f6d8a"/>
+<text x="95.0" y="318.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E010</text>
+<text x="1590.8" y="318.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">15.8942%</text>
+<rect x="320.0" y="443.2" width="714.1" height="93.6" fill="#4f6d8a"/>
+<text x="95.0" y="498.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E011</text>
+<text x="1052.1" y="498.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">9.0598%</text>
+<rect x="320.0" y="623.2" width="139.2" height="93.6" fill="#4f6d8a"/>
+<text x="95.0" y="678.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E012</text>
+<text x="477.2" y="678.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">1.7661%</text>
+<rect x="320.0" y="803.2" width="125.7" height="93.6" fill="#4f6d8a"/>
+<text x="95.0" y="858.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E009</text>
+<text x="463.7" y="858.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">1.5946%</text>
+<text x="990.0" y="1045.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">Divergence spread</text>
+<text x="320.0" y="1095.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#5b6470">Source: validated divergence audit; events ranked by spread from largest to smallest.</text>
+</svg>

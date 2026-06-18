@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze coded scenario profiles against historical analog events."""
+"""Analyse coded scenario profiles against historical analogue events."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCENARIO_PATH = PROJECT_ROOT / "data" / "sample_scenario_profiles.csv"
-EVENT_PATH = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+EVENT_PATH = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 OUTPUT_DIR = PROJECT_ROOT / "results"
 OUTPUT_PATH = OUTPUT_DIR / "interactive_scenario_analysis.json"
 
@@ -49,7 +49,7 @@ TOKEN_PATTERN = re.compile(r"[a-z0-9]+")
 
 LIMITATIONS_NOTE = (
     "Scenario comparison is deterministic and descriptive. It retrieves historical "
-    "analogs from the current evidence base and does not forecast outcomes or "
+    "analogues from the current evidence base and does not forecast outcomes or "
     "provide investment advice."
 )
 
@@ -128,16 +128,16 @@ def compare_scenario_to_event(
     }
 
 
-def summarize_pathways(top_analogs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def summarise_pathways(top_analogues: list[dict[str, Any]]) -> list[dict[str, Any]]:
     pathway_counts = Counter(
-        analog.get("observed_market_pathway") or "Not coded"
-        for analog in top_analogs
+        analogue.get("observed_market_pathway") or "Not coded"
+        for analogue in top_analogues
     )
     representative_events: dict[str, list[str]] = defaultdict(list)
 
-    for analog in top_analogs:
-        pathway = analog.get("observed_market_pathway") or "Not coded"
-        representative_events[pathway].append(str(analog["event_id"]))
+    for analogue in top_analogues:
+        pathway = analogue.get("observed_market_pathway") or "Not coded"
+        representative_events[pathway].append(str(analogue["event_id"]))
 
     return [
         {
@@ -149,7 +149,7 @@ def summarize_pathways(top_analogs: list[dict[str, Any]]) -> list[dict[str, Any]
     ]
 
 
-def analyze_scenarios(
+def analyse_scenarios(
     scenarios: list[dict[str, str]],
     events: list[dict[str, str]],
     top_n: int = 5,
@@ -168,7 +168,7 @@ def analyze_scenarios(
                 str(row["event_id"]),
             )
         )
-        top_analogs = comparisons[:top_n]
+        top_analogues = comparisons[:top_n]
         results.append({
             "scenario_id": scenario["scenario_id"],
             "scenario_question": scenario["scenario_question"],
@@ -177,14 +177,14 @@ def analyze_scenarios(
                 for field in COMPARISON_FIELDS
             },
             "analyst_note": scenario["analyst_note"],
-            "top_analogs": top_analogs,
-            "observed_pathway_summary": summarize_pathways(top_analogs),
+            "top_analogues": top_analogues,
+            "observed_pathway_summary": summarise_pathways(top_analogues),
             "evidence_notes": [
                 {
-                    "event_id": analog["event_id"],
-                    "evidence_note": analog["evidence_note"],
+                    "event_id": analogue["event_id"],
+                    "evidence_note": analogue["evidence_note"],
                 }
-                for analog in top_analogs
+                for analogue in top_analogues
             ],
             "limitations_note": LIMITATIONS_NOTE,
         })
@@ -217,13 +217,13 @@ def print_summary(payload: dict[str, Any]) -> None:
     print("Interactive scenario analysis")
     print(f"Scenarios loaded: {payload['scenario_count']}")
     print(f"Historical events loaded: {payload['event_count']}")
-    print(f"Top analogs per scenario: {payload['top_n']}")
+    print(f"Top analogues per scenario: {payload['top_n']}")
     for scenario in payload["results"]:
         print(f"- {scenario['scenario_id']}: {scenario['scenario_question']}")
-        for analog in scenario["top_analogs"][:3]:
+        for analogue in scenario["top_analogues"][:3]:
             print(
-                f"  - {analog['event_id']}: {analog['similarity_score']:.4f} "
-                f"({analog['observed_market_pathway']})"
+                f"  - {analogue['event_id']}: {analogue['similarity_score']:.4f} "
+                f"({analogue['observed_market_pathway']})"
             )
     print(f"Output path: {OUTPUT_PATH}")
 
@@ -232,7 +232,7 @@ def main() -> int:
     try:
         scenarios = load_csv(SCENARIO_PATH, SCENARIO_REQUIRED_FIELDS)
         events = load_csv(EVENT_PATH, EVENT_REQUIRED_FIELDS)
-        payload = analyze_scenarios(scenarios, events)
+        payload = analyse_scenarios(scenarios, events)
         write_output(payload)
         print_summary(payload)
     except Exception as exc:  # noqa: BLE001

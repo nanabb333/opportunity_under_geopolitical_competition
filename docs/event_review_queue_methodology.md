@@ -2,9 +2,9 @@
 
 ## Purpose
 
-`data/event_review_queue.csv` is the operating queue for candidate geopolitical and industrial-policy events. It separates unapproved candidate events from the approved historical analog dataset.
+`data/event_review_queue.csv` is the operating queue for candidate geopolitical and industrial-policy events. It separates unapproved candidate events from the approved historical analogue dataset.
 
-The queue supports a semi-automated workflow, but it does not approve events automatically. Human review remains required before any candidate enters `data/historical_analog_events.csv`.
+The queue supports a semi-automated workflow, but it does not approve events automatically. Human review remains required before any candidate enters `data/historical_analogue_events.csv`.
 
 ## Queue Lifecycle
 
@@ -37,7 +37,7 @@ A candidate may be approved when:
 - event date and title are clear
 - event-family coding is defensible
 - evidence notes are transparent
-- the event improves the historical analog evidence base
+- the event improves the historical analogue evidence base
 
 Approval does not require a known market result. The project should not invent financial precision.
 

@@ -9,13 +9,13 @@ Sprint 9 adds two dashboard screenshots under `figures/`:
 
 ## What Each Screenshot Shows
 
-`dashboard_overview.png` shows the top of the static dashboard evidence view, including the project title, data-loading status, dissertation theory chain, scenario questions, top historical analogs, similarity scores, observed pathways, and evidence notes.
+`dashboard_overview.png` shows the top of the static dashboard evidence view, including the project title, data-loading status, dissertation theory chain, scenario questions, top historical analogues, similarity scores, observed pathways, and evidence notes.
 
 `dashboard_pathways.png` shows the observed pathway section, including grouped historical patterns, pathway counts, representative events, analyst notes, evidence notes, and the limitations / not-investment-advice panel.
 
 ## Why This Improves Portfolio Readability
 
-The screenshots make the repository easier to understand from the GitHub landing page. A reader can see the final evidence interface before running the local dashboard, which helps connect the dissertation research, deterministic scripts, generated JSON outputs, and dashboard presentation into one visible portfolio artifact.
+The screenshots make the repository easier to understand from the GitHub landing page. A reader can see the final evidence interface before running the local dashboard, which helps connect the dissertation research, deterministic scripts, generated JSON outputs, and dashboard presentation into one visible portfolio artefact.
 
 The screenshots do not add new analytics functionality and do not change the project claims. They are visual documentation of the existing dashboard.
 

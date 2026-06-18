@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Dataset governance defines how approved event records are versioned, reviewed, and reproduced. The goal is to make the historical analog dataset scalable without weakening research controls.
+Dataset governance defines how approved event records are versioned, reviewed, and reproduced. The goal is to make the historical analogue dataset scalable without weakening research controls.
 
 ## Version Control
 

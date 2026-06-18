@@ -81,7 +81,7 @@ def build_payload() -> dict[str, object]:
         "prototype_status": "manual_simulation_only",
         "disclaimer": (
             "These are synthetic workflow examples. They are not verified historical events, "
-            "not scraped records, and not approved rows for data/historical_analog_events.csv."
+            "not scraped records, and not approved rows for data/historical_analogue_events.csv."
         ),
         "candidate_count": len(candidates),
         "candidates": candidates,

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+<title id="title">Figure 2. Descriptive CAR[-7,+7] Across Primary Cases</title>
+<desc id="desc">Sector-adjusted descriptive CAR[-7,+7], percentage points</desc>
+<rect width="1800" height="1200" fill="#ffffff"/>
+<text x="900.0" y="82.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#1f2933">Descriptive CAR[-7,+7] Across Primary Cases</text>
+<text x="900.0" y="135.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#5b6470">Sector-adjusted descriptive CAR[-7,+7], percentage points</text>
+<line x1="250.0" y1="960.0" x2="1680.0" y2="960.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="968.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">-4.0%</text>
+<line x1="250.0" y1="820.0" x2="1680.0" y2="820.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="828.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">-2.0%</text>
+<line x1="250.0" y1="680.0" x2="1680.0" y2="680.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="688.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">0.0%</text>
+<line x1="250.0" y1="540.0" x2="1680.0" y2="540.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="548.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">2.0%</text>
+<line x1="250.0" y1="400.0" x2="1680.0" y2="400.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="408.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">4.0%</text>
+<line x1="250.0" y1="260.0" x2="1680.0" y2="260.0" stroke="#d8dde3" stroke-width="2"/>
+<text x="232.0" y="268.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#1f2933">6.0%</text>
+<line x1="250.0" y1="680.0" x2="1680.0" y2="680.0" stroke="#2f3437" stroke-width="4"/>
+<line x1="250.0" y1="190.0" x2="250.0" y2="960.0" stroke="#2f3437" stroke-width="3"/>
+<line x1="250.0" y1="960.0" x2="1680.0" y2="960.0" stroke="#2f3437" stroke-width="3"/>
+<rect x="383.3" y="680.0" width="210.0" height="2.0" fill="#a94442"/>
+<text x="488.3" y="716.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">-0.0288%</text>
+<text x="488.3" y="1018.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E009 / INTC</text>
+<rect x="860.0" y="266.8" width="210.0" height="413.2" fill="#2f6f8f"/>
+<text x="965.0" y="244.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">5.9035%</text>
+<text x="965.0" y="1018.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E010 / TSM</text>
+<rect x="1336.7" y="680.0" width="210.0" height="227.2" fill="#a94442"/>
+<text x="1441.7" y="941.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">-3.2454%</text>
+<text x="1441.7" y="1018.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#1f2933">E012 / MU</text>
+<text x="78" y="575.0" transform="rotate(-90 78 575.0)" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#1f2933">CAR[-7,+7]</text>
+<text x="250.0" y="1095.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#5b6470">Source: validated event-study output, descriptive primary-case return measures.</text>
+</svg>

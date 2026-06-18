@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Search approved historical analog events from the command line."""
+"""Search approved historical analogue events from the command line."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATASET = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+DATASET = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 OUTPUT_PATH = PROJECT_ROOT / "results" / "latest_search_results.json"
 
 SEARCH_FIELDS = [
@@ -89,11 +89,11 @@ def write_results(query: str, results: list[dict[str, object]]) -> None:
 
 
 def print_results(query: str, results: list[dict[str, object]]) -> None:
-    print("Historical analog search")
+    print("Historical analogue search")
     print(f"Query: {query}")
     print(f"Matches: {len(results)}")
     if not results:
-        print("No approved historical analog events matched this query.")
+        print("No approved historical analogue events matched this query.")
         print(f"Output path: {OUTPUT_PATH}")
         return
 
@@ -109,7 +109,7 @@ def print_results(query: str, results: list[dict[str, object]]) -> None:
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print('Usage: python3 scripts/search_historical_analogs.py "search terms"')
+        print('Usage: python3 scripts/search_historical_analogues.py "search terms"')
         return 1
 
     query = " ".join(sys.argv[1:]).strip()

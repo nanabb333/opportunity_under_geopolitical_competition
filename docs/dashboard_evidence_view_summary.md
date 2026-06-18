@@ -6,7 +6,7 @@ Sprint 5 adds a static dashboard evidence view under `dashboard/`. The page disp
 
 - the dissertation theory chain;
 - scenario query demo questions;
-- top historical analogs;
+- top historical analogues;
 - similarity scores;
 - observed pathways;
 - evidence notes;
@@ -19,9 +19,9 @@ The dashboard reads from:
 
 ## Connection to Decision-Support Analytics
 
-The dashboard connects the dissertation research base to decision-support analytics by making the evidence chain easier to inspect. It shows how scenario questions map to historical analogs and how those analogs group into observed pathways.
+The dashboard connects the dissertation research base to decision-support analytics by making the evidence chain easier to inspect. It shows how scenario questions map to historical analogues and how those analogues group into observed pathways.
 
-This remains a research and portfolio artifact. The dashboard organizes evidence; it does not generate forecasts, probabilities, or investment recommendations.
+This remains a research and portfolio artefact. The dashboard organises evidence; it does not generate forecasts, probabilities, or investment recommendations.
 
 ## What It Does Not Do
 

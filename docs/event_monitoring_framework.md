@@ -80,4 +80,4 @@ Expected pathway relevance: Strategic investment pathway, named support pathway,
 
 ## Review Standard
 
-Monitoring categories identify candidates only. Every event still requires source verification, coding review, validation, and transparent evidence notes before entering the historical analog dataset.
+Monitoring categories identify candidates only. Every event still requires source verification, coding review, validation, and transparent evidence notes before entering the historical analogue dataset.

@@ -2,9 +2,9 @@
 
 ## Descriptive Historical Analysis Only
 
-This repository organizes historical evidence about geopolitical competition, strategic importance, state support, and market interpretation. It is a descriptive research and portfolio project.
+This repository organises historical evidence about geopolitical competition, strategic importance, state support, and market interpretation. It is a descriptive research and portfolio project.
 
-The historical analog, scenario query, observed pathway, and dashboard layers are designed to support structured comparison, not to predict future events.
+The historical analogue, scenario query, observed pathway, and dashboard layers are designed to support structured comparison, not to predict future events.
 
 ## Causal Inference Limits
 
@@ -14,7 +14,7 @@ Events may be anticipated, bundled with other information, affected by earnings 
 
 ## No Forecast Accuracy Claims
 
-The repository does not claim forecast accuracy. Similarity scores do not imply that future events will follow the same market path as historical analogs.
+The repository does not claim forecast accuracy. Similarity scores do not imply that future events will follow the same market path as historical analogues.
 
 Scenario outputs should be read as historical pattern evidence. They are not probabilities.
 
@@ -22,11 +22,11 @@ Scenario outputs should be read as historical pattern evidence. They are not pro
 
 This project does not provide investment advice, trading recommendations, expected returns, or portfolio guidance.
 
-The dashboard and JSON outputs are research artifacts. They are not intended for trading or financial decision-making.
+The dashboard and JSON outputs are research artefacts. They are not intended for trading or financial decision-making.
 
 ## Limited Sample Size
 
-The dissertation core sample is intentionally narrow and semiconductors-focused. The historical analog layer currently contains 12 events. That size is appropriate for transparent mechanism exploration, but it is not enough for broad statistical claims.
+The dissertation core sample is intentionally narrow and semiconductors-focused. The historical analogue layer currently contains 12 events. That size is appropriate for transparent mechanism exploration, but it is not enough for broad statistical claims.
 
 ## Qualitative Coding Limitations
 

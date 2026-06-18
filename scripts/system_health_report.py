@@ -13,14 +13,14 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATASET_PATH = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+DATASET_PATH = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 QUEUE_PATH = PROJECT_ROOT / "data" / "event_review_queue.csv"
 CHANGE_LOG_PATH = PROJECT_ROOT / "data" / "dataset_change_log.csv"
 COVERAGE_PATH = PROJECT_ROOT / "results" / "dataset_coverage_report.json"
 OUTPUT_DIR = PROJECT_ROOT / "results"
 OUTPUT_PATH = OUTPUT_DIR / "system_health_report.json"
 
-VALIDATION_SCRIPT = PROJECT_ROOT / "scripts" / "validate_historical_analog_dataset.py"
+VALIDATION_SCRIPT = PROJECT_ROOT / "scripts" / "validate_historical_analogue_dataset.py"
 
 REQUIRED_DASHBOARD_FILES = [
     PROJECT_ROOT / "dashboard" / "index.html",

@@ -10,9 +10,9 @@ Sprint 3 adds a deterministic scenario query demo with three hard-coded question
 
 The demo output is written to `results/scenario_query_demo_results.json`.
 
-## Top Analogs Returned
+## Top Analogues Returned
 
-| Scenario | Top analogs |
+| Scenario | Top analogues |
 |---|---|
 | China announces another large-scale military exercise near Taiwan | E003 at 0.8125; E002 at 0.6875; E005 at 0.6875 |
 | U.S. expands semiconductor export restrictions | E003 at 0.9375; E002 at 0.8125; E005 at 0.6875 |
@@ -22,7 +22,7 @@ The first two scenarios retrieve restriction-pressure pathways. The third scenar
 
 ## What This Demonstrates
 
-The demo shows how the repository can move from a static historical analog dataset to a simple queryable research artifact. A user can ask a predefined scenario question, the script maps it to a coded profile, and the system retrieves similar historical events with documented evidence notes.
+The demo shows how the repository can move from a static historical analogue dataset to a simple queryable research artefact. A user can ask a predefined scenario question, the script maps it to a coded profile, and the system retrieves similar historical events with documented evidence notes.
 
 This is useful as a portfolio-friendly example of decision-support analytics because the logic is transparent, deterministic, and tied to the dissertation's theory of state support under geopolitical competition.
 
@@ -34,4 +34,4 @@ Scores should be read as retrieval aids, not as evidence of causal similarity or
 
 ## Next Step
 
-A useful next sprint would add a validation script for `results/scenario_query_demo_results.json`, checking that each scenario returns three analogs, scores remain between 0 and 1, required fields are present, and the disclaimer is included.
+A useful next sprint would add a validation script for `results/scenario_query_demo_results.json`, checking that each scenario returns three analogues, scores remain between 0 and 1, required fields are present, and the disclaimer is included.

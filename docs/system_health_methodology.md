@@ -18,7 +18,7 @@ The health report includes:
 
 ## Dataset Status
 
-Dataset status reports whether `data/historical_analog_events.csv` exists, how many approved rows it contains, and the latest update date recorded in `data/dataset_change_log.csv`.
+Dataset status reports whether `data/historical_analogue_events.csv` exists, how many approved rows it contains, and the latest update date recorded in `data/dataset_change_log.csv`.
 
 ## Queue Status
 
@@ -32,7 +32,7 @@ The queue may be empty. An empty queue is acceptable when no candidate events ar
 
 ## Coverage Status
 
-Coverage status checks whether `results/dataset_coverage_report.json` exists and whether its dataset size matches the current historical analog dataset size.
+Coverage status checks whether `results/dataset_coverage_report.json` exists and whether its dataset size matches the current historical analogue dataset size.
 
 If coverage is stale or missing, the report returns a warning rather than inventing a coverage result.
 
@@ -41,7 +41,7 @@ If coverage is stale or missing, the report returns a warning rather than invent
 Validation status runs:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 ```
 
 The health report records the return code and final validation message.

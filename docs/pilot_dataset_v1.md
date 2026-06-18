@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This pilot does not test the theory. It tests whether the frozen theory, research design, dataset architecture, and research protocol can be operationalized before market returns are collected.
+This pilot does not test the theory. It tests whether the frozen theory, research design, dataset architecture, and research protocol can be operationalised before market returns are collected.
 
 Frozen mechanism:
 
@@ -33,7 +33,7 @@ The pilot is judged successful if events can be dated, coded, and linked to firm
 | 4 | YMTC and other Chinese entities added to Entity List | 2022-12-15 | threat_contrast | MU, Samsung, SK Hynix if feasible, SMH | Restriction plus substitution logic |
 | 5 | Japan semiconductor-equipment export controls | 2023-03-31 | threat_contrast | ASML, AMAT, LRCX, Tokyo Electron if feasible, SMH | Allied restriction contrast |
 | 6 | China restricts Micron procurement | 2023-05-21 | threat_contrast / mixed | MU, Samsung, SK Hynix if feasible, SMH | Retaliation and substitute logic |
-| 7 | BAE receives first CHIPS Act manufacturing award | 2023-12-11 | support | BAE if tradable/available, SMH, defense-semiconductor peers | Small direct-support test |
+| 7 | BAE receives first CHIPS Act manufacturing award | 2023-12-11 | support | BAE if tradable/available, SMH, defence-semiconductor peers | Small direct-support test |
 | 8 | TSMC Kumamoto fab opens with Japanese state support | 2024-02-24 | support / relocation | TSM, Sony if feasible, Toyota if relevant, SMH | State-backed reallocation test |
 | 9 | Intel CHIPS preliminary terms announced | 2024-03-20 | support | INTC, SMH, SOX, QQQ | Direct named-support test |
 | 10 | TSMC Arizona CHIPS preliminary terms announced | 2024-04-08 | support | TSM, INTC, SMH, SOX | Direct named-support and relocation test |
@@ -62,7 +62,7 @@ Geopolitical competition increases the strategic importance of domestic semicond
 
 ### Event-to-Firm Linking Decisions
 
-INTC, MU, TSM, and Samsung should be coded as `eligible_beneficiary`, not necessarily `named_beneficiary`, because the signing event authorizes a program rather than assigning final support to all firms. SMH/SOX should be benchmarks. NVDA and AMD may be sector peers, not direct beneficiaries, unless eligibility language clearly applies.
+INTC, MU, TSM, and Samsung should be coded as `eligible_beneficiary`, not necessarily `named_beneficiary`, because the signing event authorises a programme rather than assigning final support to all firms. SMH/SOX should be benchmarks. NVDA and AMD may be sector peers, not direct beneficiaries, unless eligibility language clearly applies.
 
 ### Coding Ambiguities
 
@@ -74,12 +74,12 @@ The signing date is likely anticipated. Legislative passage dates may be more ma
 
 ### Support Directness and Credibility
 
-- support_directness: moderate, because the Act authorizes support but does not name most firms.
+- support_directness: moderate, because the Act authorises support but does not name most firms.
 - support_credibility: high, because it is enacted legislation with funding authority.
 
 ### Reviewer Objections
 
-The strongest objection is that the event was priced before signing. Defense: retain as broad-policy baseline, but do not treat it as the cleanest state-support test.
+The strongest objection is that the event was priced before signing. Defence: retain as broad-policy baseline, but do not treat it as the cleanest state-support test.
 
 ## 2. Nvidia Discloses AI Chip Export-License Requirement
 
@@ -149,7 +149,7 @@ The official announcement date is clear, but some expectations may have existed 
 
 ### Reviewer Objections
 
-Reviewer may say this event is too broad and affects too many firms in different directions. Defense: use it only as a contrast case, not as a clean support mechanism test.
+Reviewer may say this event is too broad and affects too many firms in different directions. Defence: use it only as a contrast case, not as a clean support mechanism test.
 
 ## 4. YMTC and Other Chinese Entities Added to Entity List
 
@@ -186,7 +186,7 @@ Official announcement date is usable. Some anticipation may exist due to earlier
 
 ### Reviewer Objections
 
-Reviewer may argue that this belongs to sanctions/export-control literature rather than state support. Defense: retain only as contrast and secondary substitution check.
+Reviewer may argue that this belongs to sanctions/export-control literature rather than state support. Defence: retain only as contrast and secondary substitution check.
 
 ## 5. Japan Semiconductor-Equipment Export Controls
 
@@ -221,7 +221,7 @@ Official announcement date is clear. Implementation timing may differ from annou
 
 ### Reviewer Objections
 
-Reviewer may ask why this is included if the focus is state support. Defense: it is a clean contrast event showing restrictions without support.
+Reviewer may ask why this is included if the focus is state support. Defence: it is a clean contrast event showing restrictions without support.
 
 ## 6. China Restricts Micron Procurement
 
@@ -258,23 +258,23 @@ The announcement date may fall outside US trading hours. Use CAR [-1,+1] and doc
 
 ### Reviewer Objections
 
-Reviewer may object that foreign-listed substitutes complicate implementation. Defense: if data feasibility is poor, use this event mainly for threat-exposed MU and benchmark comparison.
+Reviewer may object that foreign-listed substitutes complicate implementation. Defence: if data feasibility is poor, use this event mainly for threat-exposed MU and benchmark comparison.
 
 ## 7. BAE Receives First CHIPS Act Manufacturing Award
 
 ### Inclusion Rationale
 
-This is a direct, named support event under the CHIPS framework. It is semiconductor-linked and defense-relevant, making it theoretically strong despite small event size.
+This is a direct, named support event under the CHIPS framework. It is semiconductor-linked and defence-relevant, making it theoretically strong despite small event size.
 
 ### Expected Mechanism
 
-Strategic importance is recognized through defense-linked semiconductor capacity. State support is direct and named. Investors may interpret the award as improving expected funding, capacity, or strategic positioning.
+Strategic importance is recognised through defence-linked semiconductor capacity. State support is direct and named. Investors may interpret the award as improving expected funding, capacity, or strategic positioning.
 
 ### Likely Beneficiary Firms
 
 - BAE Systems, if listed data are feasible.
-- Defense-semiconductor supply-chain peers are less clear.
-- SMH/SOX and possibly defense benchmarks can be used as benchmarks.
+- Defence-semiconductor supply-chain peers are less clear.
+- SMH/SOX and possibly defence benchmarks can be used as benchmarks.
 
 ### Event-to-Firm Linking Decisions
 
@@ -282,7 +282,7 @@ BAE should be `named_beneficiary` if a usable listed security is included. SMH/S
 
 ### Coding Ambiguities
 
-The event is small relative to BAE's total business and may not be market-relevant. It straddles defense and semiconductor categories.
+The event is small relative to BAE's total business and may not be market-relevant. It straddles defence and semiconductor categories.
 
 ### Event-Dating Problems
 
@@ -295,7 +295,7 @@ Official announcement date is usable. Check whether announcement occurred during
 
 ### Reviewer Objections
 
-Reviewer may argue the event is too small to move a large firm. Defense: include as an operational test of direct support, but classify data quality as caution if market relevance is weak.
+Reviewer may argue the event is too small to move a large firm. Defence: include as an operational test of direct support, but classify data quality as caution if market relevance is weak.
 
 ## 8. TSMC Kumamoto Fab Opens With Japanese State Support
 
@@ -332,7 +332,7 @@ Opening date is clear, but investment announcements and subsidy approvals may be
 
 ### Reviewer Objections
 
-Reviewer may argue this is not an announcement shock. Defense: treat it as a reallocation/support credibility case, not a primary event-study shock unless alternative announcement dates are added.
+Reviewer may argue this is not an announcement shock. Defence: treat it as a reallocation/support credibility case, not a primary event-study shock unless alternative announcement dates are added.
 
 ## 9. Intel CHIPS Act Preliminary Terms Announced
 
@@ -369,7 +369,7 @@ Official announcement date is usable. Need to check for Intel earnings, major fi
 
 ### Reviewer Objections
 
-Reviewer may say Intel's reaction is driven by firm fundamentals or turnaround expectations. Defense: compare against SMH/SOX and equipment peers; treat underperformance as evidence against the mechanism.
+Reviewer may say Intel's reaction is driven by firm fundamentals or turnaround expectations. Defence: compare against SMH/SOX and equipment peers; treat underperformance as evidence against the mechanism.
 
 ## 10. TSMC Arizona CHIPS Act Preliminary Terms Announced
 
@@ -406,7 +406,7 @@ Official date is usable. Need to document whether the announcement was anticipat
 
 ### Reviewer Objections
 
-Reviewer may argue support offsets costs rather than creates opportunity. Defense: the theory allows support to reduce downside risk; positive reaction is not required but is predicted if support is credible.
+Reviewer may argue support offsets costs rather than creates opportunity. Defence: the theory allows support to reduce downside risk; positive reaction is not required but is predicted if support is credible.
 
 ## 11. Samsung CHIPS Act Preliminary Terms Announced
 
@@ -443,7 +443,7 @@ US announcement date may not align cleanly with Korean trading hours. The protoc
 
 ### Reviewer Objections
 
-Reviewer may say the event is operationally messy because the primary market is outside the US. Defense: include in pilot to test feasibility; exclude from full firm-level sample if trading-calendar problems are too severe.
+Reviewer may say the event is operationally messy because the primary market is outside the US. Defence: include in pilot to test feasibility; exclude from full firm-level sample if trading-calendar problems are too severe.
 
 ## 12. Micron CHIPS Act Preliminary Agreement Announced
 
@@ -480,11 +480,11 @@ Official announcement date is usable. Check for Micron earnings or memory-sector
 
 ### Reviewer Objections
 
-Reviewer may argue market reaction is memory-cycle related. Defense: use SMH/SOX and, if feasible, Samsung/SK Hynix peer comparisons.
+Reviewer may argue market reaction is memory-cycle related. Defence: use SMH/SOX and, if feasible, Samsung/SK Hynix peer comparisons.
 
 ## Pilot Audit Report
 
-## 1. Can the Project Be Operationalized?
+## 1. Can the Project Be Operationalised?
 
 Yes, but only if the first full dataset stays narrow. Direct CHIPS preliminary terms and named support events are operationally clean. Broad legislation and export controls are useful but less clean. Foreign-listed firms and anticipated events create the largest implementation problems.
 
@@ -657,7 +657,7 @@ CHIPS Act signing is useful but not clean.
 
 Recommended revision:
 
-Full dataset should prioritize named preliminary terms and awards over legislative signing dates.
+Full dataset should prioritise named preliminary terms and awards over legislative signing dates.
 
 ## Failure 4: Substitute Links Are Weaker Than Named Beneficiary Links
 
@@ -677,7 +677,7 @@ Add a `market_relevance_caution` flag for events where the policy amount or affe
 
 ## 11. Recommended Revisions Before Full Dataset Construction
 
-1. Prioritize direct named support events for the primary sample.
+1. Prioritise direct named support events for the primary sample.
 2. Treat broad policy events as contextual or secondary.
 3. Add a foreign-listed asset timing rule.
 4. Add an implementation-event rule.
@@ -718,7 +718,7 @@ The full dataset should be built around:
 
 ## Final Pilot Verdict
 
-The project is operationalizable, but the pilot reveals that the cleanest empirical test is narrower than the original event inventory. The primary dataset should not try to cover every geopolitical semiconductor event. It should center on direct named state-support announcements and use threat-dominant events as a structured contrast.
+The project is operationalisable, but the pilot reveals that the cleanest empirical test is narrower than the original event inventory. The primary dataset should not try to cover every geopolitical semiconductor event. It should centre on direct named state-support announcements and use threat-dominant events as a structured contrast.
 
 The mechanism variables are observable in practice, especially `state_support`, `support_directness`, and `support_credibility`. The weakest parts are substitution coding, foreign-listed asset handling, and identifying true information dates for broad legislation or facility openings.
 

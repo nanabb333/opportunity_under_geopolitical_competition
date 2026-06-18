@@ -48,15 +48,15 @@ Before adding an event to the approved dataset, validate the candidate record:
 python3 scripts/validate_event_entry.py path/to/event_record.json
 ```
 
-After adding approved rows to `data/historical_analog_events.csv`, validate the dataset:
+After adding approved rows to `data/historical_analogue_events.csv`, validate the dataset:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 ```
 
 ## 5. Update Dataset
 
-Only approved events should enter `data/historical_analog_events.csv`. Candidate events should remain separate until they pass review.
+Only approved events should enter `data/historical_analogue_events.csv`. Candidate events should remain separate until they pass review.
 
 When integrating a row:
 
@@ -71,7 +71,7 @@ After dataset updates, regenerate outputs:
 
 ```bash
 python3 scripts/run_all_checks.py
-python3 scripts/analyze_scenario_profile.py
+python3 scripts/analyse_scenario_profile.py
 python3 scripts/dataset_coverage_analysis.py
 ```
 
@@ -91,4 +91,4 @@ Open:
 http://127.0.0.1:8000/dashboard/
 ```
 
-Review whether the dashboard reflects the regenerated evidence files and whether limitations remain visible. The dashboard should communicate historical analogs, observed pathways, and evidence notes without implying prediction or investment advice.
+Review whether the dashboard reflects the regenerated evidence files and whether limitations remain visible. The dashboard should communicate historical analogues, observed pathways, and evidence notes without implying prediction or investment advice.

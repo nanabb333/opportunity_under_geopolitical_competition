@@ -2,13 +2,13 @@
 
 ## Purpose
 
-The historical similarity engine adds a deterministic analytical layer to the historical analog dataset. Its purpose is to help compare geopolitical and industrial-policy events using coded qualitative features rather than narrative intuition alone.
+The historical similarity engine adds a deterministic analytical layer to the historical analogue dataset. Its purpose is to help compare geopolitical and industrial-policy events using coded qualitative features rather than narrative intuition alone.
 
-Similarity scoring is useful because the dissertation event universe contains several different event types: direct state-support announcements, broad policy support, implementation or reallocation events, export controls, entity-list actions, and retaliation cases. A transparent pairwise score makes it easier to identify which events are substantively close enough to be useful analogs, while preserving the repository's academically cautious framing.
+Similarity scoring is useful because the dissertation event universe contains several different event types: direct state-support announcements, broad policy support, implementation or reallocation events, export controls, entity-list actions, and retaliation cases. A transparent pairwise score makes it easier to identify which events are substantively close enough to be useful analogues, while preserving the repository's academically cautious framing.
 
 ## Features Compared
 
-The script compares each event with every other event using eight fields from `data/historical_analog_events.csv`:
+The script compares each event with every other event using eight fields from `data/historical_analogue_events.csv`:
 
 - `event_family`
 - `affected_sector`
@@ -57,7 +57,7 @@ This makes the score auditable and easy to challenge. If a researcher disagrees 
 
 The similarity engine is not a prediction model. It does not forecast returns, policy outcomes, firm performance, or investment opportunities. It does not claim that historically similar events will produce similar market reactions.
 
-The engine is a comparison tool for historical research and portfolio presentation. It helps organize analog reasoning; it does not validate causal claims.
+The engine is a comparison tool for historical research and portfolio presentation. It helps organise analogue reasoning; it does not validate causal claims.
 
 ## Limitations
 

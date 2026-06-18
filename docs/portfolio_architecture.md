@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This portfolio is organized as a progression from academic research to analytics engineering to decision-support product design.
+This portfolio is organised as a progression from academic research to analytics engineering to decision-support product design.
 
 ```text
 Repo 1: opportunity_under_geopolitical_competition
@@ -25,7 +25,7 @@ Core role:
 
 - define the research question
 - preserve dissertation theory and event-study framing
-- build a historical analog dataset
+- build a historical analogue dataset
 - create reproducible validation and analysis scripts
 - document limitations and research boundaries
 - demonstrate evidence synthesis without forecasting or investment advice
@@ -36,11 +36,11 @@ This repo shows research discipline, careful coding, reproducibility, and the ab
 
 ## Repo 2: Analytics Engine
 
-`Taiwan_Geopolitical_Risk_Project` should function as the analytics engine layer. It builds from the research foundation by applying geopolitical risk logic to a more focused Taiwan-centered analytical workflow.
+`Taiwan_Geopolitical_Risk_Project` should function as the analytics engine layer. It builds from the research foundation by applying geopolitical risk logic to a more focused Taiwan-centred analytical workflow.
 
 Core role:
 
-- operationalize regional geopolitical risk indicators
+- operationalise regional geopolitical risk indicators
 - transform structured event logic into reusable analytics
 - emphasize data processing, scoring, comparison, and interpretation
 - bridge research design and product-oriented outputs

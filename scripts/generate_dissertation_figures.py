@@ -139,7 +139,7 @@ def vertical_ticks(y_min: float, y_max: float) -> list[float]:
     return nice_ticks(y_min, y_max, step)
 
 
-def text_center(draw: ImageDraw.ImageDraw, xy: tuple[float, float], text: str, fnt, fill=INK):
+def text_centre(draw: ImageDraw.ImageDraw, xy: tuple[float, float], text: str, fnt, fill=INK):
     bbox = draw.textbbox((0, 0), text, font=fnt)
     draw.text((xy[0] - (bbox[2] - bbox[0]) / 2, xy[1]), text, font=fnt, fill=fill)
 
@@ -150,8 +150,8 @@ def draw_vertical_png(spec: FigureSpec, out: Path) -> None:
     y_min, y_max = spec.y_min, spec.y_max
     assert y_min is not None and y_max is not None
 
-    text_center(draw, (WIDTH / 2, 55), spec.title, FONT_TITLE)
-    text_center(draw, (WIDTH / 2, 115), spec.subtitle, FONT_SUBTITLE, TEXT_MUTED)
+    text_centre(draw, (WIDTH / 2, 55), spec.title, FONT_TITLE)
+    text_centre(draw, (WIDTH / 2, 115), spec.subtitle, FONT_SUBTITLE, TEXT_MUTED)
 
     left, right = MARGIN_L, WIDTH - MARGIN_R
     top, bottom = MARGIN_T, HEIGHT - MARGIN_B
@@ -179,20 +179,20 @@ def draw_vertical_png(spec: FigureSpec, out: Path) -> None:
         cx = left + slot * (idx + 0.5)
         yv = y_pos(value)
         y0 = y_pos(0)
-        color = POS if value >= 0 else NEG
-        draw.rectangle((cx - bar_w / 2, min(yv, y0), cx + bar_w / 2, max(yv, y0)), fill=color)
+        colour = POS if value >= 0 else NEG
+        draw.rectangle((cx - bar_w / 2, min(yv, y0), cx + bar_w / 2, max(yv, y0)), fill=colour)
         value_label = f"{value:.4f}%"
         if value >= 0:
             vy = yv - 38
         else:
             vy = yv + 13
-        text_center(draw, (cx, vy), value_label, FONT_VALUE, INK)
-        text_center(draw, (cx, bottom + 34), label, FONT_LABEL, INK)
+        text_centre(draw, (cx, vy), value_label, FONT_VALUE, INK)
+        text_centre(draw, (cx, bottom + 34), label, FONT_LABEL, INK)
 
     # Rotated y-axis label.
     label_img = Image.new("RGBA", (380, 60), (255, 255, 255, 0))
     label_draw = ImageDraw.Draw(label_img)
-    text_center(label_draw, (190, 8), spec.ylabel, FONT_AXIS, INK)
+    text_centre(label_draw, (190, 8), spec.ylabel, FONT_AXIS, INK)
     rotated = label_img.rotate(90, expand=True)
     img.paste(rotated, (70, int(top + (bottom - top) / 2 - rotated.height / 2)), rotated)
 
@@ -206,8 +206,8 @@ def draw_horizontal_png(spec: FigureSpec, out: Path) -> None:
     x_min, x_max = spec.y_min, spec.y_max
     assert x_min is not None and x_max is not None
 
-    text_center(draw, (WIDTH / 2, 55), spec.title, FONT_TITLE)
-    text_center(draw, (WIDTH / 2, 115), spec.subtitle, FONT_SUBTITLE, TEXT_MUTED)
+    text_centre(draw, (WIDTH / 2, 55), spec.title, FONT_TITLE)
+    text_centre(draw, (WIDTH / 2, 115), spec.subtitle, FONT_SUBTITLE, TEXT_MUTED)
 
     left, right = 320, WIDTH - 140
     top, bottom = 220, HEIGHT - 260
@@ -219,7 +219,7 @@ def draw_horizontal_png(spec: FigureSpec, out: Path) -> None:
         x = x_pos(tick)
         draw.line((x, top, x, bottom), fill=GRID, width=2)
         label = f"{tick:.0f}%"
-        text_center(draw, (x, bottom + 18), label, FONT_TICK, INK)
+        text_centre(draw, (x, bottom + 18), label, FONT_TICK, INK)
 
     draw.line((left, top, left, bottom), fill=AXIS, width=3)
     draw.line((left, bottom, right, bottom), fill=AXIS, width=3)
@@ -234,7 +234,7 @@ def draw_horizontal_png(spec: FigureSpec, out: Path) -> None:
         draw.text((95, cy - 16), label, font=FONT_LABEL, fill=INK)
         draw.text((xv + 18, cy - 16), f"{value:.4f}%", font=FONT_VALUE, fill=INK)
 
-    text_center(draw, ((left + right) / 2, bottom + 80), spec.ylabel, FONT_AXIS, INK)
+    text_centre(draw, ((left + right) / 2, bottom + 80), spec.ylabel, FONT_AXIS, INK)
     draw.text((left, HEIGHT - 105), spec.source_note, font=FONT_NOTE, fill=TEXT_MUTED)
     img.save(out, dpi=(300, 300))
 
@@ -285,8 +285,8 @@ def draw_vertical_svg(spec: FigureSpec, out: Path) -> None:
         cx = left + slot * (idx + 0.5)
         yv = y_pos(value)
         y0 = y_pos(0)
-        color = POS if value >= 0 else NEG
-        parts.append(f'<rect x="{cx - bar_w / 2:.1f}" y="{min(yv, y0):.1f}" width="{bar_w:.1f}" height="{abs(yv - y0):.1f}" fill="{color}"/>')
+        colour = POS if value >= 0 else NEG
+        parts.append(f'<rect x="{cx - bar_w / 2:.1f}" y="{min(yv, y0):.1f}" width="{bar_w:.1f}" height="{abs(yv - y0):.1f}" fill="{colour}"/>')
         vy = yv - 22 if value >= 0 else yv + 34
         parts.append(svg_text(cx, vy, f"{value:.4f}%", 23, "700", "middle"))
         parts.append(svg_text(cx, bottom + 58, label, 24, "400", "middle"))

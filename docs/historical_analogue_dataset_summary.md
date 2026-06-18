@@ -1,21 +1,21 @@
-# Historical Analog Dataset Summary
+# Historical Analogue Dataset Summary
 
 ## What Changed
 
-This sprint adds a focused historical-analog dataset layer to the repository. It does not redesign the dissertation project, remove the event-study framing, or change the validated dissertation results.
+This sprint adds a focused historical-analogue dataset layer to the repository. It does not redesign the dissertation project, remove the event-study framing, or change the validated dissertation results.
 
 New files:
 
-- `data/historical_analog_events.csv`
-- `docs/historical_analog_dataset_methodology.md`
-- `docs/historical_analog_dataset_summary.md`
-- `scripts/validate_historical_analog_dataset.py`
+- `data/historical_analogue_events.csv`
+- `docs/historical_analogue_dataset_methodology.md`
+- `docs/historical_analogue_dataset_summary.md`
+- `scripts/validate_historical_analogue_dataset.py`
 
-`README.md` now includes a short section linking to the historical analog dataset and methodology.
+`README.md` now includes a short section linking to the historical analogue dataset and methodology.
 
 ## Event Count
 
-The historical analog layer currently includes 12 events. The rows are derived from the existing `data/events.csv` event universe so that the new layer remains tied to the dissertation's documented coding base.
+The historical analogue layer currently includes 12 events. The rows are derived from the existing `data/events.csv` event universe so that the new layer remains tied to the dissertation's documented coding base.
 
 ## Fields Added
 
@@ -40,11 +40,11 @@ These fields make the event universe easier to compare across support signals, p
 
 ## Contribution to Decision-Support Analytics
 
-The dissertation evidence base is intentionally narrow and focused on event-study validation. The historical analog layer moves the repository one step toward decision-support analytics by creating a structured comparison table that can later support:
+The dissertation evidence base is intentionally narrow and focused on event-study validation. The historical analogue layer moves the repository one step toward decision-support analytics by creating a structured comparison table that can later support:
 
 - filtering by event family;
 - comparing support-dominant and pressure-dominant cases;
-- identifying primary cases and analog cases;
+- identifying primary cases and analogue cases;
 - documenting why an event is useful as a historical comparison;
 - separating qualitative mechanism coding from measured financial outcomes.
 

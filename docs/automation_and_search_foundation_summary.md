@@ -4,26 +4,26 @@
 
 This sprint adds the foundation for a more scalable analytics system without claiming full automation.
 
-New artifacts:
+New artefacts:
 
 - `scripts/event_ingestion_prototype.py`
 - `results/event_ingestion_candidates.json`
 - `data/candidate_events_template.csv`
 - `docs/candidate_event_review_workflow.md`
-- `scripts/search_historical_analogs.py`
+- `scripts/search_historical_analogues.py`
 - `results/latest_search_results.json`
 
 Dashboard upgrades:
 
 - Dataset Coverage Summary section.
 - System Workflow section.
-- Graceful fallback behavior for missing coverage data.
+- Graceful fallback behaviour for missing coverage data.
 
 ## Event Ingestion Prototype
 
-`scripts/event_ingestion_prototype.py` defines a small set of manually written prototype raw items inside the script. It transforms those raw items into standardized candidate records and writes `results/event_ingestion_candidates.json`.
+`scripts/event_ingestion_prototype.py` defines a small set of manually written prototype raw items inside the script. It transforms those raw items into standardised candidate records and writes `results/event_ingestion_candidates.json`.
 
-The output is explicitly marked as prototype-only. It is not scraped, not API-generated, not verified historical data, and not approved for integration into `data/historical_analog_events.csv`.
+The output is explicitly marked as prototype-only. It is not scraped, not API-generated, not verified historical data, and not approved for integration into `data/historical_analogue_events.csv`.
 
 ## Candidate Review Workflow
 
@@ -39,14 +39,14 @@ The output is explicitly marked as prototype-only. It is not scraped, not API-ge
 
 Human review remains required because source quality, duplicate detection, and event-family assignment require judgment.
 
-## Historical Analog Search
+## Historical Analogue Search
 
-`scripts/search_historical_analogs.py` is a command-line search tool for approved events in `data/historical_analog_events.csv`.
+`scripts/search_historical_analogues.py` is a command-line search tool for approved events in `data/historical_analogue_events.csv`.
 
 Example:
 
 ```bash
-python3 scripts/search_historical_analogs.py "export restriction"
+python3 scripts/search_historical_analogues.py "export restriction"
 ```
 
 The search runs across event title, family, sector, geography, market interpretation, observed pathway, and evidence note. It writes the latest search result to `results/latest_search_results.json`.
@@ -66,7 +66,7 @@ Event Ingestion Candidates
   ↓
 Human Review
   ↓
-Historical Analog Dataset
+Historical Analogue Dataset
   ↓
 Similarity Engine
   ↓
@@ -101,4 +101,4 @@ Future work could add:
 - dashboard display of candidate queues;
 - stronger tests for search and coverage outputs.
 
-Any future automation should preserve the separation between unverified candidates and approved historical analog events.
+Any future automation should preserve the separation between unverified candidates and approved historical analogue events.

@@ -10,7 +10,7 @@ Frozen theory:
 
 Pilot finding:
 
-> The project is operationalizable, but the clean empirical core is narrower than the original event inventory.
+> The project is operationalisable, but the clean empirical core is narrower than the original event inventory.
 
 Therefore, the core sample should not include every geopolitical semiconductor event. It should focus on events where the mechanism is most observable: **credible, named, semiconductor-related state support with visible public-market beneficiaries**.
 
@@ -59,7 +59,7 @@ The beneficiary is visible, named, and US-listed. The event is more discrete tha
 
 Intel's reaction may reflect firm-specific turnaround expectations, weakness, or the market's view of Intel's execution problems rather than state support.
 
-### Defense
+### Defence
 
 Use sector-adjusted returns against SMH/SOX and compare Intel to semiconductor peers. If Intel does not outperform sector benchmarks, the theory is weakened for this case.
 
@@ -77,7 +77,7 @@ TSMC is named, TSM is traded, and the event is specific. It is a cleaner support
 
 The announcement may only offset high US fab costs rather than create new upside.
 
-### Defense
+### Defence
 
 The theory explicitly allows state support to reduce downside risk. A positive reaction would support the mechanism; a weak or negative reaction would indicate that support was insufficient to offset cost concerns.
 
@@ -95,7 +95,7 @@ Samsung is a named beneficiary and the support is direct. The case improves theo
 
 Foreign listing, time-zone differences, and market-data access complicate event-window measurement.
 
-### Defense
+### Defence
 
 Include only if the event can be matched to a reliable trading instrument and transparent local-market timing rule. If not feasible, demote to secondary analysis rather than force a weak measurement.
 
@@ -113,7 +113,7 @@ The beneficiary is US-listed, public, and directly named. It also allows compari
 
 Micron's market reaction may reflect memory-cycle expectations rather than state support.
 
-### Defense
+### Defence
 
 Use sector benchmarks and, where feasible, memory peers. If Micron's reaction is indistinguishable from the sector or memory cycle, the event is not strong support for the theory.
 
@@ -131,7 +131,7 @@ Secondary analysis events fit the theory but are weaker for identification becau
 
 ### Theoretical Rationale
 
-The Act is central to state-backed semiconductor opportunity. It legally authorizes support and reflects geopolitical industrial policy.
+The Act is central to state-backed semiconductor opportunity. It legally authorises support and reflects geopolitical industrial policy.
 
 ### Identification Rationale
 
@@ -141,7 +141,7 @@ It is useful as a broad policy baseline but not a clean shock. It helps distingu
 
 The event was heavily anticipated, and signing is probably not the true information date.
 
-### Defense
+### Defence
 
 Do not use it as a main test. Code high anticipation and interpret as secondary context. Named preliminary terms are the main identification events.
 
@@ -149,7 +149,7 @@ Do not use it as a main test. Code high anticipation and interpret as secondary 
 
 ### Theoretical Rationale
 
-This is direct named state support connected to defense-relevant semiconductor capacity, fitting the theory closely.
+This is direct named state support connected to defence-relevant semiconductor capacity, fitting the theory closely.
 
 ### Identification Rationale
 
@@ -157,9 +157,9 @@ The event is specific and official, but the market relevance may be small relati
 
 ### Likely Reviewer Objection
 
-The award may be too small to move a diversified defense firm.
+The award may be too small to move a diversified defence firm.
 
-### Defense
+### Defence
 
 Include as a caution case only. If no market reaction appears, do not treat it as strong falsification because materiality is weaker.
 
@@ -177,7 +177,7 @@ It is theoretically relevant but likely not a clean information shock because op
 
 The true information event occurred earlier, when subsidies and investment plans were announced.
 
-### Defense
+### Defence
 
 Use only as secondary evidence on support credibility and reallocation. Do not use it as a primary event-study test unless a better announcement date is separately identified and frozen.
 
@@ -214,7 +214,7 @@ The firm-event link is visible because Nvidia disclosed the restriction. It prov
 
 This is a firm disclosure, not a government announcement.
 
-### Defense
+### Defence
 
 The event is still policy-driven and publicly dated. It should be classified as contrast, not support.
 
@@ -232,7 +232,7 @@ It is official, dated, and central to the semiconductor geopolitical environment
 
 The event is broad, bundled, and affects firms differently.
 
-### Defense
+### Defence
 
 Use it only as a contrast case. Do not infer mechanism from it alone. Treat heterogeneous exposure carefully.
 
@@ -250,7 +250,7 @@ It is a useful contrast to Micron state-support events, but substitute coding is
 
 Substitution beneficiaries are speculative.
 
-### Defense
+### Defence
 
 Use as secondary contrast. Do not let substitution results drive the main conclusion.
 
@@ -268,7 +268,7 @@ It is official and sector-specific, but affected firms may be foreign-listed and
 
 Foreign listing and mixed exposure reduce clean inference.
 
-### Defense
+### Defence
 
 Use as contrast with caution. If Tokyo Electron data are difficult, rely on US-traded equipment peers and sector benchmarks.
 
@@ -286,7 +286,7 @@ Micron is public and directly affected. The event provides a useful negative con
 
 Substitute beneficiaries may be foreign-listed and politically constrained.
 
-### Defense
+### Defence
 
 Use MU as the clean threat-exposed firm. Treat substitute analysis as secondary and conditional on feasible data.
 
@@ -296,14 +296,14 @@ These events should be excluded from the dissertation core sample, even if they 
 
 | Event | Exclusion Decision | Reason |
 |---|---|---|
-| FY2019 NDAA Huawei/ZTE federal procurement restrictions | Exclude | Telecom-focused, early, less semiconductor-centered |
+| FY2019 NDAA Huawei/ZTE federal procurement restrictions | Exclude | Telecom-focused, early, less semiconductor-centred |
 | Executive order securing ICT supply chain | Exclude | Broad telecom/ICT, not semiconductor-specific enough |
-| Huawei added to Entity List | Exclude from dissertation core | Important but telecom-centered and outside narrowed semiconductor state-support sample |
+| Huawei added to Entity List | Exclude from dissertation core | Important but telecom-centred and outside narrowed semiconductor state-support sample |
 | Huawei foreign direct product rule | Exclude from dissertation core | Useful historically but widens sample toward Huawei/telecom controls |
 | Further Huawei chip restrictions | Exclude | Redundant with broader export-control contrast logic |
 | SMIC added to Entity List | Exclude or reserve | Semiconductor-relevant but expands contrast set beyond manageable core |
 | Russia invades Ukraine | Exclude | Broad war shock, severe macro confounding |
-| Germany Zeitenwende defense fund | Exclude | Defense support, not semiconductor-focused |
+| Germany Zeitenwende defence fund | Exclude | Defence support, not semiconductor-focused |
 | US-Japan-Netherlands reported equipment-control agreement | Exclude | Media-report event, less official than Japan formal controls |
 | China gallium/germanium export controls | Exclude | Critical minerals/input shock, not clean semiconductor state-support test |
 | US outbound investment order | Exclude | Financial restriction, weak direct support channel |
@@ -318,7 +318,7 @@ These events should be excluded from the dissertation core sample, even if they 
 
 ## Exclusion Rationale by Type
 
-## Telecom-Centered Huawei Events
+## Telecom-Centreed Huawei Events
 
 ### Theoretical Rationale
 
@@ -332,15 +332,15 @@ Including Huawei would expand the sample toward telecom, sanctions, and substitu
 
 Reviewers may ask why canonical technology-competition events are excluded.
 
-### Defense
+### Defence
 
 The project is intentionally narrowed. Huawei can motivate the broader literature but does not belong in the main dissertation event universe.
 
-## Broad War and Defense Events
+## Broad War and Defence Events
 
 ### Theoretical Rationale
 
-Defense events fit state support but are outside the semiconductor-focused scope.
+Defence events fit state support but are outside the semiconductor-focused scope.
 
 ### Identification Rationale
 
@@ -348,9 +348,9 @@ War shocks introduce severe macro confounding and would weaken internal validity
 
 ### Likely Reviewer Objection
 
-Defense spending is a clean state-support case.
+Defence spending is a clean state-support case.
 
-### Defense
+### Defence
 
 It is clean substantively but not aligned with the semiconductor empirical focus. It belongs in future cross-sector work, not this dissertation.
 
@@ -368,7 +368,7 @@ They introduce commodity dynamics, input shocks, AI-cycle confounding, and broad
 
 Excluding them may reduce external validity.
 
-### Defense
+### Defence
 
 External validity is secondary for a master's dissertation. Internal validity and theoretical fit take priority.
 
@@ -386,7 +386,7 @@ If the support is too small relative to firm value, absence of a market reaction
 
 Excluding small awards could bias toward large, market-moving support.
 
-### Defense
+### Defence
 
 Small awards can be reserved for robustness or appendix analysis. The main sample should test events with plausible market relevance.
 
@@ -416,7 +416,7 @@ Prefer named preliminary terms, awards, or firm-specific support announcements o
 
 Anticipated events may show no market reaction even if the theory is true.
 
-## Defense
+## Defence
 
 The dissertation should not rely on anticipated events for the main test. Main analysis uses direct named support announcements, which are more discrete.
 
@@ -452,7 +452,7 @@ Exclude or reserve:
 
 This may bias the sample toward large public firms.
 
-## Defense
+## Defence
 
 The dependent variable is public-market reaction. Public-market visibility is not a flaw; it is required by the research question.
 
@@ -474,7 +474,7 @@ Main analysis:
 Secondary analysis:
 
 - enacted broad legislation
-- program authorization
+- programme authorisation
 - facility opening or implementation event
 
 ## Low Credibility
@@ -490,7 +490,7 @@ Exclude:
 
 Preliminary terms are not final disbursements.
 
-## Defense
+## Defence
 
 Markets price expectations. Preliminary terms are official, firm-specific, and materially more credible than rumors or broad policy aspirations. They are appropriate event-study dates.
 
@@ -518,7 +518,7 @@ This survives scrutiny because it avoids:
 
 - post hoc event selection
 - overbroad geopolitical risk claims
-- mixing defense, energy, telecom, AI, and minerals
+- mixing defence, energy, telecom, AI, and minerals
 - relying on speculative beneficiaries
 - treating anticipated legislation as clean shock evidence
 
@@ -526,7 +526,7 @@ This survives scrutiny because it avoids:
 
 The highest-identification sample is:
 
-> Named CHIPS preliminary terms and awards for public semiconductor firms, analyzed against sector peers and semiconductor benchmarks, with export-control events used only as contrast.
+> Named CHIPS preliminary terms and awards for public semiconductor firms, analysed against sector peers and semiconductor benchmarks, with export-control events used only as contrast.
 
 This maximizes identification because:
 
@@ -580,8 +580,8 @@ Do not include in main dissertation sample unless the committee demands expansio
 
 | Event Type | Treatment |
 |---|---|
-| Huawei telecom-centered restrictions | Exclude |
-| Broad war/defense shocks | Exclude |
+| Huawei telecom-centred restrictions | Exclude |
+| Broad war/defence shocks | Exclude |
 | Critical minerals export controls | Exclude |
 | AI Diffusion rule and broad AI controls | Exclude |
 | Repeated late export-control updates | Reserve |
@@ -607,7 +607,7 @@ Exclude from core sample if:
 
 - event lacks direct state support and is not needed as contrast
 - event lacks a visible public-market beneficiary
-- event is mainly telecom, defense, energy, AI, or critical minerals rather than semiconductors
+- event is mainly telecom, defence, energy, AI, or critical minerals rather than semiconductors
 - event is purely rhetorical
 - event is only a reported negotiation without official support terms
 - event is too small or peripheral for plausible market relevance, unless retained as a caution case
@@ -627,7 +627,7 @@ This sample is small, but defensible for a master's dissertation because the obj
 
 ## Final Reviewer-Facing Justification
 
-The sample is intentionally narrow. It prioritizes internal validity over breadth. The dissertation does not claim to explain all geopolitical competition or all market opportunity. It tests a precise mechanism in a most-likely sector:
+The sample is intentionally narrow. It prioritises internal validity over breadth. The dissertation does not claim to explain all geopolitical competition or all market opportunity. It tests a precise mechanism in a most-likely sector:
 
 > Do financial markets react positively when strategically important semiconductor firms receive credible, named state support under geopolitical competition?
 

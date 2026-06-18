@@ -2,7 +2,7 @@
 
 ## Python Version Assumption
 
-Use Python 3.10 or newer. The deterministic historical analog pipeline uses only the Python standard library.
+Use Python 3.10 or newer. The deterministic historical analogue pipeline uses only the Python standard library.
 
 The broader dissertation event-study script may require additional packages such as `pandas` and `yfinance`, depending on the local environment.
 
@@ -11,7 +11,7 @@ The broader dissertation event-study script may require additional packages such
 From the repository root:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 ```
 
 Expected result:
@@ -21,9 +21,9 @@ Expected result:
 - missing value counts are reported;
 - the script exits successfully if required structure is valid.
 
-## Regenerate Historical Analog Outputs
+## Regenerate Historical Analogue Outputs
 
-Run all deterministic historical analog checks and outputs with:
+Run all deterministic historical analogue checks and outputs with:
 
 ```bash
 python3 scripts/run_all_checks.py
@@ -31,7 +31,7 @@ python3 scripts/run_all_checks.py
 
 This runs, in order:
 
-1. `scripts/validate_historical_analog_dataset.py`
+1. `scripts/validate_historical_analogue_dataset.py`
 2. `scripts/calculate_historical_similarity.py`
 3. `scripts/run_scenario_query_demo.py`
 4. `scripts/generate_observed_pathways.py`
@@ -43,7 +43,7 @@ The runner stops at the first failure and prints PASS/FAIL messages.
 If you prefer to run each step separately:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 python3 scripts/calculate_historical_similarity.py
 python3 scripts/run_scenario_query_demo.py
 python3 scripts/generate_observed_pathways.py
@@ -84,7 +84,7 @@ Existing dissertation event-study outputs include:
 
 ## Troubleshooting Notes
 
-- If `run_all_checks.py` fails at validation, inspect `data/historical_analog_events.csv` for missing required columns, duplicate `event_id` values, or blank cells.
+- If `run_all_checks.py` fails at validation, inspect `data/historical_analogue_events.csv` for missing required columns, duplicate `event_id` values, or blank cells.
 - If scenario or pathway generation fails, regenerate upstream outputs first by running `scripts/calculate_historical_similarity.py` and `scripts/run_scenario_query_demo.py`.
 - If the dashboard does not load JSON files, make sure the HTTP server was started from the repository root, not from inside `dashboard/`.
 - If port 8000 is already in use, run `python3 -m http.server 8001` and open `http://127.0.0.1:8001/dashboard/`.

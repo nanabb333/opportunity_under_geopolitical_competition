@@ -2,9 +2,9 @@
 
 ## Current Dataset Size
 
-Current historical analog dataset size: 12 events.
+Current historical analogue dataset size: 12 events.
 
-Source: `data/historical_analog_events.csv`
+Source: `data/historical_analogue_events.csv`
 
 ## Target Size
 
@@ -53,4 +53,4 @@ Near-term priority categories:
 
 ## Growth Principle
 
-The next dataset expansion should prioritize balanced family coverage and source quality over raw event count. A 30-event dataset with conservative coding will be more useful than a larger dataset with weak source documentation.
+The next dataset expansion should prioritise balanced family coverage and source quality over raw event count. A 30-event dataset with conservative coding will be more useful than a larger dataset with weak source documentation.

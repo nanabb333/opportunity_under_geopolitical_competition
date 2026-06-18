@@ -20,7 +20,7 @@ If GitHub allows additional pinned repositories, add one supporting technical pr
 
 Suggested description:
 
-> Dissertation-based geopolitical risk analytics project transforming event-study research into historical analog scenario analysis and analyst briefs.
+> Dissertation-based geopolitical risk analytics project transforming event-study research into historical analogue scenario analysis and analyst briefs.
 
 ### Taiwan_Geopolitical_Risk_Project
 
@@ -42,7 +42,7 @@ Suggested description:
 - event-study
 - industrial-policy
 - semiconductors
-- historical-analogs
+- historical-analogues
 - scenario-analysis
 - research-analytics
 - reproducible-research
@@ -63,7 +63,7 @@ Suggested description:
 - decision-support
 - ai-product
 - geopolitical-risk
-- data-visualization
+- data-visualisation
 - scenario-analysis
 - frontend
 
@@ -98,7 +98,7 @@ Suggested positioning:
 
 > I build geopolitical risk analytics projects that turn research, structured data, and scenario evidence into decision-support tools.
 
-## Recruiter Optimization
+## Recruiter Optimisation
 
 A recruiter should be able to understand within one minute:
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This workflow turns the event expansion protocol into a repeatable production process. It is designed for careful dataset growth, not rapid collection. The goal is to add historical analog events in a way that preserves transparency, source quality, and reproducibility.
+This workflow turns the event expansion protocol into a repeatable production process. It is designed for careful dataset growth, not rapid collection. The goal is to add historical analogue events in a way that preserves transparency, source quality, and reproducibility.
 
 ## Stage 1: Event Identification
 
@@ -13,7 +13,7 @@ Outputs:
 - candidate event title;
 - candidate event date;
 - candidate source link or citation;
-- short reason the event may belong in the historical analog dataset.
+- short reason the event may belong in the historical analogue dataset.
 
 Rules:
 
@@ -45,7 +45,7 @@ Document the reason for every deferred or excluded event.
 
 Assign one dominant event family using `docs/event_family_taxonomy_v2.md`.
 
-Required behavior:
+Required behaviour:
 
 - choose the dominant public announcement mechanism;
 - document secondary mechanisms in `evidence_note`;
@@ -101,7 +101,7 @@ Recommended reviewer action:
 
 ## Stage 6: Dataset Integration
 
-Integrate approved records into `data/historical_analog_events.csv` in batches.
+Integrate approved records into `data/historical_analogue_events.csv` in batches.
 
 Integration rules:
 
@@ -116,7 +116,7 @@ Integration rules:
 Run validation after integration:
 
 ```bash
-python3 scripts/validate_historical_analog_dataset.py
+python3 scripts/validate_historical_analogue_dataset.py
 python3 scripts/run_all_checks.py
 ```
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`data/source_registry.csv` defines the source categories that should guide future event monitoring. The registry is not a scraping configuration and does not authorize automated collection. It is a research-control document for source selection, review priorities, and reliability assessment.
+`data/source_registry.csv` defines the source categories that should guide future event monitoring. The registry is not a scraping configuration and does not authorise automated collection. It is a research-control document for source selection, review priorities, and reliability assessment.
 
 ## Source Selection
 
@@ -21,15 +21,15 @@ Primary sources should be preferred when available. News and analytical sources 
 Reliability levels should be assigned conservatively:
 
 - `High`: official government releases, regulatory notices, statutory records, sanctions databases, stock-exchange filings, or company primary disclosures.
-- `Medium-High`: source classes with strong domain authority but possible interpretation or timing issues, such as defense briefings or company investor-relations materials.
-- `Medium`: reputable financial press, specialized industry press, think-tank analysis, or research reports that require corroboration before event integration.
+- `Medium-High`: source classes with strong domain authority but possible interpretation or timing issues, such as defence briefings or company investor-relations materials.
+- `Medium`: reputable financial press, specialised industry press, think-tank analysis, or research reports that require corroboration before event integration.
 - `Low`: social media, unsourced commentary, rumor-driven reporting, or claims that cannot be verified. Low-reliability sources should not be used as the sole basis for event coding.
 
 ## Update Priorities
 
 Update priority should be based on:
 
-- strategic relevance to semiconductors, AI chips, defense technology, industrial policy, or supply-chain relocation
+- strategic relevance to semiconductors, AI chips, defence technology, industrial policy, or supply-chain relocation
 - likely event-family coverage gap
 - source reliability
 - clarity of event date

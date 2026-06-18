@@ -20,7 +20,7 @@ Intelligence Operations System
 
 ## Overview
 
-This project converts dissertation research on geopolitical competition and strategic industrial policy into a reproducible historical analog intelligence system. It begins with a research question, structures event evidence, builds deterministic analytics, and adds an operations layer for candidate review, validation, and dashboard-ready system health.
+This project converts dissertation research on geopolitical competition and strategic industrial policy into a reproducible historical analogue intelligence system. It begins with a research question, structures event evidence, builds deterministic analytics, and adds an operations layer for candidate review, validation, and dashboard-ready system health.
 
 The project is descriptive. It does not forecast geopolitical outcomes, estimate returns, or provide investment advice.
 
@@ -34,7 +34,7 @@ The project is descriptive. It does not forecast geopolitical outcomes, estimate
 
 ## Analytics Engineering Skills Demonstrated
 
-- CSV data modeling for events, source registries, queues, and change logs.
+- CSV data modelling for events, source registries, queues, and change logs.
 - Deterministic Python pipelines using standard-library tooling.
 - Validation-first workflow design.
 - Generated JSON outputs for static dashboard consumption.
@@ -45,7 +45,7 @@ The project is descriptive. It does not forecast geopolitical outcomes, estimate
 
 - Dissertation framing and theory-chain preservation.
 - Event-study thinking.
-- Historical analog dataset design.
+- Historical analogue dataset design.
 - Conservative qualitative coding.
 - Evidence gap and coverage analysis.
 - Governance controls for source reliability, review accountability, and update history.
@@ -69,4 +69,4 @@ These components make the project more scalable while preserving human review an
 - Queue and source registry workflows are foundations, not live automated collection.
 - No scraping or LLM APIs are used.
 - Similarity scores are deterministic historical comparisons, not predictions.
-- Dashboard outputs are communication artifacts, not trading tools.
+- Dashboard outputs are communication artefacts, not trading tools.

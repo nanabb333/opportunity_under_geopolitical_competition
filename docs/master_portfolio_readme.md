@@ -8,7 +8,7 @@ My work focuses on strategic technology, semiconductors, industrial policy, Taiw
 
 ## Research Background
 
-My foundation is dissertation research on geopolitical competition and market interpretation. I use research design, event-study thinking, source review, and historical analog logic to structure complex geopolitical questions.
+My foundation is dissertation research on geopolitical competition and market interpretation. I use research design, event-study thinking, source review, and historical analogue logic to structure complex geopolitical questions.
 
 The research foundation matters because it keeps the portfolio grounded in evidence rather than dashboard-first storytelling.
 
@@ -55,13 +55,13 @@ Decision Support Product
 
 Role: Research foundation.
 
-This repository transforms dissertation research into a historical analog analytics system. It includes a structured event dataset, similarity engine, scenario assistant, observed pathway engine, operations layer, and analyst brief generator.
+This repository transforms dissertation research into a historical analogue analytics system. It includes a structured event dataset, similarity engine, scenario assistant, observed pathway engine, operations layer, and analyst brief generator.
 
 ### Taiwan_Geopolitical_Risk_Project
 
 Role: Analytics engine.
 
-This repository should show how the research logic can be focused on Taiwan-centered geopolitical risk and converted into reusable analytical workflows.
+This repository should show how the research logic can be focused on Taiwan-centred geopolitical risk and converted into reusable analytical workflows.
 
 ### AI_Geopolitical_Risk_Dashboard
 
@@ -71,9 +71,9 @@ This repository should show how scenario evidence and geopolitical risk analytic
 
 ## Key Projects
 
-Key portfolio artifacts include:
+Key portfolio artefacts include:
 
-- historical analog event dataset
+- historical analogue event dataset
 - deterministic similarity engine
 - scenario assistant
 - observed pathway summaries
@@ -87,7 +87,7 @@ Research skills:
 
 - research design
 - event-study framing
-- historical analog reasoning
+- historical analogue reasoning
 - source review
 - limitations documentation
 

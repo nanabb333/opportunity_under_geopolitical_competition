@@ -18,7 +18,7 @@ Use a focused event study of semiconductor state-support announcements, comparin
 
 ### Strongest Design Choice
 
-The strongest identification strategy is a narrow event-study design centered on discrete policy announcements where state support is publicly announced for strategically important semiconductor firms or facilities. The main comparison should be between:
+The strongest identification strategy is a narrow event-study design centred on discrete policy announcements where state support is publicly announced for strategically important semiconductor firms or facilities. The main comparison should be between:
 
 - Named beneficiaries of state support.
 - Strategically relevant sector peers not directly named.
@@ -31,7 +31,7 @@ The primary outcome should be abnormal return around short windows: event day, C
 
 The event-study design cannot prove causality because policy announcements are anticipated, bundled with other news, and embedded in semiconductor cycles. Reviewers may argue that any positive reaction reflects AI demand, earnings expectations, interest rates, or prior anticipation rather than state support.
 
-### Defense
+### Defence
 
 Do not overclaim causality. Frame the design as a market-expectations test, not a structural causal estimate. Use short windows, sector-adjusted returns, and pre-specified event inclusion rules. Compare named beneficiaries to sector peers to reduce the risk that results are only semiconductor-cycle effects. Flag anticipated and bundled events rather than pretending they are clean shocks.
 
@@ -46,7 +46,7 @@ The defensible claim is:
 The mechanism test should focus on whether market reactions are stronger when state support is direct and credible. Events should be classified before collecting returns into categories such as:
 
 - Direct named support: preliminary funding terms, grants, procurement, named awards.
-- Broad policy support: legislation, program authorization, eligibility rules.
+- Broad policy support: legislation, programme authorisation, eligibility rules.
 - Threat-dominant events: export controls, Entity List additions, restrictions without direct support.
 
 The core mechanism is supported if direct state-support events produce more positive reactions for named beneficiaries than broad policy support or threat-dominant events.
@@ -55,9 +55,9 @@ The core mechanism is supported if direct state-support events produce more posi
 
 The mechanism may be indistinguishable from a simpler story: markets like government money. If the project only shows that subsidy recipients rise after subsidy announcements, the theoretical contribution is thin.
 
-### Defense
+### Defence
 
-The dissertation must show that state support matters specifically in strategically important geopolitical sectors, not merely as generic subsidies. The defense is to connect each support event to strategic semiconductor capacity, national-security framing, supply-chain resilience, or technology competition. The thesis should also compare state-support events to restriction-only events in the same sector. If restriction-only events are negative or mixed while support events are positive, the mechanism is sharper than "geopolitics is good."
+The dissertation must show that state support matters specifically in strategically important geopolitical sectors, not merely as generic subsidies. The defence is to connect each support event to strategic semiconductor capacity, national-security framing, supply-chain resilience, or technology competition. The thesis should also compare state-support events to restriction-only events in the same sector. If restriction-only events are negative or mixed while support events are positive, the mechanism is sharper than "geopolitics is good."
 
 The mechanism claim should be modest:
 
@@ -89,7 +89,7 @@ Exclusion criteria:
 
 The event list may be cherry-picked. If the researcher selects famous CHIPS Act announcements and ignores null cases, results will be biased toward confirming the theory.
 
-### Defense
+### Defence
 
 Create an event log that includes all candidate events considered, including excluded events and reasons for exclusion. Include weaker or smaller support events if they meet inclusion rules. Preserve null and ambiguous events. Do not remove events after seeing returns unless there is a pre-specified exclusion reason, such as overlapping earnings or missing price data.
 
@@ -113,7 +113,7 @@ Limit the first empirical test to semiconductors and semiconductor-linked strate
 
 A semiconductor-only design may not generalize. Reviewers may say the project is really about CHIPS policy or the semiconductor cycle, not a broader theory of geopolitical competition.
 
-### Defense
+### Defence
 
 Accept the limitation. A master's thesis does not need to prove universal generality. The scope condition is part of the theory: the mechanism should work best in strategic sectors where state support is credible and market-relevant. Semiconductors are a hard enough first test because the sector has both positive state-support events and negative export-control shocks.
 
@@ -123,7 +123,7 @@ The thesis should avoid claiming external validity beyond strategic industries. 
 
 ### Strongest Design Choice
 
-Pre-specify the main alternative explanations and build defenses into the design:
+Pre-specify the main alternative explanations and build defences into the design:
 
 - AI and semiconductor demand cycle.
 - Earnings announcements and firm fundamentals.
@@ -134,13 +134,13 @@ Pre-specify the main alternative explanations and build defenses into the design
 - Subsidy as a signal of firm weakness.
 - Sector-wide industrial policy optimism.
 
-The strongest empirical defense is to compare supported firms against sector benchmarks and peers, not only against broad market indices.
+The strongest empirical defence is to compare supported firms against sector benchmarks and peers, not only against broad market indices.
 
 ### Strongest Reviewer Attack
 
 The largest alternative explanation is the semiconductor and AI cycle. From 2022 onward, many semiconductor firms moved because of AI demand, capex cycles, and earnings revisions. State support may be secondary.
 
-### Defense
+### Defence
 
 Use semiconductor-specific benchmarks such as SMH or SOX where feasible. Report both market-adjusted and sector-adjusted abnormal returns. If a named beneficiary outperforms SPY but not SMH, the result should not be interpreted as strong support for the theory. The most credible evidence is beneficiary outperformance relative to the semiconductor sector around a direct support announcement.
 
@@ -163,7 +163,7 @@ The theory is weakened if:
 
 The theory may become unfalsifiable if every negative result is explained away as anticipation, bundling, or market irrationality.
 
-### Defense
+### Defence
 
 Commit to interpreting null or negative sector-adjusted reactions as real evidence against the theory for that event class. Anticipation and bundling may be discussed, but they cannot be used to rescue every failed result. The dissertation should include a table classifying each event as supportive, contradictory, or inconclusive.
 
@@ -187,7 +187,7 @@ Recommended choices:
 
 Even short windows may be contaminated because policy announcements are anticipated or released after market close. Event dates may not capture the true information shock.
 
-### Defense
+### Defence
 
 Use alternative event dates for major legislative events where necessary: passage, signing, and award announcements. Treat highly anticipated legislation as weaker evidence than named preliminary funding terms. The strongest events are firm-specific funding announcements because they are more discrete than broad legislative milestones.
 
@@ -199,7 +199,7 @@ External validity should be presented cautiously. The design tests the mechanism
 
 The theory may travel best to:
 
-- Defense procurement.
+- Defence procurement.
 - Energy security investment.
 - Critical minerals.
 - AI infrastructure.
@@ -210,45 +210,45 @@ The theory may travel best to:
 
 Semiconductors are exceptional. The sector has unusual capital intensity, strategic salience, AI exposure, public subsidies, and globally traded firms. Results may not travel.
 
-### Defense
+### Defence
 
-Frame semiconductors as a most-likely case for the State Support mechanism. If the mechanism does not appear there, the broader theory is in trouble. If it appears there, the thesis establishes plausibility, not universality. Later work can test defense, energy, and critical minerals.
+Frame semiconductors as a most-likely case for the State Support mechanism. If the mechanism does not appear there, the broader theory is in trouble. If it appears there, the thesis establishes plausibility, not universality. Later work can test defence, energy, and critical minerals.
 
 ## 9. Reviewer Criticisms
 
 ### Criticism 1: This is just an event study of subsidies.
 
-Defense:
+Defence:
 
 The project is not about subsidies in general. It is about state support in strategically important sectors under geopolitical competition. The design includes threat-dominant contrast events and strategic framing to test whether state support converts geopolitical risk into market opportunity.
 
 ### Criticism 2: Markets anticipated the announcements.
 
-Defense:
+Defence:
 
 Anticipation is real. The design codes anticipated events as weaker tests and emphasizes discrete firm-specific awards or preliminary terms. The thesis will not treat broad legislative signing dates as clean shocks.
 
 ### Criticism 3: Semiconductor stocks moved because of AI, not geopolitics.
 
-Defense:
+Defence:
 
 Use sector-adjusted returns and compare named beneficiaries to semiconductor peers. If results disappear after sector adjustment, the theory is weakened.
 
 ### Criticism 4: Strategic importance is circular.
 
-Defense:
+Defence:
 
 Strategic importance is not inferred from returns. It is established before outcomes using policy framing, sector role, and national-security relevance. It is treated as a scope condition, not the dependent variable.
 
 ### Criticism 5: State support may signal weakness, not opportunity.
 
-Defense:
+Defence:
 
 That is a valid rival interpretation and should be treated as a falsification pathway. If supported firms underperform peers, the thesis should conclude that state support was interpreted as weakness, burden, or insufficient compensation.
 
 ### Criticism 6: Positive market reactions may be temporary or irrational.
 
-Defense:
+Defence:
 
 The theory concerns market reactions and expectations, not long-run policy success. Persistence can be discussed as a limitation or extension, but the master's thesis should not claim durable welfare gains.
 
@@ -374,7 +374,7 @@ The State Support mechanism is supported if direct, credible, strategically fram
 
 ## External Validity Position
 
-This is a most-likely test in semiconductors. Results may plausibly travel to defense, energy security, critical minerals, AI infrastructure, and telecom, but the dissertation will not claim universal generality.
+This is a most-likely test in semiconductors. Results may plausibly travel to defence, energy security, critical minerals, AI infrastructure, and telecom, but the dissertation will not claim universal generality.
 
 ## Falsification Conditions
 
@@ -386,6 +386,6 @@ The project contributes a narrower mechanism to geopolitical risk and political 
 
 > Markets may price geopolitical competition positively for selected strategic firms when states convert strategic importance into credible economic support.
 
-## Proposal Defense Position
+## Proposal Defence Position
 
 The dissertation should be defended as a modest, mechanism-focused event study. It does not prove that geopolitical competition is good, that state support succeeds, or that market reactions are rational. It tests whether credible state support is a visible channel through which geopolitical competition can generate positive market reactions for strategically important firms.

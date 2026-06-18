@@ -1,14 +1,14 @@
-# Historical Analog Dataset Methodology
+# Historical Analogue Dataset Methodology
 
 ## Purpose
 
-This sprint adds `data/historical_analog_events.csv` as a structured historical-analog layer on top of the existing dissertation event-study files. The goal is to preserve the dissertation's narrow empirical framing while making the event universe easier to compare across broader geopolitical and industrial-policy patterns.
+This sprint adds `data/historical_analogue_events.csv` as a structured historical-analogue layer on top of the existing dissertation event-study files. The goal is to preserve the dissertation's narrow empirical framing while making the event universe easier to compare across broader geopolitical and industrial-policy patterns.
 
-The existing dissertation dataset is built for event-study analysis: events are linked to assets, and the main outcome is a sector-adjusted cumulative abnormal return. The historical analog dataset does not replace that design. It adds a qualitative event-level table that can be used to compare event families, support signals, pressure signals, surprise levels, and observed pathways without claiming more precision than the evidence supports.
+The existing dissertation dataset is built for event-study analysis: events are linked to assets, and the main outcome is a sector-adjusted cumulative abnormal return. The historical analogue dataset does not replace that design. It adds a qualitative event-level table that can be used to compare event families, support signals, pressure signals, surprise levels, and observed pathways without claiming more precision than the evidence supports.
 
 ## Connection to the Dissertation Theory
 
-The dissertation theory argues that geopolitical competition can generate positive market reactions for selected firms when strategic importance is converted into credible state support. The historical analog layer supports that theory-building task by separating several mechanisms that can otherwise be conflated:
+The dissertation theory argues that geopolitical competition can generate positive market reactions for selected firms when strategic importance is converted into credible state support. The historical analogue layer supports that theory-building task by separating several mechanisms that can otherwise be conflated:
 
 - broad strategic industrial-policy support;
 - direct named state support;
@@ -25,7 +25,7 @@ This structure helps compare state-support cases with threat-dominant contrast c
 
 `event_family` groups events by the dominant policy mechanism visible in the event record. It is coded from the existing event type and policy subtype where possible.
 
-- `broad_policy_support`: legislation or broad support programs that authorize or frame support but are not firm-specific shocks.
+- `broad_policy_support`: legislation or broad support programs that authorise or frame support but are not firm-specific shocks.
 - `direct_state_support`: named awards, preliminary terms, subsidies, loans, or other direct support for a firm or facility.
 - `implementation_reallocation`: facility openings or capacity moves where support is present but the event may reflect implementation rather than new information.
 - `export_control_pressure`: export controls or license requirements that mainly restrict access to products, customers, or technology.
@@ -47,7 +47,7 @@ This structure helps compare state-support cases with threat-dominant contrast c
 `state_support_signal` describes whether the event communicates credible public support for a strategically important firm, sector, or capacity base.
 
 - Strong signals include named subsidies, loans, funded awards, tax credits, direct capacity support, or statutory programs.
-- Weak or broad signals include general industrial-policy authorization without a clean firm-specific announcement.
+- Weak or broad signals include general industrial-policy authorisation without a clean firm-specific announcement.
 - `No direct support` is used for threat-dominant events.
 
 ### `restriction_or_pressure_signal`
@@ -74,7 +74,7 @@ The field should not be read as evidence that a market reaction occurred. Actual
 This dataset can support:
 
 - transparent comparison of event families;
-- qualitative historical analog selection;
+- qualitative historical analogue selection;
 - robustness discussion around support versus pressure cases;
 - identification of cases that are primary, secondary, contrast, or still `TBD`;
 - future expansion into decision-support analytics, provided additional coding and validation are performed.

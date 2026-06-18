@@ -17,7 +17,7 @@ Evidence:
 - theory chain design
 - event-study logic
 - event taxonomy
-- historical analog dataset
+- historical analogue dataset
 - source review protocols
 - limitations documentation
 - evidence synthesis framework

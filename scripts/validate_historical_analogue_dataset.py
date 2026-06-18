@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the historical analog event dataset."""
+"""Validate the historical analogue event dataset."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATASET = PROJECT_ROOT / "data" / "historical_analog_events.csv"
+DATASET = PROJECT_ROOT / "data" / "historical_analogue_events.csv"
 
 REQUIRED_COLUMNS = [
     "event_id",
@@ -58,7 +58,7 @@ def main() -> int:
         column: count for column, count in missing_values.items() if count > 0
     }
 
-    print("Historical analog dataset validation")
+    print("Historical analogue dataset validation")
     print(f"Dataset: {DATASET}")
     print(f"Rows: {len(rows)}")
     print(f"Required columns present: {'yes' if not missing_columns else 'no'}")

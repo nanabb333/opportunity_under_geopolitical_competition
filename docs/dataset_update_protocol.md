@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This protocol defines how the historical analog dataset should be maintained as the project evolves toward a continuously updated geopolitical intelligence system. The workflow is designed for research quality, transparency, and reproducibility.
+This protocol defines how the historical analogue dataset should be maintained as the project evolves toward a continuously updated geopolitical intelligence system. The workflow is designed for research quality, transparency, and reproducibility.
 
 ## Weekly Workflow
 
@@ -58,7 +58,7 @@ Weekly work should emphasize candidate triage and documentation quality over vol
 
 - No candidate event is treated as approved without human review.
 - No financial precision is added without documented calculation.
-- No forecast or investment recommendation is inferred from historical analogs.
+- No forecast or investment recommendation is inferred from historical analogues.
 - Source notes are sufficient for future review.
 - Validation scripts pass after dataset changes.
 - Generated outputs are refreshed after approved dataset changes.

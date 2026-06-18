@@ -5,9 +5,9 @@
 Current event coverage:
 
 - `data/events.csv`: 12 events
-- `data/historical_analog_events.csv`: 12 events
+- `data/historical_analogue_events.csv`: 12 events
 
-The historical analog dataset currently mirrors the dissertation event universe. This is useful for transparency, but it is too small and too semiconductor-policy-centered for broad historical comparison.
+The historical analogue dataset currently mirrors the dissertation event universe. This is useful for transparency, but it is too small and too semiconductor-policy-centred for broad historical comparison.
 
 ## Target Event Count
 
@@ -21,7 +21,7 @@ The near-term target is the best next sprint scope because it materially improve
 
 ## Current Event Family Coverage
 
-Current `historical_analog_events.csv` families:
+Current `historical_analogue_events.csv` families:
 
 | Event family | Current count |
 |---|---:|
@@ -55,11 +55,11 @@ Secondary gaps:
 
 ## Prioritization Roadmap
 
-### Phase 1: Balanced Analog Base
+### Phase 1: Balanced Analogue Base
 
 Target: 30 total events.
 
-Add approximately 18 carefully sourced events while preserving current dissertation events. Prioritize:
+Add approximately 18 carefully sourced events while preserving current dissertation events. Prioritise:
 
 - 4 Military Exercise events
 - 3 Diplomatic Shock events
@@ -68,13 +68,13 @@ Add approximately 18 carefully sourced events while preserving current dissertat
 - 3 Leadership Meeting events
 - 2 Election Event events
 
-Purpose: make scenario retrieval less dependent on export-control and subsidy analogs.
+Purpose: make scenario retrieval less dependent on export-control and subsidy analogues.
 
 ### Phase 2: Cross-Family Robustness
 
 Target: 50 total events.
 
-Expand underrepresented families and add non-U.S. cases where source quality is strong. Prioritize:
+Expand underrepresented families and add non-U.S. cases where source quality is strong. Prioritise:
 
 - allied industrial-policy actions;
 - East Asia security shocks;
@@ -84,13 +84,13 @@ Expand underrepresented families and add non-U.S. cases where source quality is 
 
 Purpose: improve historical comparison across support, pressure, and reallocation pathways.
 
-### Phase 3: Research-Grade Historical Analog Layer
+### Phase 3: Research-Grade Historical Analogue Layer
 
 Target: 75 to 100 total events.
 
 Add a screened event log with included and excluded events, source hierarchy, coding confidence, and change history.
 
-Purpose: support a more defensible historical analog research base while preserving transparency and avoiding post hoc event selection.
+Purpose: support a more defensible historical analogue research base while preserving transparency and avoiding post hoc event selection.
 
 ## Implementation Rules
 

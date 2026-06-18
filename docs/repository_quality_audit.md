@@ -4,23 +4,23 @@ Audit date: 2026-06-17
 
 ## README Clarity
 
-- PASS: `README.md` explains the dissertation framing, research question, theory chain, validated results, historical analog layer, similarity engine, scenario query demo, observed pathway engine, dashboard view, and portfolio value chain.
+- PASS: `README.md` explains the dissertation framing, research question, theory chain, validated results, historical analogue layer, similarity engine, scenario query demo, observed pathway engine, dashboard view, and portfolio value chain.
 - PASS: The README links to portfolio-facing documents, technical architecture, project limitations, data files, scripts, results, and dashboard files.
 - WARNING: The README is now comprehensive and long. This is acceptable for a portfolio repository, but future changes should preserve scannability.
 
 ## Data Availability
 
 - PASS: Core dissertation inputs are present under `data/`: `events.csv`, `assets.csv`, `event_asset_links.csv`, and raw local price files.
-- PASS: Historical analog input is present at `data/historical_analog_events.csv`.
+- PASS: Historical analogue input is present at `data/historical_analogue_events.csv`.
 - PASS: Generated event-study outputs are present: `data/market_returns.csv`, `data/event_firm_returns.csv`, and `data/local_price_validation_report.md`.
-- WARNING: `data/first_results_memo.md` is present but appears untracked in the current working tree. Decide whether it should be committed as a generated research artifact.
+- WARNING: `data/first_results_memo.md` is present but appears untracked in the current working tree. Decide whether it should be committed as a generated research artefact.
 
 ## Script Reproducibility
 
-- PASS: The historical analog validation, similarity, scenario query, and observed pathway scripts run locally with repository-relative paths.
-- PASS: `scripts/run_all_checks.py` provides a single release-readiness command for the deterministic historical analog pipeline.
+- PASS: The historical analogue validation, similarity, scenario query, and observed pathway scripts run locally with repository-relative paths.
+- PASS: `scripts/run_all_checks.py` provides a single release-readiness command for the deterministic historical analogue pipeline.
 - WARNING: `scripts/build_event_returns.py` uses additional dependencies such as `pandas` and `yfinance`; this audit did not add dependency management.
-- WARNING: Citation-editing scripts are present as untracked files and appear outside the historical analog release path.
+- WARNING: Citation-editing scripts are present as untracked files and appear outside the historical analogue release path.
 
 ## Results Availability
 
@@ -37,7 +37,7 @@ Audit date: 2026-06-17
 
 ## Documentation Completeness
 
-- PASS: Methodology and summary documents exist for the historical analog dataset, similarity engine, scenario query demo, observed pathway engine, and dashboard evidence view.
+- PASS: Methodology and summary documents exist for the historical analogue dataset, similarity engine, scenario query demo, observed pathway engine, and dashboard evidence view.
 - PASS: Portfolio packaging documents exist: `portfolio_case_study.md`, `recruiter_summary.md`, `technical_architecture.md`, and `project_limitations.md`.
 - PASS: Research design freeze documents remain available under `docs/`.
 
@@ -49,11 +49,11 @@ Audit date: 2026-06-17
 
 ## Repo Hygiene
 
-- PASS: Core project directories are organized: `data/`, `scripts/`, `results/`, `docs/`, `dashboard/`, and `dissertation_results/`.
+- PASS: Core project directories are organised: `data/`, `scripts/`, `results/`, `docs/`, `dashboard/`, and `dissertation_results/`.
 - WARNING: There is no top-level `figures/` directory; figures are stored under `dissertation_results/figures/`.
-- WARNING: Several manuscript/citation artifacts and helper scripts are currently untracked. They should be committed intentionally, ignored, or moved out of the release branch before a final public portfolio release.
-- PASS: No dashboard build artifacts or external JavaScript dependencies were introduced.
+- WARNING: Several manuscript/citation artefacts and helper scripts are currently untracked. They should be committed intentionally, ignored, or moved out of the release branch before a final public portfolio release.
+- PASS: No dashboard build artefacts or external JavaScript dependencies were introduced.
 
 ## Overall Status
 
-PASS with warnings. The repository is portfolio-ready for the historical analog research workflow, provided the current untracked artifacts are handled intentionally before final release.
+PASS with warnings. The repository is portfolio-ready for the historical analogue research workflow, provided the current untracked artefacts are handled intentionally before final release.

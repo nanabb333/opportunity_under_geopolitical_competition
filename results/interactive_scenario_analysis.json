@@ -1,6 +1,6 @@
 {
   "source_scenarios": "data/sample_scenario_profiles.csv",
-  "source_events": "data/historical_analog_events.csv",
+  "source_events": "data/historical_analogue_events.csv",
   "scenario_count": 5,
   "event_count": 12,
   "top_n": 5,
@@ -14,7 +14,7 @@
     "surprise_level"
   ],
   "method": "Deterministic qualitative feature matching; exact match = 1, partial textual overlap = 0.5, no match or unavailable coding = 0. Scores are divided by the number of comparable scenario fields.",
-  "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice.",
+  "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice.",
   "results": [
     {
       "scenario_id": "SP001",
@@ -29,7 +29,7 @@
         "surprise_level": "Moderate"
       },
       "analyst_note": "Scenario comparison profile for military pressure; not an approved historical event.",
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -182,7 +182,7 @@
           "evidence_note": "Base event from data/events.csv; useful negative contrast to Micron's later state-support event; no return result coded here."
         }
       ],
-      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice."
+      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice."
     },
     {
       "scenario_id": "SP002",
@@ -197,7 +197,7 @@
         "surprise_level": "Moderate"
       },
       "analyst_note": "Scenario comparison profile for export-control pressure; not an approved historical event.",
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -361,7 +361,7 @@
           "evidence_note": "Base event from data/events.csv; broad enacted support and highly anticipated; no precise financial result coded."
         }
       ],
-      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice."
+      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice."
     },
     {
       "scenario_id": "SP003",
@@ -376,7 +376,7 @@
         "surprise_level": "Moderate"
       },
       "analyst_note": "Scenario comparison profile for strategic state support; not an approved historical event.",
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E009",
           "event_date": "2024-03-20",
@@ -404,7 +404,7 @@
           "event_date": "2023-12-11",
           "event_title": "BAE receives first CHIPS Act manufacturing award",
           "event_family": "direct_state_support",
-          "affected_sector": "defense semiconductors",
+          "affected_sector": "defence semiconductors",
           "country_or_region": "US",
           "similarity_score": 0.5714,
           "matched_fields": [
@@ -535,7 +535,7 @@
           "evidence_note": "Base event from data/events.csv; primary case for TSM; no additional financial result invented."
         }
       ],
-      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice."
+      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice."
     },
     {
       "scenario_id": "SP004",
@@ -550,7 +550,7 @@
         "surprise_level": "Moderate"
       },
       "analyst_note": "Scenario comparison profile for strategic industrial policy under competition; not an approved historical event.",
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -709,7 +709,7 @@
           "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
         }
       ],
-      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice."
+      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice."
     },
     {
       "scenario_id": "SP005",
@@ -724,7 +724,7 @@
         "surprise_level": "Moderate"
       },
       "analyst_note": "Scenario comparison profile for relocation and capacity reallocation; not an approved historical event.",
-      "top_analogs": [
+      "top_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
@@ -889,7 +889,7 @@
           "evidence_note": "Base event from data/events.csv; Entity List action; substitution links are analytically useful but weaker than named support."
         }
       ],
-      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogs from the current evidence base and does not forecast outcomes or provide investment advice."
+      "limitations_note": "Scenario comparison is deterministic and descriptive. It retrieves historical analogues from the current evidence base and does not forecast outcomes or provide investment advice."
     }
   ]
 }

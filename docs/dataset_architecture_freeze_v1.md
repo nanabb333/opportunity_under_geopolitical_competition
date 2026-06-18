@@ -50,7 +50,7 @@ Used for interpretation: named beneficiaries, sector peers, broad benchmarks, an
 
 The event-firm unit may inflate observations because multiple firms are attached to the same event.
 
-## Defense
+## Defence
 
 The dissertation should avoid pretending event-firm rows are fully independent. Main results should be descriptive and event-clustered where possible. The event-firm unit is still necessary because the core theory predicts different reactions within the same event.
 
@@ -110,7 +110,7 @@ Recommended fields:
 | asset_type | categorical | firm, ETF, index |
 | country | string | Primary listing or headquarters country |
 | sector | string | Main sector |
-| subsector | string | Foundry, memory, equipment, AI chips, defense semiconductors, etc. |
+| subsector | string | Foundry, memory, equipment, AI chips, defence semiconductors, etc. |
 | benchmark_role | categorical | none, broad_market, tech_benchmark, sector_benchmark |
 | strategic_asset | binary | Whether asset belongs to strategically relevant semiconductor universe |
 | public_market_available | binary | Whether daily price data are available |
@@ -209,7 +209,7 @@ The sector-adjusted return is more important for mechanism testing. A firm that 
 
 ETF benchmarks may contain the treated firm, creating mechanical contamination.
 
-## Defense
+## Defence
 
 Report both SPY-adjusted and semiconductor-benchmark-adjusted returns. Acknowledge that sector benchmarks are imperfect but necessary to separate beneficiary-specific moves from sector-wide moves. For large constituents, supplement with peer comparisons where feasible.
 
@@ -230,23 +230,23 @@ Each linked asset must fall into one of these roles:
 
 ## Strongest Design Choice
 
-The main test should prioritize named_beneficiary observations because they have the cleanest event-firm link.
+The main test should prioritise named_beneficiary observations because they have the cleanest event-firm link.
 
 ## Reviewer Concern
 
 Named beneficiaries are selected by the state, not randomly assigned. They may be chosen because they are strong, politically connected, weak, or already expected to invest.
 
-## Defense
+## Defence
 
 The design does not claim random assignment. It tests whether markets interpret state selection and support as positive information. Include sector peers and benchmarks to show whether named beneficiaries react differently from comparable assets.
 
-## 5. Mechanism Operationalization
+## 5. Mechanism Operationalisation
 
 The frozen mechanism is:
 
 > Geopolitical competition -> Strategic Importance -> Credible State Support -> Investor Interpretation -> Positive Market Reaction
 
-The dataset operationalizes this through four blocks:
+The dataset operationalises this through four blocks:
 
 1. Event context: geopolitical_competition_link and strategic_importance.
 2. Mechanism: state_support, support_directness, support_credibility.
@@ -255,11 +255,11 @@ The dataset operationalizes this through four blocks:
 
 The mechanism is supported if high state-support events generate positive abnormal returns for named or clearly eligible beneficiaries, especially relative to sector peers and benchmarks.
 
-## 6. Variable Construction and Reviewer Defense
+## 6. Variable Construction and Reviewer Defence
 
 ## Event-Level Variables
 
-| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defense |
+| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defence |
 |---|---|---|---|---|
 | event_id | Required to link event tables without ambiguity. | Unique code such as E001. | None substantive. | Use stable identifiers and preserve codebook. |
 | event_date | Defines timing of market reaction. | Official announcement date; if after market close, note timing. | True information date may differ due to leaks or anticipation. | Record alternative dates in notes; use short windows and flag anticipation. |
@@ -275,7 +275,7 @@ The mechanism is supported if high state-support events generate positive abnorm
 | support_directness | Distinguishes named awards from broad eligibility. | 0 none, 1 rhetoric, 2 eligible group, 3 named firm/facility. | Named support may be anticipated. | Pair with anticipation_level and event-date notes. |
 | support_credibility | Captures whether support is likely market-relevant. | 0 none, 1 vague, 2 official but broad, 3 funded/specific/official. | Credibility is subjective. | Code based on official status, funding specificity, and legal/administrative concreteness. |
 | threat_signal | Captures negative pathway. | 0 none, 1 weak, 2 moderate, 3 direct restriction/threat. | Threat and support may coexist. | Permit both high threat and high support; theory predicts mixed reactions. |
-| opportunity_signal | Captures event-level opportunity content. | 0 none, 1 weak, 2 moderate, 3 direct expected upside. | May duplicate state_support. | Use as descriptive; core mechanism tests should prioritize state_support. |
+| opportunity_signal | Captures event-level opportunity content. | 0 none, 1 weak, 2 moderate, 3 direct expected upside. | May duplicate state_support. | Use as descriptive; core mechanism tests should prioritise state_support. |
 | substitution_reallocation | Captures secondary mechanism. | 0 none, 1 weak, 2 plausible, 3 strong/explicit. | Could introduce new mechanism creep. | Use only as secondary moderator, not central theory. |
 | anticipation_level | Handles expectedness. | 0 surprise, 1 low anticipation, 2 debated/partly expected, 3 highly anticipated. | Hard to know expectations. | Use pre-event news/policy timeline; report sensitivity excluding high-anticipation events. |
 | confound_flag_event | Protects internal validity. | 1 if major same-day policy, macro, or sector event exists. | Confounds are hard to exhaustively identify. | Flag obvious confounds; do not claim perfect control. |
@@ -284,7 +284,7 @@ The mechanism is supported if high state-support events generate positive abnorm
 
 ## Asset-Level Variables
 
-| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defense |
+| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defence |
 |---|---|---|---|---|
 | asset_id | Required for clean linkage. | Unique code such as A001. | None substantive. | Stable identifier. |
 | ticker | Identifies market asset. | Market ticker. | ADRs and foreign listings may differ. | Note listing type and use consistent trading calendar. |
@@ -296,21 +296,21 @@ The mechanism is supported if high state-support events generate positive abnorm
 | benchmark_role | Identifies benchmark assets. | broad_market, tech_benchmark, sector_benchmark, none. | Benchmark choice affects results. | Report multiple benchmarks. |
 | strategic_asset | Asset-level scope marker. | 1 if asset is in strategic semiconductor universe. | Could be tautological. | Based on sector role before outcomes, not returns. |
 | public_market_available | Ensures feasibility. | 1 if daily price data are available. | Excludes private beneficiaries. | Acknowledge public-market selection limitation. |
-| notes | Documents listing and comparability issues. | Text. | Inconsistent notes. | Keep short and standardized. |
+| notes | Documents listing and comparability issues. | Text. | Inconsistent notes. | Keep short and standardised. |
 
 ## Event-Asset Link Variables
 
-| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defense |
+| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defence |
 |---|---|---|---|---|
 | exposure_role | Central cross-sectional exposure concept. | named_beneficiary, eligible_beneficiary, sector_peer, threat_exposed, substitute, benchmark. | Role assignment may be subjective. | Assign before returns using source documents and predefined rules. |
 | expected_direction | Records ex ante prediction. | positive, negative, mixed, neutral, ambiguous. | Can become hindsight-biased. | Freeze before return calculation and preserve original coding. |
 | link_strength | Captures directness of event-firm relationship. | 0 none, 1 weak, 2 moderate, 3 direct/named. | May be subjective. | Anchor 3 to named firms or direct restrictions; use notes. |
-| link_basis | Explains why asset is linked. | named_in_policy, sector_eligibility, supply_chain_role, benchmark, direct_restriction, substitute_logic. | Multiple bases possible. | Allow multiple bases; prioritize named_in_policy for main tests. |
-| pre_outcome_link_notes | Anti-hindsight audit trail. | Text written before returns. | Notes may be rationalizations. | Timestamp or freeze the link table before market data collection. |
+| link_basis | Explains why asset is linked. | named_in_policy, sector_eligibility, supply_chain_role, benchmark, direct_restriction, substitute_logic. | Multiple bases possible. | Allow multiple bases; prioritise named_in_policy for main tests. |
+| pre_outcome_link_notes | Anti-hindsight audit trail. | Text written before returns. | Notes may be rationalisations. | Timestamp or freeze the link table before market data collection. |
 
 ## Market and Outcome Variables
 
-| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defense |
+| Variable | Why It Exists Theoretically | How It Is Measured | Reviewer Concerns | Defence |
 |---|---|---|---|---|
 | daily_return | Input for market reaction. | Percent/log return from adjusted close. | Different return formulas. | Use one formula consistently; report choice. |
 | event_day_return | Immediate market reaction. | Asset return on event date. | Event may occur after close. | Use CAR [-1,+1] as primary if timing uncertain. |
@@ -324,7 +324,7 @@ The mechanism is supported if high state-support events generate positive abnorm
 | earnings_conflict | Controls firm-news confounding. | 1 if firm earnings occur inside event window. | Earnings calendars can be incomplete. | Flag obvious cases; sensitivity excluding them. |
 | macro_conflict | Controls macro-news confounding. | 1 if major Fed/CPI/jobs event occurs in window. | Macro confounds can be missed. | Use major published macro calendar; discuss limitations. |
 | data_quality_flag | Prevents overinterpretation. | clean, caution, weak, exclude. | Could be used to drop inconvenient observations. | Assign before analysis or based on documented data issues only. |
-| interpretation_result | Proposal-defense summary. | supportive, contradictory, inconclusive after returns. | Subjective post-outcome label. | Use only for summary, not as independent variable. |
+| interpretation_result | Proposal-defence summary. | supportive, contradictory, inconclusive after returns. | Subjective post-outcome label. | Use only for summary, not as independent variable. |
 
 ## 7. Coding Rules
 
@@ -368,7 +368,7 @@ For a master's dissertation, the minimum viable event universe is:
 - 5-8 threat-dominant semiconductor contrast events.
 - Total: approximately 15-23 events.
 
-This is enough for descriptive event-study evidence and simple comparisons. It is not enough for complex causal modeling.
+This is enough for descriptive event-study evidence and simple comparisons. It is not enough for complex causal modelling.
 
 ## Minimum Asset Universe
 
@@ -421,7 +421,7 @@ It cannot support:
 
 ## Expansion 1: Cross-Sector Comparison
 
-Add defense, energy security, critical minerals, telecom infrastructure, and AI infrastructure.
+Add defence, energy security, critical minerals, telecom infrastructure, and AI infrastructure.
 
 Purpose:
 
