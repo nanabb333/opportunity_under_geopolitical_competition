@@ -29,6 +29,7 @@ REQUIRED_DASHBOARD_FILES = [
     PROJECT_ROOT / "results" / "scenario_query_demo_results.json",
     PROJECT_ROOT / "results" / "observed_pathways.json",
     PROJECT_ROOT / "results" / "interactive_scenario_analysis.json",
+    PROJECT_ROOT / "results" / "analyst_briefs.json",
     COVERAGE_PATH,
 ]
 

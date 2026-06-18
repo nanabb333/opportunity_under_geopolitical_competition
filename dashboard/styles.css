@@ -90,6 +90,8 @@ h3 {
 .interactive-panel,
 .interactive-summary,
 .mini-card,
+.brief-panel,
+.brief-card,
 .error-panel {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -337,6 +339,45 @@ main {
   background: var(--surface);
 }
 
+.brief-panel {
+  padding: 20px;
+}
+
+.brief-card {
+  padding: 18px;
+  box-shadow: none;
+}
+
+.brief-flow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.brief-section {
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+}
+
+.brief-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.brief-list li {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.brief-list strong {
+  color: var(--ink);
+}
+
 .scenario-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -503,6 +544,7 @@ main {
 @media (max-width: 1040px) {
   .page-header,
   .interactive-layout,
+  .brief-flow,
   .split-section {
     grid-template-columns: 1fr;
   }

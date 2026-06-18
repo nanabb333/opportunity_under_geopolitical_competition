@@ -19,7 +19,8 @@ PIPELINE_STEPS = [
     ("Step 5a", "Generate scenario query outputs", ["scripts/run_scenario_query_demo.py"]),
     ("Step 5b", "Generate interactive scenario outputs", ["scripts/analyze_scenario_profile.py"]),
     ("Step 6", "Generate pathway outputs", ["scripts/generate_observed_pathways.py"]),
-    ("Step 7", "Generate dashboard operations data", ["scripts/system_health_report.py"]),
+    ("Step 7", "Generate analyst brief outputs", ["scripts/generate_analyst_brief.py"]),
+    ("Step 8", "Generate dashboard operations data", ["scripts/system_health_report.py"]),
 ]
 
 

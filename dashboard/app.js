@@ -4,6 +4,7 @@ const DATA_FILES = {
   coverage: "../results/dataset_coverage_report.json",
   interactive: "../results/interactive_scenario_analysis.json",
   health: "../results/system_health_report.json",
+  briefs: "../results/analyst_briefs.json",
 };
 
 const state = {
@@ -16,6 +17,9 @@ const state = {
   selectedInteractiveScenarioId: null,
   healthData: null,
   healthError: null,
+  briefData: null,
+  briefError: null,
+  selectedBriefScenarioId: null,
   errors: [],
 };
 
@@ -57,7 +61,8 @@ function renderDataStatus() {
   const coverageStatus = state.coverageData ? "coverage loaded" : "coverage unavailable";
   const interactiveStatus = state.interactiveData ? "interactive assistant loaded" : "interactive assistant unavailable";
   const healthStatus = state.healthData ? `operations ${state.healthData.overall_status}` : "operations unavailable";
-  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}, ${interactiveStatus}, ${healthStatus}`;
+  const briefStatus = state.briefData ? "briefs loaded" : "briefs unavailable";
+  status.textContent = `${scenarioCount} scenarios, ${pathwayCount} pathway summaries, ${coverageStatus}, ${interactiveStatus}, ${healthStatus}, ${briefStatus}`;
 }
 
 function renderErrors() {
@@ -341,6 +346,120 @@ function renderInteractiveAssistant() {
   container.appendChild(layout);
 }
 
+function renderAnalystBriefs() {
+  const container = document.getElementById("brief-container");
+  container.innerHTML = "";
+
+  const briefs = state.briefData?.briefs ?? [];
+  if (briefs.length === 0) {
+    container.appendChild(
+      el(
+        "p",
+        "fallback-note",
+        `Analyst briefs unavailable. Run python3 scripts/generate_analyst_brief.py to generate ${DATA_FILES.briefs}.`
+      )
+    );
+    if (state.briefError) {
+      container.appendChild(el("p", "fallback-detail", state.briefError));
+    }
+    return;
+  }
+
+  if (!state.selectedBriefScenarioId) {
+    state.selectedBriefScenarioId = briefs[0].scenario_id;
+  }
+
+  const selectedBrief = briefs.find(
+    (brief) => brief.scenario_id === state.selectedBriefScenarioId
+  ) ?? briefs[0];
+
+  const controls = el("div", "interactive-controls");
+  const label = el("label", "scenario-select-label", "Brief scenario");
+  label.setAttribute("for", "brief-scenario-select");
+
+  const select = el("select", "scenario-select");
+  select.id = "brief-scenario-select";
+  briefs.forEach((brief) => {
+    const option = el("option", null, `${brief.scenario_id}: ${brief.scenario_question}`);
+    option.value = brief.scenario_id;
+    option.selected = brief.scenario_id === selectedBrief.scenario_id;
+    select.appendChild(option);
+  });
+  select.addEventListener("change", (event) => {
+    state.selectedBriefScenarioId = event.target.value;
+    renderAnalystBriefs();
+  });
+  controls.appendChild(label);
+  controls.appendChild(select);
+  container.appendChild(controls);
+
+  const briefCard = el("article", "brief-card");
+  briefCard.appendChild(el("span", "scenario-id", selectedBrief.scenario_id));
+  briefCard.appendChild(el("h3", null, selectedBrief.scenario_description?.question ?? selectedBrief.scenario_question));
+  briefCard.appendChild(
+    el("p", "evidence-note", selectedBrief.scenario_description?.profile_summary ?? "No profile summary available.")
+  );
+
+  const sectionFlow = el("div", "brief-flow");
+
+  const analogSection = el("section", "brief-section");
+  analogSection.appendChild(el("h3", null, "Historical Analogs"));
+  const analogList = el("ul", "brief-list");
+  (selectedBrief.most_relevant_historical_analogs ?? []).forEach((analog) => {
+    const item = el("li");
+    item.appendChild(el("strong", null, `${analog.event_id}: ${analog.event_title}`));
+    item.appendChild(
+      el(
+        "p",
+        "evidence-note",
+        `Similarity ${formatScore(analog.similarity_score)}; pathway: ${analog.observed_market_pathway}; matched fields: ${(analog.matched_fields ?? []).join(", ") || "None"}`
+      )
+    );
+    analogList.appendChild(item);
+  });
+  analogSection.appendChild(analogList);
+
+  const pathwaySection = el("section", "brief-section");
+  pathwaySection.appendChild(el("h3", null, "Observed Pathways"));
+  const pathwayList = el("ul", "brief-list");
+  (selectedBrief.common_observed_pathways ?? []).forEach((pathway) => {
+    const item = el("li");
+    item.appendChild(el("strong", null, pathway.pathway_name));
+    item.appendChild(el("p", "evidence-note", pathway.summary_note));
+    item.appendChild(
+      el("p", "evidence-note", `Representative events: ${(pathway.representative_events ?? []).join(", ")}`)
+    );
+    pathwayList.appendChild(item);
+  });
+  pathwaySection.appendChild(pathwayList);
+
+  const evidenceSection = el("section", "brief-section");
+  evidenceSection.appendChild(el("h3", null, "Evidence Summary"));
+  const evidenceList = el("ul", "brief-list");
+  (selectedBrief.key_evidence_notes ?? []).forEach((note) => {
+    evidenceList.appendChild(el("li", null, `${note.event_id}: ${note.evidence_note}`));
+  });
+  evidenceSection.appendChild(evidenceList);
+
+  const limitationsSection = el("section", "brief-section");
+  limitationsSection.appendChild(el("h3", null, "Limitations"));
+  const limitationsList = el("ul", "brief-list");
+  [
+    ...(selectedBrief.analytical_caveats ?? []),
+    ...(selectedBrief.research_limitations ?? []),
+  ].forEach((limitation) => {
+    limitationsList.appendChild(el("li", null, limitation));
+  });
+  limitationsSection.appendChild(limitationsList);
+
+  sectionFlow.appendChild(analogSection);
+  sectionFlow.appendChild(pathwaySection);
+  sectionFlow.appendChild(evidenceSection);
+  sectionFlow.appendChild(limitationsSection);
+  briefCard.appendChild(sectionFlow);
+  container.appendChild(briefCard);
+}
+
 function renderPathways() {
   const container = document.getElementById("pathway-container");
   container.innerHTML = "";
@@ -384,12 +503,13 @@ function renderPathways() {
 }
 
 async function init() {
-  const [scenarioResult, pathwayResult, coverageResult, interactiveResult, healthResult] = await Promise.allSettled([
+  const [scenarioResult, pathwayResult, coverageResult, interactiveResult, healthResult, briefResult] = await Promise.allSettled([
     loadJson("scenario", DATA_FILES.scenario),
     loadJson("pathways", DATA_FILES.pathways),
     loadJson("coverage", DATA_FILES.coverage),
     loadJson("interactive", DATA_FILES.interactive),
     loadJson("health", DATA_FILES.health),
+    loadJson("briefs", DATA_FILES.briefs),
   ]);
 
   if (scenarioResult.status === "fulfilled") {
@@ -422,11 +542,18 @@ async function init() {
     state.healthError = `Missing or unreadable file: ${DATA_FILES.health}. ${healthResult.reason.message}`;
   }
 
+  if (briefResult.status === "fulfilled") {
+    state.briefData = briefResult.value;
+  } else {
+    state.briefError = `Missing or unreadable file: ${DATA_FILES.briefs}. ${briefResult.reason.message}`;
+  }
+
   renderDataStatus();
   renderErrors();
   renderOperationsOverview();
   renderCoverage();
   renderInteractiveAssistant();
+  renderAnalystBriefs();
   renderScenarioCards();
   renderPathways();
 }

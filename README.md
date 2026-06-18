@@ -83,6 +83,33 @@ python3 scripts/pipeline_orchestrator.py
 
 The operations layer supports reproducibility and operational scalability. It does not scrape websites, call LLM APIs, forecast outcomes, or provide investment advice.
 
+## Evidence-to-Decision Layer
+
+```text
+Historical Evidence
+        ↓
+Similarity Analysis
+        ↓
+Observed Pathways
+        ↓
+Evidence Synthesis
+        ↓
+Analyst Brief
+```
+
+Phase 5 adds deterministic analyst briefs that synthesize scenario descriptions, relevant historical analogs, observed pathways, evidence notes, caveats, and research limitations. This layer turns structured historical evidence into a readable analyst brief without adding forecasts, probabilities, expected-return estimates, investment recommendations, or LLM API calls.
+
+- [Analyst brief generator](scripts/generate_analyst_brief.py)
+- [Analyst briefs output](results/analyst_briefs.json)
+- [Evidence synthesis framework](docs/evidence_synthesis_framework.md)
+- [Decision support principles](docs/decision_support_principles.md)
+
+Generate briefs with:
+
+```bash
+python3 scripts/generate_analyst_brief.py
+```
+
 ## Live / Local Dashboard Preview
 
 Run the static dashboard locally from the repository root:

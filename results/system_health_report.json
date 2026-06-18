@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T10:13:54",
+  "generated_at": "2026-06-18T10:19:03",
   "overall_status": "PASS",
   "dataset_status": {
     "path": "data/historical_analog_events.csv",
@@ -36,6 +36,7 @@
       "results/scenario_query_demo_results.json",
       "results/observed_pathways.json",
       "results/interactive_scenario_analysis.json",
+      "results/analyst_briefs.json",
       "results/dataset_coverage_report.json"
     ]
   },
