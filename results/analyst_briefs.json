@@ -1,398 +1,334 @@
 {
-  "source_file": "results/interactive_scenario_analysis.json",
-  "brief_count": 5,
-  "method": "Deterministic template synthesis from scenario profiles, retrieved historical analogs, observed pathway summaries, and evidence notes.",
-  "disclaimer": "Analyst briefs are descriptive evidence syntheses only. They are not forecasts, probability estimates, expected-return estimates, or investment advice.",
+  "source_files": {
+    "historical_events": "data/historical_analogue_events.csv",
+    "scenario_results": "results/scenario_query_demo_results.json",
+    "observed_pathways": "results/observed_pathways.json"
+  },
+  "brief_count": 3,
+  "method": "Deterministic template synthesis from scenario profiles, retrieved historical analogues, observed pathway groupings, and event evidence notes.",
+  "disclaimer": "Analyst briefs are descriptive historical evidence syntheses only. They are not forecasts, probability estimates, expected-return estimates, trading tools, or investment advice.",
   "briefs": [
     {
-      "scenario_id": "SP001",
-      "scenario_question": "What if a new Taiwan Strait military exercise raises semiconductor supply-chain concern?",
-      "scenario_description": {
-        "question": "What if a new Taiwan Strait military exercise raises semiconductor supply-chain concern?",
-        "profile_summary": "Scenario profile codes event family as Military Exercise, sector as semiconductors, region as Taiwan Strait, strategic importance as High, support signal as No direct support, pressure signal as Strong military-pressure signal, and surprise level as Moderate.",
-        "analyst_note": "Scenario comparison profile for military pressure; not an approved historical event."
-      },
-      "most_relevant_historical_analogs": [
+      "brief_id": "BRIEF-SQ001",
+      "scenario_id": "SQ001",
+      "scenario_title": "What if China announces another large-scale military exercise near Taiwan?",
+      "scenario_description": "The scenario is coded as geopolitical_pressure in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong geopolitical-pressure context, and surprise level coded as Moderate.",
+      "most_relevant_historical_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.6429,
-          "observed_market_pathway": "Restriction pressure pathway",
+          "event_family": "export_control_pressure",
+          "country_or_region": "US",
+          "affected_sector": "semiconductors",
+          "similarity_score": 0.8125,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E003 is included because it shares 5 coded field(s) with the scenario profile."
+          "different_fields": [],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
         },
         {
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.5,
+          "event_family": "export_control_pressure",
+          "country_or_region": "US",
+          "affected_sector": "AI chips",
+          "similarity_score": 0.6875,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
           "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E002 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E004",
-          "event_date": "2022-12-15",
-          "event_title": "YMTC and other Chinese entities added to Entity List",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Restriction/substitution pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E004 is included because it shares 4 coded field(s) with the scenario profile."
+          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
         },
         {
           "event_id": "E005",
           "event_date": "2023-03-31",
           "event_title": "Japan announces semiconductor-equipment export controls",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Restriction pressure pathway",
+          "event_family": "allied_export_control_pressure",
+          "country_or_region": "Japan",
+          "affected_sector": "semiconductor equipment",
+          "similarity_score": 0.6875,
           "matched_fields": [
+            "event_family",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E005 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E006",
-          "event_date": "2023-05-21",
-          "event_title": "China restricts Micron procurement",
-          "similarity_score": 0.5,
+          "different_fields": [
+            "affected_sector"
+          ],
           "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E006 is included because it shares 4 coded field(s) with the scenario profile."
+          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
         }
       ],
-      "common_observed_pathways": [
+      "observed_historical_pathways": [
         {
           "pathway_name": "Restriction pressure pathway",
-          "count": 4,
+          "count": 3,
           "representative_events": [
             "E003",
             "E002",
-            "E005",
-            "E006"
+            "E005"
           ],
-          "summary_note": "Restriction pressure pathway appears in 4 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Restriction/substitution pathway",
-          "count": 1,
-          "representative_events": [
-            "E004"
+          "evidence_notes": [
+            {
+              "event_id": "E003",
+              "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+            },
+            {
+              "event_id": "E002",
+              "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+            },
+            {
+              "event_id": "E005",
+              "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+            }
           ],
-          "summary_note": "Restriction/substitution pathway appears in 1 of the top historical analog(s)."
+          "analyst_note": "3 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ],
-      "key_evidence_notes": [
-        {
-          "event_id": "E003",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
-        {
-          "event_id": "E002",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
-        },
-        {
-          "event_id": "E004",
-          "evidence_note": "Base event from data/events.csv; Entity List action; substitution links are analytically useful but weaker than named support."
-        },
-        {
-          "event_id": "E005",
-          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
-        },
-        {
-          "event_id": "E006",
-          "evidence_note": "Base event from data/events.csv; useful negative contrast to Micron's later state-support event; no return result coded here."
-        }
+      "key_evidence": [
+        "E003: Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously.",
+        "E002: Base event from data/events.csv; firm disclosure of policy restriction; contrast case only.",
+        "E005: Base event from data/events.csv; official allied restriction; no direct state-support signal coded.",
+        "Restriction pressure pathway: 3 retrieved analogue(s), represented by E003, E002, E005."
       ],
       "analytical_caveats": [
-        "The brief uses the top 5 retrieved analog(s) from the current evidence base.",
-        "The pathway summary contains 2 observed pathway category or categories.",
-        "Scenario inputs are predefined coded profiles, not approved historical events.",
-        "Evidence notes should be read as qualitative context, not causal proof."
+        "The brief uses 3 retrieved historical analogue(s) from the current scenario demo.",
+        "The observed pathway section contains 1 pathway grouping(s).",
+        "The scenario profile is a coded comparison input, not an approved historical event.",
+        "Evidence notes are qualitative research context, not causal proof."
       ],
       "research_limitations": [
-        "This brief is a deterministic evidence synthesis, not a forecast.",
-        "Historical analogs are selected from the current coded dataset and may reflect sample limitations.",
-        "Similarity scores summarize qualitative feature overlap and do not imply probabilities.",
-        "Observed pathways describe historical patterns in the evidence base and do not estimate expected returns.",
-        "This output is not investment advice or a trading recommendation."
-      ]
+        "This brief is a deterministic historical evidence synthesis, not a forecast.",
+        "Historical analogues are limited to the current coded dataset and may not cover all relevant event types.",
+        "Similarity scores describe qualitative feature overlap and do not imply probabilities.",
+        "Observed pathways summarise retrieved historical patterns and do not estimate expected returns.",
+        "This output is not investment advice, a trading recommendation, or a market-timing tool."
+      ],
+      "analyst_note": "The retrieved evidence is organised around Restriction pressure pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
     },
     {
-      "scenario_id": "SP002",
-      "scenario_question": "What if the U.S. expands semiconductor export restrictions?",
-      "scenario_description": {
-        "question": "What if the U.S. expands semiconductor export restrictions?",
-        "profile_summary": "Scenario profile codes event family as Export Restriction, sector as semiconductors, region as US, strategic importance as High, support signal as No direct support, pressure signal as Strong export-control pressure, and surprise level as Moderate.",
-        "analyst_note": "Scenario comparison profile for export-control pressure; not an approved historical event."
-      },
-      "most_relevant_historical_analogs": [
+      "brief_id": "BRIEF-SQ002",
+      "scenario_id": "SQ002",
+      "scenario_title": "What if the U.S. expands semiconductor export restrictions?",
+      "scenario_description": "The scenario is coded as export_control_pressure in semiconductors, with strategic importance coded as High, support signal coded as No direct support, pressure signal coded as Strong export-control pressure, and surprise level coded as Moderate.",
+      "most_relevant_historical_analogues": [
         {
           "event_id": "E003",
           "event_date": "2022-10-07",
           "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.9286,
-          "observed_market_pathway": "Restriction pressure pathway",
+          "event_family": "export_control_pressure",
+          "country_or_region": "US",
+          "affected_sector": "semiconductors",
+          "similarity_score": 0.9375,
           "matched_fields": [
             "event_family",
             "affected_sector",
-            "country_or_region",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E003 is included because it shares 7 coded field(s) with the scenario profile."
+          "different_fields": [],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
         },
         {
           "event_id": "E002",
           "event_date": "2022-08-31",
           "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.7857,
-          "observed_market_pathway": "Restriction pressure pathway",
+          "event_family": "export_control_pressure",
+          "country_or_region": "US",
+          "affected_sector": "AI chips",
+          "similarity_score": 0.8125,
           "matched_fields": [
             "event_family",
-            "country_or_region",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E002 is included because it shares 6 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E004",
-          "event_date": "2022-12-15",
-          "event_title": "YMTC and other Chinese entities added to Entity List",
-          "similarity_score": 0.6429,
-          "observed_market_pathway": "Restriction/substitution pathway",
-          "matched_fields": [
-            "country_or_region",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
+          "different_fields": [
+            "affected_sector"
           ],
-          "brief_note": "E004 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E009",
-          "event_date": "2024-03-20",
-          "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.6429,
-          "observed_market_pathway": "Named support/downside-offset pathway",
-          "matched_fields": [
-            "affected_sector",
-            "country_or_region",
-            "strategic_importance_level",
-            "state_support_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E009 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E001",
-          "event_date": "2022-08-09",
-          "event_title": "CHIPS and Science Act signed",
-          "similarity_score": 0.5714,
-          "observed_market_pathway": "Broad policy support context",
-          "matched_fields": [
-            "affected_sector",
-            "country_or_region",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal"
-          ],
-          "brief_note": "E001 is included because it shares 5 coded field(s) with the scenario profile."
-        }
-      ],
-      "common_observed_pathways": [
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 2,
-          "representative_events": [
-            "E003",
-            "E002"
-          ],
-          "summary_note": "Restriction pressure pathway appears in 2 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Restriction/substitution pathway",
-          "count": 1,
-          "representative_events": [
-            "E004"
-          ],
-          "summary_note": "Restriction/substitution pathway appears in 1 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Named support/downside-offset pathway",
-          "count": 1,
-          "representative_events": [
-            "E009"
-          ],
-          "summary_note": "Named support/downside-offset pathway appears in 1 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Broad policy support context",
-          "count": 1,
-          "representative_events": [
-            "E001"
-          ],
-          "summary_note": "Broad policy support context appears in 1 of the top historical analog(s)."
-        }
-      ],
-      "key_evidence_notes": [
-        {
-          "event_id": "E003",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
-        {
-          "event_id": "E002",
+          "observed_market_pathway": "Restriction pressure pathway",
           "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
         },
         {
-          "event_id": "E004",
-          "evidence_note": "Base event from data/events.csv; Entity List action; substitution links are analytically useful but weaker than named support."
-        },
-        {
-          "event_id": "E009",
-          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E001",
-          "evidence_note": "Base event from data/events.csv; broad enacted support and highly anticipated; no precise financial result coded."
+          "event_id": "E005",
+          "event_date": "2023-03-31",
+          "event_title": "Japan announces semiconductor-equipment export controls",
+          "event_family": "allied_export_control_pressure",
+          "country_or_region": "Japan",
+          "affected_sector": "semiconductor equipment",
+          "similarity_score": 0.6875,
+          "matched_fields": [
+            "event_family",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "affected_sector"
+          ],
+          "observed_market_pathway": "Restriction pressure pathway",
+          "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
         }
       ],
+      "observed_historical_pathways": [
+        {
+          "pathway_name": "Restriction pressure pathway",
+          "count": 3,
+          "representative_events": [
+            "E003",
+            "E002",
+            "E005"
+          ],
+          "evidence_notes": [
+            {
+              "event_id": "E003",
+              "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
+            },
+            {
+              "event_id": "E002",
+              "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
+            },
+            {
+              "event_id": "E005",
+              "evidence_note": "Base event from data/events.csv; official allied restriction; no direct state-support signal coded."
+            }
+          ],
+          "analyst_note": "3 of 3 retrieved analogues fall into a restriction-pressure historical pattern. This supports reading the scenario evidence through pressure, access-loss, or compliance-burden channels rather than direct state-support channels.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
+        }
+      ],
+      "key_evidence": [
+        "E003: Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously.",
+        "E002: Base event from data/events.csv; firm disclosure of policy restriction; contrast case only.",
+        "E005: Base event from data/events.csv; official allied restriction; no direct state-support signal coded.",
+        "Restriction pressure pathway: 3 retrieved analogue(s), represented by E003, E002, E005."
+      ],
       "analytical_caveats": [
-        "The brief uses the top 5 retrieved analog(s) from the current evidence base.",
-        "The pathway summary contains 4 observed pathway category or categories.",
-        "Scenario inputs are predefined coded profiles, not approved historical events.",
-        "Evidence notes should be read as qualitative context, not causal proof."
+        "The brief uses 3 retrieved historical analogue(s) from the current scenario demo.",
+        "The observed pathway section contains 1 pathway grouping(s).",
+        "The scenario profile is a coded comparison input, not an approved historical event.",
+        "Evidence notes are qualitative research context, not causal proof."
       ],
       "research_limitations": [
-        "This brief is a deterministic evidence synthesis, not a forecast.",
-        "Historical analogs are selected from the current coded dataset and may reflect sample limitations.",
-        "Similarity scores summarize qualitative feature overlap and do not imply probabilities.",
-        "Observed pathways describe historical patterns in the evidence base and do not estimate expected returns.",
-        "This output is not investment advice or a trading recommendation."
-      ]
+        "This brief is a deterministic historical evidence synthesis, not a forecast.",
+        "Historical analogues are limited to the current coded dataset and may not cover all relevant event types.",
+        "Similarity scores describe qualitative feature overlap and do not imply probabilities.",
+        "Observed pathways summarise retrieved historical patterns and do not estimate expected returns.",
+        "This output is not investment advice, a trading recommendation, or a market-timing tool."
+      ],
+      "analyst_note": "The retrieved evidence is organised around Restriction pressure pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
     },
     {
-      "scenario_id": "SP003",
-      "scenario_question": "What if Taiwan announces a semiconductor state support package?",
-      "scenario_description": {
-        "question": "What if Taiwan announces a semiconductor state support package?",
-        "profile_summary": "Scenario profile codes event family as Industrial Policy, sector as semiconductors, region as Taiwan, strategic importance as High, support signal as Strong named subsidy and capacity-support signal, pressure signal as Low, and surprise level as Moderate.",
-        "analyst_note": "Scenario comparison profile for strategic state support; not an approved historical event."
-      },
-      "most_relevant_historical_analogs": [
+      "brief_id": "BRIEF-SQ003",
+      "scenario_id": "SQ003",
+      "scenario_title": "What if Taiwan announces new state support for strategic semiconductor firms?",
+      "scenario_description": "The scenario is coded as direct_state_support in semiconductors, with strategic importance coded as High, support signal coded as Strong named subsidy and capacity-support signal, pressure signal coded as Low, and surprise level coded as Moderate.",
+      "most_relevant_historical_analogues": [
         {
           "event_id": "E009",
           "event_date": "2024-03-20",
           "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.6429,
-          "observed_market_pathway": "Named support/downside-offset pathway",
+          "event_family": "direct_state_support",
+          "country_or_region": "US",
+          "affected_sector": "semiconductors",
+          "similarity_score": 0.875,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E009 is included because it shares 5 coded field(s) with the scenario profile."
+          "different_fields": [],
+          "observed_market_pathway": "Named support/downside-offset pathway",
+          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
         },
         {
           "event_id": "E007",
           "event_date": "2023-12-11",
           "event_title": "BAE receives first CHIPS Act manufacturing award",
-          "similarity_score": 0.5714,
-          "observed_market_pathway": "Named support pathway",
+          "event_family": "direct_state_support",
+          "country_or_region": "US",
+          "affected_sector": "defence semiconductors",
+          "similarity_score": 0.75,
           "matched_fields": [
+            "event_family",
             "affected_sector",
             "strategic_importance_level",
             "state_support_signal",
             "restriction_or_pressure_signal",
-            "surprise_level"
+            "surprise_level",
+            "market_interpretation",
+            "observed_market_pathway"
           ],
-          "brief_note": "E007 is included because it shares 5 coded field(s) with the scenario profile."
+          "different_fields": [],
+          "observed_market_pathway": "Named support pathway",
+          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
         },
         {
           "event_id": "E011",
           "event_date": "2024-04-15",
           "event_title": "Samsung CHIPS Act preliminary terms announced",
-          "similarity_score": 0.5714,
+          "event_family": "direct_state_support",
+          "country_or_region": "US/South Korea",
+          "affected_sector": "semiconductors",
+          "similarity_score": 0.75,
+          "matched_fields": [
+            "event_family",
+            "affected_sector",
+            "strategic_importance_level",
+            "state_support_signal",
+            "restriction_or_pressure_signal",
+            "market_interpretation",
+            "observed_market_pathway"
+          ],
+          "different_fields": [
+            "surprise_level"
+          ],
           "observed_market_pathway": "Named support pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal"
-          ],
-          "brief_note": "E011 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E003",
-          "event_date": "2022-10-07",
-          "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E003 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E010",
-          "event_date": "2024-04-08",
-          "event_title": "TSMC Arizona CHIPS Act preliminary terms announced",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Named support/downside-offset pathway",
-          "matched_fields": [
-            "country_or_region",
-            "strategic_importance_level",
-            "state_support_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E010 is included because it shares 4 coded field(s) with the scenario profile."
+          "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
         }
       ],
-      "common_observed_pathways": [
-        {
-          "pathway_name": "Named support/downside-offset pathway",
-          "count": 2,
-          "representative_events": [
-            "E009",
-            "E010"
-          ],
-          "summary_note": "Named support/downside-offset pathway appears in 2 of the top historical analog(s)."
-        },
+      "observed_historical_pathways": [
         {
           "pathway_name": "Named support pathway",
           "count": 2,
@@ -400,154 +336,18 @@
             "E007",
             "E011"
           ],
-          "summary_note": "Named support pathway appears in 2 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 1,
-          "representative_events": [
-            "E003"
+          "evidence_notes": [
+            {
+              "event_id": "E007",
+              "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
+            },
+            {
+              "event_id": "E011",
+              "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
+            }
           ],
-          "summary_note": "Restriction pressure pathway appears in 1 of the top historical analog(s)."
-        }
-      ],
-      "key_evidence_notes": [
-        {
-          "event_id": "E009",
-          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E007",
-          "evidence_note": "Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case."
-        },
-        {
-          "event_id": "E011",
-          "evidence_note": "Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding."
-        },
-        {
-          "event_id": "E003",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
-        {
-          "event_id": "E010",
-          "evidence_note": "Base event from data/events.csv; primary case for TSM; no additional financial result invented."
-        }
-      ],
-      "analytical_caveats": [
-        "The brief uses the top 5 retrieved analog(s) from the current evidence base.",
-        "The pathway summary contains 3 observed pathway category or categories.",
-        "Scenario inputs are predefined coded profiles, not approved historical events.",
-        "Evidence notes should be read as qualitative context, not causal proof."
-      ],
-      "research_limitations": [
-        "This brief is a deterministic evidence synthesis, not a forecast.",
-        "Historical analogs are selected from the current coded dataset and may reflect sample limitations.",
-        "Similarity scores summarize qualitative feature overlap and do not imply probabilities.",
-        "Observed pathways describe historical patterns in the evidence base and do not estimate expected returns.",
-        "This output is not investment advice or a trading recommendation."
-      ]
-    },
-    {
-      "scenario_id": "SP004",
-      "scenario_question": "What if China escalates strategic industrial policy for advanced chips?",
-      "scenario_description": {
-        "question": "What if China escalates strategic industrial policy for advanced chips?",
-        "profile_summary": "Scenario profile codes event family as Industrial Policy, sector as semiconductors, region as China, strategic importance as High, support signal as Strong industrial-policy support signal, pressure signal as Moderate geopolitical-pressure context, and surprise level as Moderate.",
-        "analyst_note": "Scenario comparison profile for strategic industrial policy under competition; not an approved historical event."
-      },
-      "most_relevant_historical_analogs": [
-        {
-          "event_id": "E003",
-          "event_date": "2022-10-07",
-          "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.5714,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E003 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E006",
-          "event_date": "2023-05-21",
-          "event_title": "China restricts Micron procurement",
-          "similarity_score": 0.5714,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "country_or_region",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E006 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E001",
-          "event_date": "2022-08-09",
-          "event_title": "CHIPS and Science Act signed",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Broad policy support context",
-          "matched_fields": [
-            "event_family",
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal"
-          ],
-          "brief_note": "E001 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E009",
-          "event_date": "2024-03-20",
-          "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Named support/downside-offset pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E009 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E002",
-          "event_date": "2022-08-31",
-          "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.4286,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E002 is included because it shares 4 coded field(s) with the scenario profile."
-        }
-      ],
-      "common_observed_pathways": [
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 3,
-          "representative_events": [
-            "E003",
-            "E006",
-            "E002"
-          ],
-          "summary_note": "Restriction pressure pathway appears in 3 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Broad policy support context",
-          "count": 1,
-          "representative_events": [
-            "E001"
-          ],
-          "summary_note": "Broad policy support context appears in 1 of the top historical analog(s)."
+          "analyst_note": "2 of 3 retrieved analogues fall into a named-support historical pattern. This points to state-support logic, but the retrieved analogues may differ in market relevance, timing quality, or beneficiary visibility.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         },
         {
           "pathway_name": "Named support/downside-offset pathway",
@@ -555,196 +355,37 @@
           "representative_events": [
             "E009"
           ],
-          "summary_note": "Named support/downside-offset pathway appears in 1 of the top historical analog(s)."
+          "evidence_notes": [
+            {
+              "event_id": "E009",
+              "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
+            }
+          ],
+          "analyst_note": "1 of 3 retrieved analogues fall into a named-support/downside-offset historical pattern. This suggests the closest analogues centre on credible support for strategically important firms, while still requiring case-specific interpretation.",
+          "limitations_note": "This pathway summary is descriptive. It groups the top analogues returned by the scenario demo and does not assign probabilities, estimate market effects, or provide trading or investment guidance."
         }
       ],
-      "key_evidence_notes": [
-        {
-          "event_id": "E003",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
-        {
-          "event_id": "E006",
-          "evidence_note": "Base event from data/events.csv; useful negative contrast to Micron's later state-support event; no return result coded here."
-        },
-        {
-          "event_id": "E001",
-          "evidence_note": "Base event from data/events.csv; broad enacted support and highly anticipated; no precise financial result coded."
-        },
-        {
-          "event_id": "E009",
-          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E002",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
-        }
+      "key_evidence": [
+        "E009: Base event from data/events.csv; primary case for INTC; no additional financial result invented.",
+        "E007: Base event from data/events.csv; direct award is theoretically relevant but treated as a caution case.",
+        "E011: Base event from data/events.csv; conditional main event; trading-calendar implementation requires further coding.",
+        "Named support pathway: 2 retrieved analogue(s), represented by E007, E011.",
+        "Named support/downside-offset pathway: 1 retrieved analogue(s), represented by E009."
       ],
       "analytical_caveats": [
-        "The brief uses the top 5 retrieved analog(s) from the current evidence base.",
-        "The pathway summary contains 3 observed pathway category or categories.",
-        "Scenario inputs are predefined coded profiles, not approved historical events.",
-        "Evidence notes should be read as qualitative context, not causal proof."
+        "The brief uses 3 retrieved historical analogue(s) from the current scenario demo.",
+        "The observed pathway section contains 2 pathway grouping(s).",
+        "The scenario profile is a coded comparison input, not an approved historical event.",
+        "Evidence notes are qualitative research context, not causal proof."
       ],
       "research_limitations": [
-        "This brief is a deterministic evidence synthesis, not a forecast.",
-        "Historical analogs are selected from the current coded dataset and may reflect sample limitations.",
-        "Similarity scores summarize qualitative feature overlap and do not imply probabilities.",
-        "Observed pathways describe historical patterns in the evidence base and do not estimate expected returns.",
-        "This output is not investment advice or a trading recommendation."
-      ]
-    },
-    {
-      "scenario_id": "SP005",
-      "scenario_question": "What if firms announce a strategic supply chain relocation away from a high-risk region?",
-      "scenario_description": {
-        "question": "What if firms announce a strategic supply chain relocation away from a high-risk region?",
-        "profile_summary": "Scenario profile codes event family as Supply Chain Relocation, sector as semiconductors, region as Multi-region, strategic importance as High, support signal as Potential capacity-support signal, pressure signal as Moderate supply-chain pressure, and surprise level as Moderate.",
-        "analyst_note": "Scenario comparison profile for relocation and capacity reallocation; not an approved historical event."
-      },
-      "most_relevant_historical_analogs": [
-        {
-          "event_id": "E003",
-          "event_date": "2022-10-07",
-          "event_title": "BIS advanced computing and semiconductor controls",
-          "similarity_score": 0.5714,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E003 is included because it shares 5 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E009",
-          "event_date": "2024-03-20",
-          "event_title": "Intel CHIPS Act preliminary terms announced",
-          "similarity_score": 0.5,
-          "observed_market_pathway": "Named support/downside-offset pathway",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E009 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E001",
-          "event_date": "2022-08-09",
-          "event_title": "CHIPS and Science Act signed",
-          "similarity_score": 0.4286,
-          "observed_market_pathway": "Broad policy support context",
-          "matched_fields": [
-            "affected_sector",
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal"
-          ],
-          "brief_note": "E001 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E002",
-          "event_date": "2022-08-31",
-          "event_title": "Nvidia discloses AI chip export-license requirement",
-          "similarity_score": 0.4286,
-          "observed_market_pathway": "Restriction pressure pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E002 is included because it shares 4 coded field(s) with the scenario profile."
-        },
-        {
-          "event_id": "E004",
-          "event_date": "2022-12-15",
-          "event_title": "YMTC and other Chinese entities added to Entity List",
-          "similarity_score": 0.4286,
-          "observed_market_pathway": "Restriction/substitution pathway",
-          "matched_fields": [
-            "strategic_importance_level",
-            "state_support_signal",
-            "restriction_or_pressure_signal",
-            "surprise_level"
-          ],
-          "brief_note": "E004 is included because it shares 4 coded field(s) with the scenario profile."
-        }
+        "This brief is a deterministic historical evidence synthesis, not a forecast.",
+        "Historical analogues are limited to the current coded dataset and may not cover all relevant event types.",
+        "Similarity scores describe qualitative feature overlap and do not imply probabilities.",
+        "Observed pathways summarise retrieved historical patterns and do not estimate expected returns.",
+        "This output is not investment advice, a trading recommendation, or a market-timing tool."
       ],
-      "common_observed_pathways": [
-        {
-          "pathway_name": "Restriction pressure pathway",
-          "count": 2,
-          "representative_events": [
-            "E003",
-            "E002"
-          ],
-          "summary_note": "Restriction pressure pathway appears in 2 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Named support/downside-offset pathway",
-          "count": 1,
-          "representative_events": [
-            "E009"
-          ],
-          "summary_note": "Named support/downside-offset pathway appears in 1 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Broad policy support context",
-          "count": 1,
-          "representative_events": [
-            "E001"
-          ],
-          "summary_note": "Broad policy support context appears in 1 of the top historical analog(s)."
-        },
-        {
-          "pathway_name": "Restriction/substitution pathway",
-          "count": 1,
-          "representative_events": [
-            "E004"
-          ],
-          "summary_note": "Restriction/substitution pathway appears in 1 of the top historical analog(s)."
-        }
-      ],
-      "key_evidence_notes": [
-        {
-          "event_id": "E003",
-          "evidence_note": "Base event from data/events.csv; broad export-control package; heterogeneous effects should be treated cautiously."
-        },
-        {
-          "event_id": "E009",
-          "evidence_note": "Base event from data/events.csv; primary case for INTC; no additional financial result invented."
-        },
-        {
-          "event_id": "E001",
-          "evidence_note": "Base event from data/events.csv; broad enacted support and highly anticipated; no precise financial result coded."
-        },
-        {
-          "event_id": "E002",
-          "evidence_note": "Base event from data/events.csv; firm disclosure of policy restriction; contrast case only."
-        },
-        {
-          "event_id": "E004",
-          "evidence_note": "Base event from data/events.csv; Entity List action; substitution links are analytically useful but weaker than named support."
-        }
-      ],
-      "analytical_caveats": [
-        "The brief uses the top 5 retrieved analog(s) from the current evidence base.",
-        "The pathway summary contains 4 observed pathway category or categories.",
-        "Scenario inputs are predefined coded profiles, not approved historical events.",
-        "Evidence notes should be read as qualitative context, not causal proof."
-      ],
-      "research_limitations": [
-        "This brief is a deterministic evidence synthesis, not a forecast.",
-        "Historical analogs are selected from the current coded dataset and may reflect sample limitations.",
-        "Similarity scores summarize qualitative feature overlap and do not imply probabilities.",
-        "Observed pathways describe historical patterns in the evidence base and do not estimate expected returns.",
-        "This output is not investment advice or a trading recommendation."
-      ]
+      "analyst_note": "The retrieved evidence is organised around Named support pathway, Named support/downside-offset pathway. This supports structured scenario assessment by showing which historical patterns appear in the current evidence base, without claiming that those patterns will recur."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Opportunity Under Geopolitical Competition
 
-A dissertation-based geopolitical risk analytics project that transforms event-study research into historical analog scenario analysis.
+A dissertation-based geopolitical risk analytics project that transforms event-study research into historical analogue scenario analysis.
 
 ## Project Value Chain
 
@@ -23,7 +23,7 @@ Dashboard Evidence View
 ```text
 Dissertation Research
         ↓
-Historical Analog Dataset
+Historical Analogue Dataset
         ↓
 Similarity Engine
         ↓
@@ -34,7 +34,7 @@ Intelligence System Foundation
 Future Automation Expansion
 ```
 
-Phase 3 adds the operating foundation for a continuously updated geopolitical intelligence system. It defines how raw information sources become candidate events, how human review protects dataset quality, and how approved events flow into the historical analog, similarity, scenario, observed pathway, and dashboard layers.
+Phase 3 adds the operating foundation for a continuously updated geopolitical intelligence system. It defines how raw information sources become candidate events, how human review protects dataset quality, and how approved events flow into the historical analogue, similarity, scenario, observed pathway, and dashboard layers.
 
 - [Intelligence system architecture](docs/intelligence_system_architecture.md)
 - [Source registry](data/source_registry.csv)
@@ -86,9 +86,9 @@ The operations layer supports reproducibility and operational scalability. It do
 ## Evidence-to-Decision Layer
 
 ```text
-Historical Evidence
+Historical Events
         ↓
-Similarity Analysis
+Historical Analogues
         ↓
 Observed Pathways
         ↓
@@ -97,17 +97,21 @@ Evidence Synthesis
 Analyst Brief
 ```
 
-Phase 5 adds deterministic analyst briefs that synthesize scenario descriptions, relevant historical analogs, observed pathways, evidence notes, caveats, and research limitations. This layer turns structured historical evidence into a readable analyst brief without adding forecasts, probabilities, expected-return estimates, investment recommendations, or LLM API calls.
+Phase 5 adds deterministic analyst briefs that synthesise scenario descriptions, relevant historical analogues, observed pathways, evidence notes, caveats, and research limitations. This layer turns structured historical evidence into a readable analyst brief without adding forecasts, probabilities, expected-return estimates, investment recommendations, or LLM API calls.
 
-- [Analyst brief generator](scripts/generate_analyst_brief.py)
+The repository now supports structured historical evidence retrieval and analyst-oriented scenario assessment.
+
+- [Analyst brief generator](scripts/generate_analyst_briefs.py)
 - [Analyst briefs output](results/analyst_briefs.json)
 - [Evidence synthesis framework](docs/evidence_synthesis_framework.md)
+- [Analyst brief methodology](docs/analyst_brief_methodology.md)
+- [Research to decision support](docs/research_to_decision_support.md)
 - [Decision support principles](docs/decision_support_principles.md)
 
 Generate briefs with:
 
 ```bash
-python3 scripts/generate_analyst_brief.py
+python3 scripts/generate_analyst_briefs.py
 ```
 
 ## Live / Local Dashboard Preview
@@ -124,7 +128,7 @@ Then open:
 http://127.0.0.1:8000/dashboard/
 ```
 
-The dashboard displays scenario questions, top historical analogs, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
+The dashboard displays scenario questions, top historical analogues, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
 
 ## Dashboard Preview
 
@@ -134,7 +138,7 @@ The dashboard displays scenario questions, top historical analogs, similarity sc
 
 ## Key Outputs
 
-- [Historical analog dataset](data/historical_analog_events.csv)
+- [Historical analogue dataset](data/historical_analogue_events.csv)
 - [Historical similarity matrix](results/historical_similarity_matrix.csv)
 - [Scenario query demo results](results/scenario_query_demo_results.json)
 - [Observed pathway summaries](results/observed_pathways.json)
@@ -146,15 +150,15 @@ The dashboard displays scenario questions, top historical analogs, similarity sc
 
 ## How It Works
 
-1. Events are coded from the dissertation research base into a structured historical analog dataset.
+1. Events are coded from the dissertation research base into a structured historical analogue dataset.
 2. Similarity is calculated deterministically across qualitative event features.
-3. Scenario questions are mapped to coded profiles and retrieve the closest historical analogs.
-4. Retrieved analogs are grouped into observed pathways with representative events and evidence notes.
+3. Scenario questions are mapped to coded profiles and retrieve the closest historical analogues.
+4. Retrieved analogues are grouped into observed pathways with representative events and evidence notes.
 5. The dashboard displays the scenario evidence in a readable static interface.
 
 ## Reproducibility
 
-Run the deterministic historical analog release checks with:
+Run the deterministic historical analogue release checks with:
 
 ```bash
 python3 scripts/run_all_checks.py
@@ -190,13 +194,13 @@ This project is descriptive historical analysis only. It does not claim forecast
 
 ## Future Dataset Expansion
 
-The current historical analog dataset is intentionally limited and mirrors the dissertation event base. Future versions should expand event coverage across military exercises, diplomatic shocks, sanctions, leadership meetings, supply-chain relocation, technology restrictions, strategic investment, and semiconductor expansion cases.
+The current historical analogue dataset is intentionally limited and mirrors the dissertation event base. Future versions should expand event coverage across military exercises, diplomatic shocks, sanctions, leadership meetings, supply-chain relocation, technology restrictions, strategic investment, and semiconductor expansion cases.
 
 A larger, better-balanced evidence base will improve historical comparison and scenario retrieval, but only if new events are sourced and coded conservatively. See [Event expansion plan](docs/event_expansion_plan.md), [Event family taxonomy V2](docs/event_family_taxonomy_v2.md), and [Event collection protocol](docs/event_collection_protocol.md).
 
 ## Dataset Production Pipeline
 
-New events should move through a standardized production workflow: identification, eligibility screening, event-family assignment, coding, quality review, dataset integration, and validation. The workflow keeps source requirements, coding rules, and review steps explicit before an event enters the analytical system.
+New events should move through a standardised production workflow: identification, eligibility screening, event-family assignment, coding, quality review, dataset integration, and validation. The workflow keeps source requirements, coding rules, and review steps explicit before an event enters the analytical system.
 
 Use [Event coding workflow](docs/event_coding_workflow.md), [Event coding template](docs/event_coding_template.md), and [Dataset growth dashboard](docs/dataset_growth_dashboard.md) when preparing new rows. Validate a single candidate event with:
 
@@ -204,7 +208,7 @@ Use [Event coding workflow](docs/event_coding_workflow.md), [Event coding templa
 python3 scripts/validate_event_entry.py path/to/event_record.json
 ```
 
-After approved events are integrated into `data/historical_analog_events.csv`, run:
+After approved events are integrated into `data/historical_analogue_events.csv`, run:
 
 ```bash
 python3 scripts/run_all_checks.py
@@ -212,53 +216,53 @@ python3 scripts/run_all_checks.py
 
 ## Dataset Coverage Analytics
 
-Coverage monitoring tracks how the historical analog dataset is distributed across event families, sectors, geographies, strategic-importance levels, surprise levels, and state-support signals. This helps identify evidence gaps before adding new events.
+Coverage monitoring tracks how the historical analogue dataset is distributed across event families, sectors, geographies, strategic-importance levels, surprise levels, and state-support signals. This helps identify evidence gaps before adding new events.
 
-Current coverage analysis is generated by [dataset coverage analysis script](scripts/dataset_coverage_analysis.py) and written to [dataset coverage report](results/dataset_coverage_report.json) and `results/dataset_coverage_summary.csv`. The findings are summarized in [dataset coverage analysis](docs/dataset_coverage_analysis.md) and [evidence gap assessment](docs/evidence_gap_assessment.md).
+Current coverage analysis is generated by [dataset coverage analysis script](scripts/dataset_coverage_analysis.py) and written to [dataset coverage report](results/dataset_coverage_report.json) and `results/dataset_coverage_summary.csv`. The findings are summarised in [dataset coverage analysis](docs/dataset_coverage_analysis.md) and [evidence gap assessment](docs/evidence_gap_assessment.md).
 
-Future expansion should prioritize underrepresented event families and regions rather than simply adding more semiconductor subsidy cases.
+Future expansion should prioritise underrepresented event families and regions rather than simply adding more semiconductor subsidy cases.
 
 ## Automation and Search Foundation
 
-The repo now includes a prototype foundation for future event-ingestion automation and local historical analog search. The ingestion prototype creates unverified candidate records only; candidates remain separate from approved historical analog events until human review and validation.
+The repo now includes a prototype foundation for future event-ingestion automation and local historical analogue search. The ingestion prototype creates unverified candidate records only; candidates remain separate from approved historical analogue events until human review and validation.
 
 - [Event ingestion prototype](scripts/event_ingestion_prototype.py)
 - [Prototype ingestion candidates](results/event_ingestion_candidates.json)
 - [Candidate events template](data/candidate_events_template.csv)
 - [Candidate event review workflow](docs/candidate_event_review_workflow.md)
-- [Historical analog search CLI](scripts/search_historical_analogs.py)
+- [Historical analogue search CLI](scripts/search_historical_analogues.py)
 - [Automation and search foundation summary](docs/automation_and_search_foundation_summary.md)
 
 Example commands:
 
 ```bash
 python3 scripts/event_ingestion_prototype.py
-python3 scripts/search_historical_analogs.py "military exercise"
-python3 scripts/search_historical_analogs.py "export restriction"
+python3 scripts/search_historical_analogues.py "military exercise"
+python3 scripts/search_historical_analogues.py "export restriction"
 ```
 
 ## Interactive Scenario Assistant v1
 
-The repo now includes a static interactive scenario assistant. Users can select predefined geopolitical or industrial-policy scenarios, retrieve similar historical analogs, and review observed pathway summaries from the current evidence base.
+The repo now includes a static interactive scenario assistant. Users can select predefined geopolitical or industrial-policy scenarios, retrieve similar historical analogues, and review observed pathway summaries from the current evidence base.
 
 The assistant is deterministic and evidence-based. It uses no LLM API calls, does not scrape websites, does not forecast outcomes, and does not provide investment advice.
 
 - [Scenario profiles template](data/scenario_profiles_template.csv)
 - [Sample scenario profiles](data/sample_scenario_profiles.csv)
-- [Scenario profile analyzer](scripts/analyze_scenario_profile.py)
+- [Scenario profile analyser](scripts/analyse_scenario_profile.py)
 - [Interactive scenario analysis output](results/interactive_scenario_analysis.json)
 - [Interactive scenario assistant methodology](docs/interactive_scenario_assistant_methodology.md)
 - [Interactive scenario assistant summary](docs/interactive_scenario_assistant_summary.md)
 
-Run the analyzer with:
+Run the analyser with:
 
 ```bash
-python3 scripts/analyze_scenario_profile.py
+python3 scripts/analyse_scenario_profile.py
 ```
 
 ## Repository Map
 
-- `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analog dataset.
+- `data/`: dissertation event data, asset links, market outputs, raw price inputs, and historical analogue dataset.
 - `scripts/`: validation, event-study, similarity, scenario query, observed pathway, figure, and release-check scripts.
 - `results/`: generated similarity, scenario query, and observed pathway outputs.
 - `dashboard/`: static evidence view.
@@ -281,7 +285,7 @@ python3 scripts/analyze_scenario_profile.py
 
 This project demonstrates how a political economy research question can be converted into a transparent empirical workflow. Rather than treating geopolitical competition only as a narrative risk factor, the project defines a testable mechanism, freezes coding decisions before return interpretation, links events to firms through documented event-asset relationships, and evaluates market reactions using sector-adjusted abnormal returns.
 
-The main empirical finding is intentionally mixed: one primary case supports the proposed State Support mechanism, while two primary cases weaken it under the pre-committed classification rule. This makes the project stronger as a research portfolio artifact because it shows disciplined interpretation rather than result-chasing. The contribution is not a claim that state support always creates market opportunity, but a reproducible framework for evaluating when geopolitical state support is, or is not, reflected in market pricing.
+The main empirical finding is intentionally mixed: one primary case supports the proposed State Support mechanism, while two primary cases weaken it under the pre-committed classification rule. This makes the project stronger as a research portfolio artefact because it shows disciplined interpretation rather than result-chasing. The contribution is not a claim that state support always creates market opportunity, but a reproducible framework for evaluating when geopolitical state support is, or is not, reflected in market pricing.
 
 ## Research Question
 
@@ -353,7 +357,7 @@ The validated evidence is mixed: one primary case is supportive, and two primary
 
 ![Descriptive CAR[-7,+7] Across Primary Cases](dissertation_results/figures/figure2_primary_case_descriptive_car_m7_p7.png)
 
-Figure 1 summarizes the pre-committed primary outcome across the three validated primary cases. Figure 2 provides descriptive wider-window context. Figure 3 reports the recipient versus non-recipient comparison and is linked below.
+Figure 1 summarises the pre-committed primary outcome across the three validated primary cases. Figure 2 provides descriptive wider-window context. Figure 3 reports the recipient versus non-recipient comparison and is linked below.
 
 Additional figure:
 
@@ -395,19 +399,19 @@ Expected outputs:
 - `data/event_firm_returns.csv`
 - `data/local_price_validation_report.md`
 
-## Historical Analog Dataset Layer
+## Historical Analogue Dataset Layer
 
-This repo now includes a structured historical-analog event layer that extends the dissertation event-study base into a broader qualitative comparison dataset. It supports comparison across event families, state-support signals, restriction or pressure signals, surprise levels, and observed market pathways.
+This repo now includes a structured historical-analogue event layer that extends the dissertation event-study base into a broader qualitative comparison dataset. It supports comparison across event families, state-support signals, restriction or pressure signals, surprise levels, and observed market pathways.
 
-The historical analog layer is for research comparison and decision-support framing only. It does not make forecasts or investment recommendations.
+The historical analogue layer is for research comparison and decision-support framing only. It does not make forecasts or investment recommendations.
 
-- [Historical analog events](data/historical_analog_events.csv)
-- [Historical analog dataset methodology](docs/historical_analog_dataset_methodology.md)
-- [Historical analog dataset summary](docs/historical_analog_dataset_summary.md)
+- [Historical analogue events](data/historical_analogue_events.csv)
+- [Historical analogue dataset methodology](docs/historical_analogue_dataset_methodology.md)
+- [Historical analogue dataset summary](docs/historical_analogue_dataset_summary.md)
 
 ## Historical Similarity Engine
 
-The repo also includes a deterministic pairwise event-comparison script for the historical analog layer. The engine compares coded qualitative features across events and writes a transparent similarity matrix for historical research use.
+The repo also includes a deterministic pairwise event-comparison script for the historical analogue layer. The engine compares coded qualitative features across events and writes a transparent similarity matrix for historical research use.
 
 The similarity output is not a forecast, trading signal, or investment recommendation.
 
@@ -418,7 +422,7 @@ The similarity output is not a forecast, trading signal, or investment recommend
 
 ## Scenario Query Demo Layer
 
-The repo can now answer example scenario questions using deterministic historical analog retrieval. The demo maps hard-coded scenario questions to coded profiles, compares them against the historical analog dataset, and returns the closest documented events.
+The repo can now answer example scenario questions using deterministic historical analogue retrieval. The demo maps hard-coded scenario questions to coded profiles, compares them against the historical analogue dataset, and returns the closest documented events.
 
 The demo uses no LLM API calls and is a portfolio demonstration, not a forecasting model. It does not provide trading or investment advice.
 
@@ -429,7 +433,7 @@ The demo uses no LLM API calls and is a portfolio demonstration, not a forecasti
 
 ## Observed Pathway Engine
 
-The repo now summarizes observed post-event pathways from similar historical analogs. This supports structured scenario analysis by grouping retrieved analogs into pathway counts, representative events, and evidence notes.
+The repo now summarises observed post-event pathways from similar historical analogues. This supports structured scenario analysis by grouping retrieved analogues into pathway counts, representative events, and evidence notes.
 
 The pathway output does not assign probabilities and does not provide investment advice.
 
@@ -440,7 +444,7 @@ The pathway output does not assign probabilities and does not provide investment
 
 ## Dashboard Evidence View
 
-The repo includes a static dashboard evidence view for scenario questions, top historical analogs, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
+The repo includes a static dashboard evidence view for scenario questions, top historical analogues, similarity scores, observed pathways, evidence notes, and limitations. It uses no external JavaScript libraries, no build step, and no LLM API calls.
 
 Run it locally from the repository root:
 
@@ -469,4 +473,4 @@ The dashboard is an evidence view, not a forecasting model or investment-advice 
 
 ## Academic Status
 
-This repository contains research materials, code, documentation, figures, tables, and summarized findings associated with an academic dissertation project. It is intended for research transparency, reproducibility, and portfolio presentation. It is not a peer-reviewed publication, and the full dissertation manuscript is not included in this repository.
+This repository contains research materials, code, documentation, figures, tables, and summarised findings associated with an academic dissertation project. It is intended for research transparency, reproducibility, and portfolio presentation. It is not a peer-reviewed publication, and the full dissertation manuscript is not included in this repository.

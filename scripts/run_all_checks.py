@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run release-readiness checks for the historical analog pipeline."""
+"""Run release-readiness checks for the historical analogue pipeline."""
 
 from __future__ import annotations
 
@@ -11,10 +11,11 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 CHECKS = [
-    ("Historical analog dataset validation", "scripts/validate_historical_analog_dataset.py"),
+    ("Historical analogue dataset validation", "scripts/validate_historical_analogue_dataset.py"),
     ("Historical similarity matrix generation", "scripts/calculate_historical_similarity.py"),
     ("Scenario query demo generation", "scripts/run_scenario_query_demo.py"),
     ("Observed pathway generation", "scripts/generate_observed_pathways.py"),
+    ("Analyst brief generation", "scripts/generate_analyst_briefs.py"),
 ]
 
 

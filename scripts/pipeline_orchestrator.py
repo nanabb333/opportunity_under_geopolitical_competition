@@ -13,13 +13,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = PROJECT_ROOT / "data" / "event_review_queue.csv"
 
 PIPELINE_STEPS = [
-    ("Step 1", "Validate dataset", ["scripts/validate_historical_analog_dataset.py"]),
+    ("Step 1", "Validate dataset", ["scripts/validate_historical_analogue_dataset.py"]),
     ("Step 3", "Generate coverage analytics", ["scripts/dataset_coverage_analysis.py"]),
     ("Step 4", "Generate similarity outputs", ["scripts/calculate_historical_similarity.py"]),
     ("Step 5a", "Generate scenario query outputs", ["scripts/run_scenario_query_demo.py"]),
-    ("Step 5b", "Generate interactive scenario outputs", ["scripts/analyze_scenario_profile.py"]),
+    ("Step 5b", "Generate interactive scenario outputs", ["scripts/analyse_scenario_profile.py"]),
     ("Step 6", "Generate pathway outputs", ["scripts/generate_observed_pathways.py"]),
-    ("Step 7", "Generate analyst brief outputs", ["scripts/generate_analyst_brief.py"]),
+    ("Step 7", "Generate analyst brief outputs", ["scripts/generate_analyst_briefs.py"]),
     ("Step 8", "Generate dashboard operations data", ["scripts/system_health_report.py"]),
 ]
 

@@ -120,21 +120,21 @@ function renderScenarioCards() {
     });
     card.appendChild(profileList);
 
-    card.appendChild(el("h3", null, "Top Historical Analogs"));
-    const analogList = el("ul", "analog-list");
-    (scenario.top_analogs ?? []).forEach((analog) => {
-      const item = el("li", "analog-item");
-      item.appendChild(el("h3", null, `${analog.event_id}: ${analog.event_title}`));
+    card.appendChild(el("h3", null, "Top Historical Analogues"));
+    const analogueList = el("ul", "analogue-list");
+    (scenario.top_analogues ?? []).forEach((analogue) => {
+      const item = el("li", "analogue-item");
+      item.appendChild(el("h3", null, `${analogue.event_id}: ${analogue.event_title}`));
 
-      const meta = el("div", "analog-meta");
-      meta.appendChild(el("span", "tag score-tag", `Similarity ${formatScore(analog.similarity_score)}`));
-      meta.appendChild(el("span", "tag", analog.observed_market_pathway ?? "Not coded"));
+      const meta = el("div", "analogue-meta");
+      meta.appendChild(el("span", "tag score-tag", `Similarity ${formatScore(analogue.similarity_score)}`));
+      meta.appendChild(el("span", "tag", analogue.observed_market_pathway ?? "Not coded"));
       item.appendChild(meta);
 
-      item.appendChild(el("p", "evidence-note", analog.evidence_note ?? "No evidence note available."));
-      analogList.appendChild(item);
+      item.appendChild(el("p", "evidence-note", analogue.evidence_note ?? "No evidence note available."));
+      analogueList.appendChild(item);
     });
-    card.appendChild(analogList);
+    card.appendChild(analogueList);
     container.appendChild(card);
   });
 }
@@ -238,7 +238,7 @@ function renderInteractiveAssistant() {
       el(
         "p",
         "fallback-note",
-        `Interactive scenario analysis unavailable. Run python3 scripts/analyze_scenario_profile.py to generate ${DATA_FILES.interactive}.`
+        `Interactive scenario analysis unavailable. Run python3 scripts/analyse_scenario_profile.py to generate ${DATA_FILES.interactive}.`
       )
     );
     if (state.interactiveError) {
@@ -300,27 +300,27 @@ function renderInteractiveAssistant() {
 
   const layout = el("div", "interactive-layout");
 
-  const analogColumn = el("section", "interactive-column");
-  analogColumn.appendChild(el("h3", null, "Top Historical Analogs"));
-  const analogList = el("div", "analog-stack");
-  (selectedScenario.top_analogs ?? []).forEach((analog) => {
+  const analogueColumn = el("section", "interactive-column");
+  analogueColumn.appendChild(el("h3", null, "Top Historical Analogues"));
+  const analogueList = el("div", "analogue-stack");
+  (selectedScenario.top_analogues ?? []).forEach((analogue) => {
     const card = el("article", "mini-card");
-    card.appendChild(el("h3", null, `${analog.event_id}: ${analog.event_title}`));
-    const meta = el("div", "analog-meta");
-    meta.appendChild(el("span", "tag score-tag", `Similarity ${formatScore(analog.similarity_score)}`));
-    meta.appendChild(el("span", "tag", analog.observed_market_pathway ?? "Not coded"));
+    card.appendChild(el("h3", null, `${analogue.event_id}: ${analogue.event_title}`));
+    const meta = el("div", "analogue-meta");
+    meta.appendChild(el("span", "tag score-tag", `Similarity ${formatScore(analogue.similarity_score)}`));
+    meta.appendChild(el("span", "tag", analogue.observed_market_pathway ?? "Not coded"));
     card.appendChild(meta);
     card.appendChild(
       el(
         "p",
         "evidence-note",
-        `Matched fields: ${(analog.matched_fields ?? []).join(", ") || "None"}`
+        `Matched fields: ${(analogue.matched_fields ?? []).join(", ") || "None"}`
       )
     );
-    card.appendChild(el("p", "evidence-note", analog.evidence_note ?? "No evidence note available."));
-    analogList.appendChild(card);
+    card.appendChild(el("p", "evidence-note", analogue.evidence_note ?? "No evidence note available."));
+    analogueList.appendChild(card);
   });
-  analogColumn.appendChild(analogList);
+  analogueColumn.appendChild(analogueList);
 
   const pathwayColumn = el("section", "interactive-column");
   pathwayColumn.appendChild(el("h3", null, "Observed Pathway Summary"));
@@ -328,7 +328,7 @@ function renderInteractiveAssistant() {
   (selectedScenario.observed_pathway_summary ?? []).forEach((pathway) => {
     const item = el("li");
     item.appendChild(el("strong", null, pathway.pathway_name));
-    item.appendChild(el("span", "tag count-tag", `${pathway.count} analog(s)`));
+    item.appendChild(el("span", "tag count-tag", `${pathway.count} analogue(s)`));
     item.appendChild(
       el("p", "evidence-note", `Representative events: ${(pathway.representative_events ?? []).join(", ")}`)
     );
@@ -341,7 +341,7 @@ function renderInteractiveAssistant() {
     el("p", "evidence-note", selectedScenario.limitations_note ?? state.interactiveData.limitations_note)
   );
 
-  layout.appendChild(analogColumn);
+  layout.appendChild(analogueColumn);
   layout.appendChild(pathwayColumn);
   container.appendChild(layout);
 }
@@ -356,7 +356,7 @@ function renderAnalystBriefs() {
       el(
         "p",
         "fallback-note",
-        `Analyst briefs unavailable. Run python3 scripts/generate_analyst_brief.py to generate ${DATA_FILES.briefs}.`
+        `Analyst briefs unavailable. Run python3 scripts/generate_analyst_briefs.py to generate ${DATA_FILES.briefs}.`
       )
     );
     if (state.briefError) {
@@ -380,7 +380,7 @@ function renderAnalystBriefs() {
   const select = el("select", "scenario-select");
   select.id = "brief-scenario-select";
   briefs.forEach((brief) => {
-    const option = el("option", null, `${brief.scenario_id}: ${brief.scenario_question}`);
+    const option = el("option", null, `${brief.scenario_id}: ${brief.scenario_title ?? brief.scenario_question}`);
     option.value = brief.scenario_id;
     option.selected = brief.scenario_id === selectedBrief.scenario_id;
     select.appendChild(option);
@@ -395,37 +395,38 @@ function renderAnalystBriefs() {
 
   const briefCard = el("article", "brief-card");
   briefCard.appendChild(el("span", "scenario-id", selectedBrief.scenario_id));
-  briefCard.appendChild(el("h3", null, selectedBrief.scenario_description?.question ?? selectedBrief.scenario_question));
+  briefCard.appendChild(el("h3", null, selectedBrief.scenario_title ?? selectedBrief.scenario_description?.question ?? selectedBrief.scenario_question));
   briefCard.appendChild(
-    el("p", "evidence-note", selectedBrief.scenario_description?.profile_summary ?? "No profile summary available.")
+    el("p", "evidence-note", selectedBrief.scenario_description?.profile_summary ?? selectedBrief.scenario_description ?? "No profile summary available.")
   );
+  briefCard.appendChild(el("p", "evidence-note", selectedBrief.analyst_note ?? "No analyst note available."));
 
   const sectionFlow = el("div", "brief-flow");
 
-  const analogSection = el("section", "brief-section");
-  analogSection.appendChild(el("h3", null, "Historical Analogs"));
-  const analogList = el("ul", "brief-list");
-  (selectedBrief.most_relevant_historical_analogs ?? []).forEach((analog) => {
+  const analogueSection = el("section", "brief-section");
+  analogueSection.appendChild(el("h3", null, "Historical Analogues"));
+  const analogueList = el("ul", "brief-list");
+  (selectedBrief.most_relevant_historical_analogues ?? []).forEach((analogue) => {
     const item = el("li");
-    item.appendChild(el("strong", null, `${analog.event_id}: ${analog.event_title}`));
+    item.appendChild(el("strong", null, `${analogue.event_id}: ${analogue.event_title}`));
     item.appendChild(
       el(
         "p",
         "evidence-note",
-        `Similarity ${formatScore(analog.similarity_score)}; pathway: ${analog.observed_market_pathway}; matched fields: ${(analog.matched_fields ?? []).join(", ") || "None"}`
+        `Similarity ${formatScore(analogue.similarity_score)}; pathway: ${analogue.observed_market_pathway}; matched fields: ${(analogue.matched_fields ?? []).join(", ") || "None"}`
       )
     );
-    analogList.appendChild(item);
+    analogueList.appendChild(item);
   });
-  analogSection.appendChild(analogList);
+  analogueSection.appendChild(analogueList);
 
   const pathwaySection = el("section", "brief-section");
   pathwaySection.appendChild(el("h3", null, "Observed Pathways"));
   const pathwayList = el("ul", "brief-list");
-  (selectedBrief.common_observed_pathways ?? []).forEach((pathway) => {
+  (selectedBrief.observed_historical_pathways ?? selectedBrief.common_observed_pathways ?? []).forEach((pathway) => {
     const item = el("li");
     item.appendChild(el("strong", null, pathway.pathway_name));
-    item.appendChild(el("p", "evidence-note", pathway.summary_note));
+    item.appendChild(el("p", "evidence-note", pathway.analyst_note ?? pathway.summary_note));
     item.appendChild(
       el("p", "evidence-note", `Representative events: ${(pathway.representative_events ?? []).join(", ")}`)
     );
@@ -434,27 +435,37 @@ function renderAnalystBriefs() {
   pathwaySection.appendChild(pathwayList);
 
   const evidenceSection = el("section", "brief-section");
-  evidenceSection.appendChild(el("h3", null, "Evidence Summary"));
+  evidenceSection.appendChild(el("h3", null, "Key Evidence"));
   const evidenceList = el("ul", "brief-list");
-  (selectedBrief.key_evidence_notes ?? []).forEach((note) => {
-    evidenceList.appendChild(el("li", null, `${note.event_id}: ${note.evidence_note}`));
+  (selectedBrief.key_evidence ?? selectedBrief.key_evidence_notes ?? []).forEach((note) => {
+    if (typeof note === "string") {
+      evidenceList.appendChild(el("li", null, note));
+    } else {
+      evidenceList.appendChild(el("li", null, `${note.event_id}: ${note.evidence_note}`));
+    }
   });
   evidenceSection.appendChild(evidenceList);
 
+  const caveatsSection = el("section", "brief-section");
+  caveatsSection.appendChild(el("h3", null, "Analytical Caveats"));
+  const caveatsList = el("ul", "brief-list");
+  (selectedBrief.analytical_caveats ?? []).forEach((caveat) => {
+    caveatsList.appendChild(el("li", null, caveat));
+  });
+  caveatsSection.appendChild(caveatsList);
+
   const limitationsSection = el("section", "brief-section");
-  limitationsSection.appendChild(el("h3", null, "Limitations"));
+  limitationsSection.appendChild(el("h3", null, "Research Limitations"));
   const limitationsList = el("ul", "brief-list");
-  [
-    ...(selectedBrief.analytical_caveats ?? []),
-    ...(selectedBrief.research_limitations ?? []),
-  ].forEach((limitation) => {
+  (selectedBrief.research_limitations ?? []).forEach((limitation) => {
     limitationsList.appendChild(el("li", null, limitation));
   });
   limitationsSection.appendChild(limitationsList);
 
-  sectionFlow.appendChild(analogSection);
+  sectionFlow.appendChild(analogueSection);
   sectionFlow.appendChild(pathwaySection);
   sectionFlow.appendChild(evidenceSection);
+  sectionFlow.appendChild(caveatsSection);
   sectionFlow.appendChild(limitationsSection);
   briefCard.appendChild(sectionFlow);
   container.appendChild(briefCard);
@@ -479,7 +490,7 @@ function renderPathways() {
       const item = el("li", "pathway-item");
       const header = el("div", "pathway-item-header");
       header.appendChild(el("strong", null, pathway.pathway_name));
-      header.appendChild(el("span", "tag count-tag", `${pathway.count} analog(s)`));
+      header.appendChild(el("span", "tag count-tag", `${pathway.count} analogue(s)`));
       item.appendChild(header);
 
       item.appendChild(
