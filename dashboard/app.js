@@ -89,6 +89,31 @@ function renderErrors() {
   panel.appendChild(list);
 }
 
+function renderHeroKpis() {
+  const datasetSize = document.getElementById("kpi-dataset-size");
+  const familyCoverage = document.getElementById("kpi-family-coverage");
+  const sectorCoverage = document.getElementById("kpi-sector-coverage");
+  const scenarioEngine = document.getElementById("kpi-scenario-engine");
+
+  const coverage = state.coverageData?.coverage ?? {};
+  const eventFamilyCount = coverage.event_family?.counts?.length;
+  const sectorCount = coverage.affected_sector?.counts?.length;
+  const scenarioCount = state.scenarioData?.results?.length;
+
+  datasetSize.textContent = state.coverageData?.dataset_size ?? "Unavailable";
+  familyCoverage.textContent = eventFamilyCount !== undefined ? String(eventFamilyCount) : "Unavailable";
+  sectorCoverage.textContent = sectorCount !== undefined ? String(sectorCount) : "Unavailable";
+  scenarioEngine.textContent = scenarioCount ? "Available" : "Unavailable";
+
+  const scenarioCard = scenarioEngine.closest(".hero-kpi-card");
+  const scenarioNote = scenarioCard?.querySelector("p");
+  if (scenarioNote) {
+    scenarioNote.textContent = scenarioCount
+      ? `${scenarioCount} scenario profile(s) loaded`
+      : "Run scenario query generation";
+  }
+}
+
 function renderScenarioCards() {
   const container = document.getElementById("scenario-container");
   container.innerHTML = "";
@@ -600,6 +625,7 @@ async function init() {
 
   renderDataStatus();
   renderErrors();
+  renderHeroKpis();
   renderOperationsOverview();
   renderCoverage();
   renderInteractiveAssistant();
