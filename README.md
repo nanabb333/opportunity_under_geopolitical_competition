@@ -18,6 +18,34 @@ Observed Pathway Engine
 Dashboard Evidence View
 ```
 
+## System Evolution Roadmap
+
+```text
+Dissertation Research
+        ↓
+Historical Analog Dataset
+        ↓
+Similarity Engine
+        ↓
+Scenario Assistant
+        ↓
+Intelligence System Foundation
+        ↓
+Future Automation Expansion
+```
+
+Phase 3 adds the operating foundation for a continuously updated geopolitical intelligence system. It defines how raw information sources become candidate events, how human review protects dataset quality, and how approved events flow into the historical analog, similarity, scenario, observed pathway, and dashboard layers.
+
+- [Intelligence system architecture](docs/intelligence_system_architecture.md)
+- [Source registry](data/source_registry.csv)
+- [Source registry methodology](docs/source_registry_methodology.md)
+- [Event monitoring framework](docs/event_monitoring_framework.md)
+- [Dataset update protocol](docs/dataset_update_protocol.md)
+- [Analyst workbench guide](docs/analyst_workbench_guide.md)
+- [Roadmap V2](docs/roadmap_v2.md)
+
+This roadmap is an architecture and workflow foundation. It does not add scraping, LLM APIs, forecasting, or investment advice.
+
 ## Live / Local Dashboard Preview
 
 Run the static dashboard locally from the repository root:
