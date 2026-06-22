@@ -496,6 +496,22 @@ The validated evidence is mixed: one primary case is supportive, and two primary
 - Descriptive CAR[-7,+7] values show the same heterogeneity: TSM has the strongest positive wider-window movement, while MU remains negative and INTC is near zero.
 - The recipient vs non-recipient comparison does not show systematic recipient outperformance, reinforcing the dissertation's cautious interpretation.
 
+## Dashboard Screenshots
+
+The dashboard presents the repository as an analyst-facing intelligence product before the README moves into dissertation result exhibits.
+
+### Dashboard Overview
+
+![Dashboard Overview](docs/images/dashboard_overview.png)
+
+The overview shows the Geopolitical Intelligence Automation System, including the historical analogue dataset size, event-family coverage, strategic-sector coverage, and scenario engine availability.
+
+### Evidence Transparency Layer
+
+![Evidence Transparency Layer](docs/images/dashboard_evidence_transparency.png)
+
+The transparency view shows why a historical analogue was retrieved, including match dimensions, similarity explanation, divergence explanation, evidence metadata, evidence support, and analyst caveats.
+
 ## Result Exhibits
 
 ![Primary Outcome Results](dissertation_results/figures/figure1_primary_outcome_car_sector_m1_p1.png)
